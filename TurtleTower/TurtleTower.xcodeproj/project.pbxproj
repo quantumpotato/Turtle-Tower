@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* TurtleTowerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TurtleTowerAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* TurtleTowerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* TurtleTowerViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* TurtleTowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */; };
+		BF06259012C7052E003DD96A /* EasyCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF06258F12C7052E003DD96A /* EasyCloud.m */; };
+		BF06259F12C705CF003DD96A /* MediumCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF06259E12C705CF003DD96A /* MediumCloud.m */; };
+		BF0625A212C705E8003DD96A /* HardCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0625A112C705E8003DD96A /* HardCloud.m */; };
+		BF097F7F127376D800FCDC4C /* WhiteCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF097F7E127376D800FCDC4C /* WhiteCloud.m */; };
+		BF097FD512737C1200FCDC4C /* BlueBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BF097FD412737C1200FCDC4C /* BlueBase.m */; };
+		BF0A39DC124E697900D1DF85 /* turtlesmallsize1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0A39DB124E697900D1DF85 /* turtlesmallsize1.png */; };
+		BF325A8612528E3300DAAF73 /* DifficultyObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = BF325A8512528E3300DAAF73 /* DifficultyObstacle.m */; };
+		BF325AE61252997400DAAF73 /* SMbird1a2F.png in Resources */ = {isa = PBXBuildFile; fileRef = BF325AE21252997400DAAF73 /* SMbird1a2F.png */; };
+		BF325AE71252997400DAAF73 /* SMbird1a2.png in Resources */ = {isa = PBXBuildFile; fileRef = BF325AE31252997400DAAF73 /* SMbird1a2.png */; };
+		BF325AE81252997400DAAF73 /* SMBird1b84F.png in Resources */ = {isa = PBXBuildFile; fileRef = BF325AE41252997400DAAF73 /* SMBird1b84F.png */; };
+		BF325AE91252997400DAAF73 /* SMbird1b84.png in Resources */ = {isa = PBXBuildFile; fileRef = BF325AE51252997400DAAF73 /* SMbird1b84.png */; };
+		BF46096B1255503A00FE13A2 /* purplebirdatry1.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4609671255503A00FE13A2 /* purplebirdatry1.png */; };
+		BF46096C1255503A00FE13A2 /* purplebirdb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4609681255503A00FE13A2 /* purplebirdb.png */; };
+		BF46096D1255503A00FE13A2 /* purplebirdca.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4609691255503A00FE13A2 /* purplebirdca.png */; };
+		BF46096E1255503A00FE13A2 /* purplebirdcb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF46096A1255503A00FE13A2 /* purplebirdcb.png */; };
+		BF4D456112A735AD001F9C33 /* BirdSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D456012A735AD001F9C33 /* BirdSpawner.m */; };
+		BF52B30C12934D1700FF1FBC /* DifficultyController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B30B12934D1700FF1FBC /* DifficultyController.m */; };
+		BF52B31512934DFF00FF1FBC /* DifficultyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B31412934DFF00FF1FBC /* DifficultyControl.m */; };
+		BF52B3271293503000FF1FBC /* WindController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B3261293503000FF1FBC /* WindController.m */; };
+		BF52B32C1293506C00FF1FBC /* WindActiveControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B32B1293506C00FF1FBC /* WindActiveControl.m */; };
+		BF52B33F129351B700FF1FBC /* EarlyGameWindControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B33E129351B700FF1FBC /* EarlyGameWindControl.m */; };
+		BF869659127B557C00C914F3 /* greenbirda.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869655127B557C00C914F3 /* greenbirda.png */; };
+		BF86965A127B557C00C914F3 /* greenbirdcb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869656127B557C00C914F3 /* greenbirdcb.png */; };
+		BF86965B127B557C00C914F3 /* greenbirdca.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869657127B557C00C914F3 /* greenbirdca.png */; };
+		BF86965C127B557C00C914F3 /* greenbirdb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869658127B557C00C914F3 /* greenbirdb.png */; };
+		BF8BDF9512ADACAC001F8135 /* BirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8BDF9412ADACAC001F8135 /* BirdRow.m */; };
+		BF8BDF9812ADADBC001F8135 /* PatrolBirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8BDF9712ADADBC001F8135 /* PatrolBirdRow.m */; };
+		BF8E04D412B0875B00D3668F /* CampBirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E04D312B0875B00D3668F /* CampBirdRow.m */; };
+		BF8EEEFC12778E89002BF326 /* TurtleMenuMoveState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EEEFB12778E89002BF326 /* TurtleMenuMoveState.m */; };
+		BF8EEEFF12778E90002BF326 /* TurtleGameMoveState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EEEFE12778E90002BF326 /* TurtleGameMoveState.m */; };
+		BF8EEF0212778E96002BF326 /* TurtleMoveState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EEF0112778E96002BF326 /* TurtleMoveState.m */; };
+		BF8EEF9E127793A3002BF326 /* FloatingWhiteCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EEF9D127793A3002BF326 /* FloatingWhiteCloud.m */; };
+		BF8F237D12AB365800032D8A /* PatrolBird.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8F237C12AB365800032D8A /* PatrolBird.m */; };
+		BF8F238C12AB382C00032D8A /* CampBird.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8F238B12AB382C00032D8A /* CampBird.m */; };
+		BF8F239312AB38C900032D8A /* DivebombBird.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8F239212AB38C900032D8A /* DivebombBird.m */; };
+		BF8F7C141251210E00C58424 /* subliminallycochlear3204601.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8F7C131251210E00C58424 /* subliminallycochlear3204601.png */; };
+		BF8F7CA812513E7100C58424 /* TurtleTowerPlatform.png in Resources */ = {isa = PBXBuildFile; fileRef = BF8F7CA712513E7100C58424 /* TurtleTowerPlatform.png */; };
+		BF98D0C21294D4F5009B803C /* PatrolBirdController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF98D0C11294D4F5009B803C /* PatrolBirdController.m */; };
+		BF98D0C91294D59E009B803C /* PatrolBirdControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF98D0C81294D59E009B803C /* PatrolBirdControl.m */; };
+		BFB3EC96128E164B00FFCFFE /* Wind.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3EC95128E164B00FFCFFE /* Wind.m */; };
+		BFB3ECAD128E18F300FFCFFE /* InactiveWind.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3ECAC128E18F300FFCFFE /* InactiveWind.m */; };
+		BFB3ED0B128E1BFA00FFCFFE /* ActiveWind.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB3ED0A128E1BFA00FFCFFE /* ActiveWind.m */; };
+		BFBB3C301297785100B8DBC4 /* BirdController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3C2F1297785100B8DBC4 /* BirdController.m */; };
+		BFBCA4F1127C945600EA087D /* Feather.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBCA4F0127C945600EA087D /* Feather.m */; };
+		BFBDDE4912B5AD6C0081357A /* DivebombBirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDDE4812B5AD6C0081357A /* DivebombBirdRow.m */; };
+		BFC0A6BE12DFD19400FD30E0 /* MoonScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0A6BD12DFD19400FD30E0 /* MoonScale.m */; };
+		BFC161D8125EAE1800A76470 /* cmpvisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC161D7125EAE1800A76470 /* cmpvisuals.m */; };
+		BFE7BE92124C38D60083A59A /* vrvc.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE91124C38D60083A59A /* vrvc.m */; };
+		BFE7BE98124C39F20083A59A /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE97124C39F20083A59A /* Ball.m */; };
+		BFE7BEA9124C3AE20083A59A /* cmpgames.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEA8124C3AE20083A59A /* cmpgames.m */; };
+		BFE7BEC3124C417D0083A59A /* Turtle.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEC2124C417D0083A59A /* Turtle.m */; };
+		BFE7BEC6124C41820083A59A /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEC5124C41820083A59A /* Bird.m */; };
+		BFE7BEC9124C418A0083A59A /* Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEC8124C418A0083A59A /* Platform.m */; };
+		BFF52CA4129375D300244A0E /* WindInactiveControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF52CA3129375D300244A0E /* WindInactiveControl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* TurtleTowerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleTowerAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* TurtleTowerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleTowerAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* TurtleTower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurtleTower.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* TurtleTowerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TurtleTowerViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* TurtleTowerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleTowerViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleTowerViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* TurtleTower_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleTower_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* TurtleTower-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TurtleTower-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		BF06258E12C7052E003DD96A /* EasyCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCloud.h; sourceTree = "<group>"; };
+		BF06258F12C7052E003DD96A /* EasyCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCloud.m; sourceTree = "<group>"; };
+		BF06259D12C705CF003DD96A /* MediumCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumCloud.h; sourceTree = "<group>"; };
+		BF06259E12C705CF003DD96A /* MediumCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediumCloud.m; sourceTree = "<group>"; };
+		BF0625A012C705E8003DD96A /* HardCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HardCloud.h; sourceTree = "<group>"; };
+		BF0625A112C705E8003DD96A /* HardCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardCloud.m; sourceTree = "<group>"; };
+		BF097F7D127376D800FCDC4C /* WhiteCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhiteCloud.h; sourceTree = "<group>"; };
+		BF097F7E127376D800FCDC4C /* WhiteCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhiteCloud.m; sourceTree = "<group>"; };
+		BF097FD312737C1200FCDC4C /* BlueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueBase.h; sourceTree = "<group>"; };
+		BF097FD412737C1200FCDC4C /* BlueBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueBase.m; sourceTree = "<group>"; };
+		BF0A39DB124E697900D1DF85 /* turtlesmallsize1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtlesmallsize1.png; sourceTree = "<group>"; };
+		BF325A8412528E3300DAAF73 /* DifficultyObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyObstacle.h; sourceTree = "<group>"; };
+		BF325A8512528E3300DAAF73 /* DifficultyObstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyObstacle.m; sourceTree = "<group>"; };
+		BF325AE21252997400DAAF73 /* SMbird1a2F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMbird1a2F.png; sourceTree = "<group>"; };
+		BF325AE31252997400DAAF73 /* SMbird1a2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMbird1a2.png; sourceTree = "<group>"; };
+		BF325AE41252997400DAAF73 /* SMBird1b84F.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMBird1b84F.png; sourceTree = "<group>"; };
+		BF325AE51252997400DAAF73 /* SMbird1b84.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SMbird1b84.png; sourceTree = "<group>"; };
+		BF4609671255503A00FE13A2 /* purplebirdatry1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebirdatry1.png; sourceTree = "<group>"; };
+		BF4609681255503A00FE13A2 /* purplebirdb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebirdb.png; sourceTree = "<group>"; };
+		BF4609691255503A00FE13A2 /* purplebirdca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebirdca.png; sourceTree = "<group>"; };
+		BF46096A1255503A00FE13A2 /* purplebirdcb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebirdcb.png; sourceTree = "<group>"; };
+		BF4D455F12A735AD001F9C33 /* BirdSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSpawner.h; sourceTree = "<group>"; };
+		BF4D456012A735AD001F9C33 /* BirdSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSpawner.m; sourceTree = "<group>"; };
+		BF52B30A12934D1700FF1FBC /* DifficultyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyController.h; sourceTree = "<group>"; };
+		BF52B30B12934D1700FF1FBC /* DifficultyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyController.m; sourceTree = "<group>"; };
+		BF52B31312934DFF00FF1FBC /* DifficultyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyControl.h; sourceTree = "<group>"; };
+		BF52B31412934DFF00FF1FBC /* DifficultyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyControl.m; sourceTree = "<group>"; };
+		BF52B3251293503000FF1FBC /* WindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindController.h; sourceTree = "<group>"; };
+		BF52B3261293503000FF1FBC /* WindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindController.m; sourceTree = "<group>"; };
+		BF52B32A1293506C00FF1FBC /* WindActiveControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindActiveControl.h; sourceTree = "<group>"; };
+		BF52B32B1293506C00FF1FBC /* WindActiveControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindActiveControl.m; sourceTree = "<group>"; };
+		BF52B33D129351B700FF1FBC /* EarlyGameWindControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarlyGameWindControl.h; sourceTree = "<group>"; };
+		BF52B33E129351B700FF1FBC /* EarlyGameWindControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarlyGameWindControl.m; sourceTree = "<group>"; };
+		BF869655127B557C00C914F3 /* greenbirda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirda.png; sourceTree = "<group>"; };
+		BF869656127B557C00C914F3 /* greenbirdcb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdcb.png; sourceTree = "<group>"; };
+		BF869657127B557C00C914F3 /* greenbirdca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdca.png; sourceTree = "<group>"; };
+		BF869658127B557C00C914F3 /* greenbirdb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdb.png; sourceTree = "<group>"; };
+		BF8BDF9312ADACAC001F8135 /* BirdRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdRow.h; sourceTree = "<group>"; };
+		BF8BDF9412ADACAC001F8135 /* BirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdRow.m; sourceTree = "<group>"; };
+		BF8BDF9612ADADBC001F8135 /* PatrolBirdRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrolBirdRow.h; sourceTree = "<group>"; };
+		BF8BDF9712ADADBC001F8135 /* PatrolBirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrolBirdRow.m; sourceTree = "<group>"; };
+		BF8E04D212B0875B00D3668F /* CampBirdRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBirdRow.h; sourceTree = "<group>"; };
+		BF8E04D312B0875B00D3668F /* CampBirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBirdRow.m; sourceTree = "<group>"; };
+		BF8EEEFA12778E89002BF326 /* TurtleMenuMoveState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleMenuMoveState.h; sourceTree = "<group>"; };
+		BF8EEEFB12778E89002BF326 /* TurtleMenuMoveState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleMenuMoveState.m; sourceTree = "<group>"; };
+		BF8EEEFD12778E90002BF326 /* TurtleGameMoveState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleGameMoveState.h; sourceTree = "<group>"; };
+		BF8EEEFE12778E90002BF326 /* TurtleGameMoveState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleGameMoveState.m; sourceTree = "<group>"; };
+		BF8EEF0012778E96002BF326 /* TurtleMoveState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleMoveState.h; sourceTree = "<group>"; };
+		BF8EEF0112778E96002BF326 /* TurtleMoveState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleMoveState.m; sourceTree = "<group>"; };
+		BF8EEF9C127793A3002BF326 /* FloatingWhiteCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingWhiteCloud.h; sourceTree = "<group>"; };
+		BF8EEF9D127793A3002BF326 /* FloatingWhiteCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingWhiteCloud.m; sourceTree = "<group>"; };
+		BF8F237B12AB365800032D8A /* PatrolBird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrolBird.h; sourceTree = "<group>"; };
+		BF8F237C12AB365800032D8A /* PatrolBird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrolBird.m; sourceTree = "<group>"; };
+		BF8F238A12AB382C00032D8A /* CampBird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBird.h; sourceTree = "<group>"; };
+		BF8F238B12AB382C00032D8A /* CampBird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBird.m; sourceTree = "<group>"; };
+		BF8F239112AB38C900032D8A /* DivebombBird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DivebombBird.h; sourceTree = "<group>"; };
+		BF8F239212AB38C900032D8A /* DivebombBird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivebombBird.m; sourceTree = "<group>"; };
+		BF8F7C131251210E00C58424 /* subliminallycochlear3204601.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subliminallycochlear3204601.png; path = Classes/subliminallycochlear3204601.png; sourceTree = "<group>"; };
+		BF8F7CA712513E7100C58424 /* TurtleTowerPlatform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TurtleTowerPlatform.png; sourceTree = "<group>"; };
+		BF98D0C01294D4F5009B803C /* PatrolBirdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrolBirdController.h; sourceTree = "<group>"; };
+		BF98D0C11294D4F5009B803C /* PatrolBirdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrolBirdController.m; sourceTree = "<group>"; };
+		BF98D0C71294D59E009B803C /* PatrolBirdControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrolBirdControl.h; sourceTree = "<group>"; };
+		BF98D0C81294D59E009B803C /* PatrolBirdControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrolBirdControl.m; sourceTree = "<group>"; };
+		BFB3EC94128E164B00FFCFFE /* Wind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wind.h; sourceTree = "<group>"; };
+		BFB3EC95128E164B00FFCFFE /* Wind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wind.m; sourceTree = "<group>"; };
+		BFB3ECAB128E18F300FFCFFE /* InactiveWind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InactiveWind.h; sourceTree = "<group>"; };
+		BFB3ECAC128E18F300FFCFFE /* InactiveWind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InactiveWind.m; sourceTree = "<group>"; };
+		BFB3ED09128E1BFA00FFCFFE /* ActiveWind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveWind.h; sourceTree = "<group>"; };
+		BFB3ED0A128E1BFA00FFCFFE /* ActiveWind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveWind.m; sourceTree = "<group>"; };
+		BFBB3C2E1297785100B8DBC4 /* BirdController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdController.h; sourceTree = "<group>"; };
+		BFBB3C2F1297785100B8DBC4 /* BirdController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdController.m; sourceTree = "<group>"; };
+		BFBCA4EF127C945600EA087D /* Feather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feather.h; sourceTree = "<group>"; };
+		BFBCA4F0127C945600EA087D /* Feather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feather.m; sourceTree = "<group>"; };
+		BFBDDE4712B5AD6C0081357A /* DivebombBirdRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DivebombBirdRow.h; sourceTree = "<group>"; };
+		BFBDDE4812B5AD6C0081357A /* DivebombBirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivebombBirdRow.m; sourceTree = "<group>"; };
+		BFC0A6BC12DFD19400FD30E0 /* MoonScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoonScale.h; sourceTree = "<group>"; };
+		BFC0A6BD12DFD19400FD30E0 /* MoonScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoonScale.m; sourceTree = "<group>"; };
+		BFC161D6125EAE1800A76470 /* cmpvisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmpvisuals.h; sourceTree = "<group>"; };
+		BFC161D7125EAE1800A76470 /* cmpvisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmpvisuals.m; sourceTree = "<group>"; };
+		BFE7BE90124C38D60083A59A /* vrvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrvc.h; sourceTree = "<group>"; };
+		BFE7BE91124C38D60083A59A /* vrvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vrvc.m; sourceTree = "<group>"; };
+		BFE7BE96124C39F20083A59A /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
+		BFE7BE97124C39F20083A59A /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ball.m; sourceTree = "<group>"; };
+		BFE7BEA7124C3AE20083A59A /* cmpgames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmpgames.h; sourceTree = "<group>"; };
+		BFE7BEA8124C3AE20083A59A /* cmpgames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmpgames.m; sourceTree = "<group>"; };
+		BFE7BEC1124C417D0083A59A /* Turtle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turtle.h; sourceTree = "<group>"; };
+		BFE7BEC2124C417D0083A59A /* Turtle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turtle.m; sourceTree = "<group>"; };
+		BFE7BEC4124C41820083A59A /* Bird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		BFE7BEC5124C41820083A59A /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
+		BFE7BEC7124C418A0083A59A /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
+		BFE7BEC8124C418A0083A59A /* Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Platform.m; sourceTree = "<group>"; };
+		BFF52CA2129375D300244A0E /* WindInactiveControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindInactiveControl.h; sourceTree = "<group>"; };
+		BFF52CA3129375D300244A0E /* WindInactiveControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindInactiveControl.m; sourceTree = "<group>"; };
+		BFFE738312AF1D13003D0475 /* ScrollProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollProtocol.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BF52B3241293502000FF1FBC /* Difficulty Controls */,
+				BFBCA4ED127C943300EA087D /* Base Classes */,
+				BFBCA4EC127C942600EA087D /* Birds */,
+				BFBCA4EA127C941200EA087D /* Clouds */,
+				BF8EEF0312778E99002BF326 /* Turtle */,
+				1D3623240D0F684500981E51 /* TurtleTowerAppDelegate.h */,
+				1D3623250D0F684500981E51 /* TurtleTowerAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* TurtleTowerViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */,
+				BFC0A6BC12DFD19400FD30E0 /* MoonScale.h */,
+				BFC0A6BD12DFD19400FD30E0 /* MoonScale.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* TurtleTower.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* TurtleTower_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+				BFFE738312AF1D13003D0475 /* ScrollProtocol.h */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF0A39D9124E696B00D1DF85 /* Images */,
+				2899E5210DE3E06400AC0155 /* TurtleTowerViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* TurtleTower-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF0A39D9124E696B00D1DF85 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BF325ADB1252996400DAAF73 /* Birds */,
+				BF8F7CA712513E7100C58424 /* TurtleTowerPlatform.png */,
+				BF8F7C131251210E00C58424 /* subliminallycochlear3204601.png */,
+				BF0A39DB124E697900D1DF85 /* turtlesmallsize1.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		BF325ADB1252996400DAAF73 /* Birds */ = {
+			isa = PBXGroup;
+			children = (
+				BF869655127B557C00C914F3 /* greenbirda.png */,
+				BF869656127B557C00C914F3 /* greenbirdcb.png */,
+				BF869657127B557C00C914F3 /* greenbirdca.png */,
+				BF869658127B557C00C914F3 /* greenbirdb.png */,
+				BF325AE21252997400DAAF73 /* SMbird1a2F.png */,
+				BF4609671255503A00FE13A2 /* purplebirdatry1.png */,
+				BF4609681255503A00FE13A2 /* purplebirdb.png */,
+				BF4609691255503A00FE13A2 /* purplebirdca.png */,
+				BF46096A1255503A00FE13A2 /* purplebirdcb.png */,
+				BF325AE31252997400DAAF73 /* SMbird1a2.png */,
+				BF325AE41252997400DAAF73 /* SMBird1b84F.png */,
+				BF325AE51252997400DAAF73 /* SMbird1b84.png */,
+			);
+			name = Birds;
+			sourceTree = "<group>";
+		};
+		BF52B3241293502000FF1FBC /* Difficulty Controls */ = {
+			isa = PBXGroup;
+			children = (
+				BF98D0BF1294D4A7009B803C /* Birds */,
+				BFF52CA0129375BB00244A0E /* Wind */,
+				BF52B30A12934D1700FF1FBC /* DifficultyController.h */,
+				BF52B30B12934D1700FF1FBC /* DifficultyController.m */,
+				BF52B31312934DFF00FF1FBC /* DifficultyControl.h */,
+				BF52B31412934DFF00FF1FBC /* DifficultyControl.m */,
+				BF4D455F12A735AD001F9C33 /* BirdSpawner.h */,
+				BF4D456012A735AD001F9C33 /* BirdSpawner.m */,
+			);
+			name = "Difficulty Controls";
+			sourceTree = "<group>";
+		};
+		BF8EEF0312778E99002BF326 /* Turtle */ = {
+			isa = PBXGroup;
+			children = (
+				BFE7BEC1124C417D0083A59A /* Turtle.h */,
+				BFE7BEC2124C417D0083A59A /* Turtle.m */,
+				BF8EEEFA12778E89002BF326 /* TurtleMenuMoveState.h */,
+				BF8EEEFB12778E89002BF326 /* TurtleMenuMoveState.m */,
+				BF8EEEFD12778E90002BF326 /* TurtleGameMoveState.h */,
+				BF8EEEFE12778E90002BF326 /* TurtleGameMoveState.m */,
+				BF8EEF0012778E96002BF326 /* TurtleMoveState.h */,
+				BF8EEF0112778E96002BF326 /* TurtleMoveState.m */,
+			);
+			name = Turtle;
+			sourceTree = "<group>";
+		};
+		BF98D0BF1294D4A7009B803C /* Birds */ = {
+			isa = PBXGroup;
+			children = (
+				BF98D0C01294D4F5009B803C /* PatrolBirdController.h */,
+				BF98D0C11294D4F5009B803C /* PatrolBirdController.m */,
+				BF98D0C71294D59E009B803C /* PatrolBirdControl.h */,
+				BF98D0C81294D59E009B803C /* PatrolBirdControl.m */,
+				BFBB3C2E1297785100B8DBC4 /* BirdController.h */,
+				BFBB3C2F1297785100B8DBC4 /* BirdController.m */,
+			);
+			name = Birds;
+			sourceTree = "<group>";
+		};
+		BFBCA4EA127C941200EA087D /* Clouds */ = {
+			isa = PBXGroup;
+			children = (
+				BF097F7D127376D800FCDC4C /* WhiteCloud.h */,
+				BF097F7E127376D800FCDC4C /* WhiteCloud.m */,
+				BF097FD312737C1200FCDC4C /* BlueBase.h */,
+				BF097FD412737C1200FCDC4C /* BlueBase.m */,
+				BF8EEF9C127793A3002BF326 /* FloatingWhiteCloud.h */,
+				BF8EEF9D127793A3002BF326 /* FloatingWhiteCloud.m */,
+				BFB3EC94128E164B00FFCFFE /* Wind.h */,
+				BFB3EC95128E164B00FFCFFE /* Wind.m */,
+				BFB3ECAB128E18F300FFCFFE /* InactiveWind.h */,
+				BFB3ECAC128E18F300FFCFFE /* InactiveWind.m */,
+				BFB3ED09128E1BFA00FFCFFE /* ActiveWind.h */,
+				BFB3ED0A128E1BFA00FFCFFE /* ActiveWind.m */,
+				BF06258E12C7052E003DD96A /* EasyCloud.h */,
+				BF06258F12C7052E003DD96A /* EasyCloud.m */,
+				BF06259D12C705CF003DD96A /* MediumCloud.h */,
+				BF06259E12C705CF003DD96A /* MediumCloud.m */,
+				BF0625A012C705E8003DD96A /* HardCloud.h */,
+				BF0625A112C705E8003DD96A /* HardCloud.m */,
+			);
+			name = Clouds;
+			sourceTree = "<group>";
+		};
+		BFBCA4EC127C942600EA087D /* Birds */ = {
+			isa = PBXGroup;
+			children = (
+				BFE7BEC4124C41820083A59A /* Bird.h */,
+				BFE7BEC5124C41820083A59A /* Bird.m */,
+				BFBCA4EF127C945600EA087D /* Feather.h */,
+				BFBCA4F0127C945600EA087D /* Feather.m */,
+				BF8F237B12AB365800032D8A /* PatrolBird.h */,
+				BF8F237C12AB365800032D8A /* PatrolBird.m */,
+				BF8F238A12AB382C00032D8A /* CampBird.h */,
+				BF8F238B12AB382C00032D8A /* CampBird.m */,
+				BF8F239112AB38C900032D8A /* DivebombBird.h */,
+				BF8F239212AB38C900032D8A /* DivebombBird.m */,
+				BF8BDF9312ADACAC001F8135 /* BirdRow.h */,
+				BF8BDF9412ADACAC001F8135 /* BirdRow.m */,
+				BF8BDF9612ADADBC001F8135 /* PatrolBirdRow.h */,
+				BF8BDF9712ADADBC001F8135 /* PatrolBirdRow.m */,
+				BF8E04D212B0875B00D3668F /* CampBirdRow.h */,
+				BF8E04D312B0875B00D3668F /* CampBirdRow.m */,
+				BFBDDE4712B5AD6C0081357A /* DivebombBirdRow.h */,
+				BFBDDE4812B5AD6C0081357A /* DivebombBirdRow.m */,
+			);
+			name = Birds;
+			sourceTree = "<group>";
+		};
+		BFBCA4ED127C943300EA087D /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BFE7BE90124C38D60083A59A /* vrvc.h */,
+				BFE7BE91124C38D60083A59A /* vrvc.m */,
+				BFE7BEA7124C3AE20083A59A /* cmpgames.h */,
+				BFE7BEA8124C3AE20083A59A /* cmpgames.m */,
+				BFE7BEC7124C418A0083A59A /* Platform.h */,
+				BFE7BEC8124C418A0083A59A /* Platform.m */,
+				BFC161D6125EAE1800A76470 /* cmpvisuals.h */,
+				BFC161D7125EAE1800A76470 /* cmpvisuals.m */,
+				BFE7BE96124C39F20083A59A /* Ball.h */,
+				BFE7BE97124C39F20083A59A /* Ball.m */,
+				BF325A8412528E3300DAAF73 /* DifficultyObstacle.h */,
+				BF325A8512528E3300DAAF73 /* DifficultyObstacle.m */,
+			);
+			name = "Base Classes";
+			sourceTree = "<group>";
+		};
+		BFF52CA0129375BB00244A0E /* Wind */ = {
+			isa = PBXGroup;
+			children = (
+				BF52B3251293503000FF1FBC /* WindController.h */,
+				BF52B3261293503000FF1FBC /* WindController.m */,
+				BF52B32B1293506C00FF1FBC /* WindActiveControl.m */,
+				BF52B32A1293506C00FF1FBC /* WindActiveControl.h */,
+				BF52B33D129351B700FF1FBC /* EarlyGameWindControl.h */,
+				BF52B33E129351B700FF1FBC /* EarlyGameWindControl.m */,
+				BFF52CA2129375D300244A0E /* WindInactiveControl.h */,
+				BFF52CA3129375D300244A0E /* WindInactiveControl.m */,
+			);
+			name = Wind;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* TurtleTower */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TurtleTower" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TurtleTower;
+			productName = TurtleTower;
+			productReference = 1D6058910D05DD3D006BFB54 /* TurtleTower.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TurtleTower" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* TurtleTower */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* TurtleTowerViewController.xib in Resources */,
+				BF0A39DC124E697900D1DF85 /* turtlesmallsize1.png in Resources */,
+				BF8F7C141251210E00C58424 /* subliminallycochlear3204601.png in Resources */,
+				BF8F7CA812513E7100C58424 /* TurtleTowerPlatform.png in Resources */,
+				BF325AE61252997400DAAF73 /* SMbird1a2F.png in Resources */,
+				BF325AE71252997400DAAF73 /* SMbird1a2.png in Resources */,
+				BF325AE81252997400DAAF73 /* SMBird1b84F.png in Resources */,
+				BF325AE91252997400DAAF73 /* SMbird1b84.png in Resources */,
+				BF46096B1255503A00FE13A2 /* purplebirdatry1.png in Resources */,
+				BF46096C1255503A00FE13A2 /* purplebirdb.png in Resources */,
+				BF46096D1255503A00FE13A2 /* purplebirdca.png in Resources */,
+				BF46096E1255503A00FE13A2 /* purplebirdcb.png in Resources */,
+				BF869659127B557C00C914F3 /* greenbirda.png in Resources */,
+				BF86965A127B557C00C914F3 /* greenbirdcb.png in Resources */,
+				BF86965B127B557C00C914F3 /* greenbirdca.png in Resources */,
+				BF86965C127B557C00C914F3 /* greenbirdb.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* TurtleTowerAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* TurtleTowerViewController.m in Sources */,
+				BFE7BE92124C38D60083A59A /* vrvc.m in Sources */,
+				BFE7BE98124C39F20083A59A /* Ball.m in Sources */,
+				BFE7BEA9124C3AE20083A59A /* cmpgames.m in Sources */,
+				BFE7BEC3124C417D0083A59A /* Turtle.m in Sources */,
+				BFE7BEC6124C41820083A59A /* Bird.m in Sources */,
+				BFE7BEC9124C418A0083A59A /* Platform.m in Sources */,
+				BF325A8612528E3300DAAF73 /* DifficultyObstacle.m in Sources */,
+				BFC161D8125EAE1800A76470 /* cmpvisuals.m in Sources */,
+				BF097F7F127376D800FCDC4C /* WhiteCloud.m in Sources */,
+				BF097FD512737C1200FCDC4C /* BlueBase.m in Sources */,
+				BF8EEEFC12778E89002BF326 /* TurtleMenuMoveState.m in Sources */,
+				BF8EEEFF12778E90002BF326 /* TurtleGameMoveState.m in Sources */,
+				BF8EEF0212778E96002BF326 /* TurtleMoveState.m in Sources */,
+				BF8EEF9E127793A3002BF326 /* FloatingWhiteCloud.m in Sources */,
+				BFBCA4F1127C945600EA087D /* Feather.m in Sources */,
+				BFB3EC96128E164B00FFCFFE /* Wind.m in Sources */,
+				BFB3ECAD128E18F300FFCFFE /* InactiveWind.m in Sources */,
+				BFB3ED0B128E1BFA00FFCFFE /* ActiveWind.m in Sources */,
+				BF52B30C12934D1700FF1FBC /* DifficultyController.m in Sources */,
+				BF52B31512934DFF00FF1FBC /* DifficultyControl.m in Sources */,
+				BF52B3271293503000FF1FBC /* WindController.m in Sources */,
+				BF52B32C1293506C00FF1FBC /* WindActiveControl.m in Sources */,
+				BF52B33F129351B700FF1FBC /* EarlyGameWindControl.m in Sources */,
+				BFF52CA4129375D300244A0E /* WindInactiveControl.m in Sources */,
+				BF98D0C21294D4F5009B803C /* PatrolBirdController.m in Sources */,
+				BF98D0C91294D59E009B803C /* PatrolBirdControl.m in Sources */,
+				BFBB3C301297785100B8DBC4 /* BirdController.m in Sources */,
+				BF4D456112A735AD001F9C33 /* BirdSpawner.m in Sources */,
+				BF8F237D12AB365800032D8A /* PatrolBird.m in Sources */,
+				BF8F238C12AB382C00032D8A /* CampBird.m in Sources */,
+				BF8F239312AB38C900032D8A /* DivebombBird.m in Sources */,
+				BF8BDF9512ADACAC001F8135 /* BirdRow.m in Sources */,
+				BF8BDF9812ADADBC001F8135 /* PatrolBirdRow.m in Sources */,
+				BF8E04D412B0875B00D3668F /* CampBirdRow.m in Sources */,
+				BFBDDE4912B5AD6C0081357A /* DivebombBirdRow.m in Sources */,
+				BF06259012C7052E003DD96A /* EasyCloud.m in Sources */,
+				BF06259F12C705CF003DD96A /* MediumCloud.m in Sources */,
+				BF0625A212C705E8003DD96A /* HardCloud.m in Sources */,
+				BFC0A6BE12DFD19400FD30E0 /* MoonScale.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TurtleTower_Prefix.pch;
+				INFOPLIST_FILE = "TurtleTower-Info.plist";
+				PRODUCT_NAME = TurtleTower;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TurtleTower_Prefix.pch;
+				INFOPLIST_FILE = "TurtleTower-Info.plist";
+				PRODUCT_NAME = TurtleTower;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anthony Broussard";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anthony Broussard";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "A617AA53-FE6E-4362-B420-43EB9202010B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A617AA53-FE6E-4362-B420-43EB9202010B";
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anthony Broussard";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Anthony Broussard";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "A617AA53-FE6E-4362-B420-43EB9202010B";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A617AA53-FE6E-4362-B420-43EB9202010B";
+				SDKROOT = iphoneos3.1.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TurtleTower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TurtleTower" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
