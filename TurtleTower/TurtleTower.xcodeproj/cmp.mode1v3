@@ -337,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF027E0412E37A4D005781EA</string>
+										<string>BF027E1412E38A3D005781EA</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -409,7 +409,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>CampBird.m</string>
+								<string>TurtleTowerViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -417,11 +417,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CampBird.m</string>
+										<string>TurtleTowerViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF027E0712E37A4D005781EA</string>
+										<string>BF027E1512E38A3D005781EA</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -487,7 +487,6 @@
 											<string>BF380EA312DA427000F59080</string>
 											<string>BF19373F12DA4AFA00EB2E9C</string>
 											<string>BF19375412DA4F4F00EB2E9C</string>
-											<string>BF5173E212DAA3AB00C09AC8</string>
 											<string>BFC0A6F512DFD42A00FD30E0</string>
 											<string>BF027D3D12E36DA9005781EA</string>
 											<string>BF027D3E12E36DA9005781EA</string>
@@ -497,7 +496,8 @@
 											<string>BF027DE812E374DE005781EA</string>
 											<string>BF027DE912E374DE005781EA</string>
 											<string>BF027E0512E37A4D005781EA</string>
-											<string>BF027E0612E37A4D005781EA</string>
+											<string>BF027E0D12E38A2D005781EA</string>
+											<string>BF5173E212DAA3AB00C09AC8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -536,7 +536,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BF027E0812E37A4D005781EA</string>
+										<string>BF027E1612E38A3D005781EA</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -830,14 +830,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>BF027E0912E37A4D005781EA</string>
 		<string>BF027D0412E36817005781EA</string>
 		<string>BF027CFC12E367FA005781EA</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>BFE7BE83124C36860083A59A</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>/Users/cmp/TurtleTower/TurtleTower/TurtleTower.xcodeproj</string>
+		<string>BFE7BE83124C36860083A59A</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 50 1680 978 0 0 1680 1028 </string>
@@ -932,7 +931,7 @@
 			<key>WindowToolGUID</key>
 			<string>BFE7BE83124C36860083A59A</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

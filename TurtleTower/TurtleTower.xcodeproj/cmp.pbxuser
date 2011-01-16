@@ -29,9 +29,9 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1619, 54350}}";
-			sepNavSelRange = "{15924, 0}";
-			sepNavVisRange = "{15600, 528}";
+			sepNavIntBoundsRect = "{{0, 0}, {1972.28, 54250}}";
+			sepNavSelRange = "{46771, 0}";
+			sepNavVisRange = "{46273, 972}";
 			sepNavWindowFrame = "{{15, 49}, {1266, 764}}";
 		};
 	};
@@ -272,6 +272,13 @@
 			BF027E0612E37A4D005781EA /* PBXTextBookmark */ = BF027E0612E37A4D005781EA /* PBXTextBookmark */;
 			BF027E0712E37A4D005781EA /* PBXTextBookmark */ = BF027E0712E37A4D005781EA /* PBXTextBookmark */;
 			BF027E0812E37A4D005781EA /* PBXTextBookmark */ = BF027E0812E37A4D005781EA /* PBXTextBookmark */;
+			BF027E0C12E38A2D005781EA /* PBXTextBookmark */ = BF027E0C12E38A2D005781EA /* PBXTextBookmark */;
+			BF027E0D12E38A2D005781EA /* PBXTextBookmark */ = BF027E0D12E38A2D005781EA /* PBXTextBookmark */;
+			BF027E0E12E38A2D005781EA /* PBXTextBookmark */ = BF027E0E12E38A2D005781EA /* PBXTextBookmark */;
+			BF027E0F12E38A2D005781EA /* PBXTextBookmark */ = BF027E0F12E38A2D005781EA /* PBXTextBookmark */;
+			BF027E1412E38A3D005781EA /* PBXTextBookmark */ = BF027E1412E38A3D005781EA /* PBXTextBookmark */;
+			BF027E1512E38A3D005781EA /* PBXTextBookmark */ = BF027E1512E38A3D005781EA /* PBXTextBookmark */;
+			BF027E1612E38A3D005781EA /* PBXTextBookmark */ = BF027E1612E38A3D005781EA /* PBXTextBookmark */;
 			BF0625BF12C70738003DD96A = BF0625BF12C70738003DD96A /* PBXTextBookmark */;
 			BF0625E112C70802003DD96A = BF0625E112C70802003DD96A /* PBXTextBookmark */;
 			BF0625F812C70875003DD96A = BF0625F812C70875003DD96A /* PBXTextBookmark */;
@@ -1959,6 +1966,76 @@
 		vrLen = 0;
 		vrLoc = 0;
 	};
+	BF027E0C12E38A2D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BFB3ECAB128E18F300FFCFFE /* InactiveWind.h */;
+		name = "InactiveWind.h: 14";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	BF027E0D12E38A2D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF8F238B12AB382C00032D8A /* CampBird.m */;
+		name = "CampBird.m: 62";
+		rLen = 0;
+		rLoc = 1331;
+		rType = 0;
+		vrLen = 820;
+		vrLoc = 968;
+	};
+	BF027E0E12E38A2D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */;
+		name = "TurtleTowerViewController.m: 1844";
+		rLen = 0;
+		rLoc = 46755;
+		rType = 0;
+		vrLen = 1075;
+		vrLoc = 46273;
+	};
+	BF027E0F12E38A2D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF325A8512528E3300DAAF73 /* DifficultyObstacle.m */;
+		name = "DifficultyObstacle.m: 21";
+		rLen = 0;
+		rLoc = 423;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	BF027E1412E38A3D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BFB3ECAB128E18F300FFCFFE /* InactiveWind.h */;
+		name = "InactiveWind.h: 14";
+		rLen = 0;
+		rLoc = 220;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	BF027E1512E38A3D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */;
+		name = "TurtleTowerViewController.m: 1847";
+		rLen = 0;
+		rLoc = 46771;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 46273;
+	};
+	BF027E1612E38A3D005781EA /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF325A8512528E3300DAAF73 /* DifficultyObstacle.m */;
+		name = "DifficultyObstacle.m: 21";
+		rLen = 0;
+		rLoc = 423;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
 	BF06258E12C7052E003DD96A /* EasyCloud.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1369, 498}}";
@@ -2502,7 +2579,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */;
 		name = "TurtleTowerViewController.m: 2051";
 		rLen = 0;
-		rLoc = 53986;
+		rLoc = 54256;
 		rType = 0;
 		vrLen = 375;
 		vrLoc = 52317;
@@ -3050,8 +3127,8 @@
 	BF8F238B12AB382C00032D8A /* CampBird.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1495.45, 4400}}";
-			sepNavSelRange = "{1137, 0}";
-			sepNavVisRange = "{968, 758}";
+			sepNavSelRange = "{1331, 0}";
+			sepNavVisRange = "{968, 820}";
 		};
 	};
 	BF8F239112AB38C900032D8A /* DivebombBird.h */ = {

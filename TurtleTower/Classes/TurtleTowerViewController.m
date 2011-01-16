@@ -1833,6 +1833,20 @@
 	}
 }
 
+-(int)bonusScoreByDifficulty {
+	if (difficultyLevel == 0) {
+		return 0;	
+	}else if (difficultyLevel == 1){
+		return 8;	
+	}else if (difficultyLevel == 2){
+		return 16;	
+	}else if (difficultyLevel == 3) {
+		return 24;	
+	}
+	
+	return 0;
+}
+
 -(void)landedOnPlat:(Platform *)p firstPlatform:(BOOL)firstPlat{
 	[t setSquashState:TSC_SQUASH];
 	if (gamestate == 1 && p.landed == 0){
@@ -1870,7 +1884,7 @@
 		
 		lastScore = landingAccuracy;
 		[self colorPlatform:p withScore:landingAccuracy];		
-		score+= landingAccuracy;	
+		score+= (landingAccuracy + [self bonusScoreByDifficulty]);	
 		
 		fastScoreTimer = fastScoreTimerReset;
 		
