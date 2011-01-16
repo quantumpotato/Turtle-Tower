@@ -533,6 +533,9 @@
 }
 
 -(void)landedOnPlatform:(Platform *)p firstPlatform:(BOOL)firstPlat{	
+	lands++;
+	float updated = lands/ totallands;
+	[ms updateProgress:updated];
 	if (gamestate == 1){
 	[self calcTrainingText];
 	}
@@ -618,6 +621,8 @@
 }
 
 -(void)resetDifficulty{
+	totallands = 2500;
+	lands = 0;
 	self.sphere = @"Stratosphere";
 	difficultySelectedStatus = -1;
 	cloudScrollSpeed = 3;
@@ -2121,7 +2126,7 @@
 		difficultySelectedStatus = 0;
 		difficultyLevel = diff;
 		[self setDifficulties];
-		risingSpeed = -12;
+		risingSpeed = -20;
 		
 		[self setPlatformSpeed:risingSpeed];
 		

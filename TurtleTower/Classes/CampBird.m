@@ -51,6 +51,17 @@
 	}
 }
 
+-(void)chargeAhead {
+	self.state = 3; //charging
+	int chargeDir = -1;
+	if (t.l.x > self.l.x){
+		chargeDir = 1;
+	}
+	self.target = CGPointMake(self.l.x + (chargeDir * 10),self.l.y);
+	self.vel = GetAngle(self.l, self.target);
+	self.vel = MultiplyVel(self.vel, self.speed+2);
+}
+
 -(void)move{
 	
 	if (self.state <= 2){
@@ -77,7 +88,7 @@
 	
 	if (self.state == 3){
 		self.timer++;	
-		if (self.timer >= 10*66){
+		if (self.timer >= 20*66){
 			self.l = SYetY(self.l, 955);
 		}
 	}else if (self.state == 4){
@@ -96,17 +107,12 @@
 			self.direction = -self.direction;
 		}
 		
-		if (self.state == 2){
+		if (self.state == 1){
 			if (t.l.y <= self.l.y){
 				//Camp birds flap wings slow: will delay then charge wherever the turtle was at the time of delaying.
 				//Land somewhere, then move.
 				//Possibly will charge at the current Turtle's X, old Y?
-				self.state = 4; //charging
-				self.vel = CGPointZero;
-				self.target = t.l;
-				int randomDelay = random() % 16;
-				self.timer = 5+randomDelay;
-				//				self.timer = self.birdController.diffVertBirdDelay + randomDelay;
+				[self chargeAhead];
 			}
 		}
 	}
@@ -120,25 +126,21 @@
 }
 
 -(void)turtlelanded{
-	if (self.state == 1){
+	if (self.state == 2){ //WAS 1
 		if (t.l.y <= self.l.y){
-			//Camp birds flap wings fast: will charge immediately, time your landing. Will always contain enough
+			//Camp birds flap wings fast: will charge immediately, time your landing. Will possibly contain enough
 			//Y variance to be out of the way.
+					
+//			if (self.l.x < -35 || self.l.x > 35){
+//				self.state = 1; //WAS 2
+//				return;
+//			}
 			
-			if (self.l.x < -35 || self.l.x > 35){
-				self.state = 2;
-				return;
-			}
-			self.state = 3; //charging
-			int chargeDir = -1;
-			if (t.l.x > self.l.x){
-				chargeDir = 1;
-			}
-			self.target = CGPointMake(self.l.x + (chargeDir * 10),self.l.y);
-			self.vel = GetAngle(self.l, self.target);
-			self.vel = MultiplyVel(self.vel, self.speed);
-			self.timer = 0;
-			
+			self.state = 4; //charging
+			self.vel = CGPointZero;
+			self.target = t.l;
+			int randomDelay = random() % 5;// WAS using Timer
+			self.timer = 3+randomDelay;			
 		}
 	}
 	

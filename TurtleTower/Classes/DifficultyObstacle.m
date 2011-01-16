@@ -19,7 +19,6 @@
 
 -(void)scrollWithY:(float)y{
 	self.l = SYOffsetY(self.l, y);	
-	NSLog(@"new y: %f",self.l.y);
 }
 
 @end

@@ -18,7 +18,7 @@
 		moon.center = CGPointMake(0,10);
 		[self addSubview:moon];
 		turtle = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"turtlesmallsize1.png"]];
-		turtle.center = CGPointMake(0,0);
+		turtle.center = CGPointMake(20,0);
 		turtle.transform = CGAffineTransformMakeScale(.6, .6);
 		[self addSubview:turtle];
     }
@@ -32,7 +32,6 @@
 -(void)updateProgress:(float)newProgress {
 	progress = newProgress;
 	turtle.center = CGPointMake(turtle.center.x,[self calculatedProgress]);	
-	NSLog(@"y: %f",turtle.center.y);
 }
 
 @end

@@ -171,6 +171,8 @@
 	UILabel *trainingText;
 	
 	int trainingState;
+	
+	float lands, totallands;
 }
 
 @property(nonatomic,retain) UILabel *easyText;
