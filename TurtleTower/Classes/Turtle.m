@@ -45,7 +45,7 @@
 
 -(void)tick {
 	
-	if (fabsf(self.vel.x > 0)){
+	if (self.state == TSA_TURTLE_STATE_AIR){
 		if (self.vel.x < 0){
 			self.facing = -1;
 		}else {

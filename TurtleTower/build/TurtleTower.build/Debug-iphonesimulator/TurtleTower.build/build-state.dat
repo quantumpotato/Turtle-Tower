@@ -1,7 +1,7 @@
 TTurtleTower
 v7
 r0
-t316658954.603527
+t316895522.729099
 cCheck dependencies
 cProcessInfoPlistFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/Info.plist TurtleTower-Info.plist
 cCompileXIB /Users/cmp/TurtleTower/TurtleTower/MainWindow.xib
@@ -64,6 +64,8 @@ cCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Object
 cCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/MediumCloud.o /Users/cmp/TurtleTower/TurtleTower/Classes/MediumCloud.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/HardCloud.o /Users/cmp/TurtleTower/TurtleTower/Classes/HardCloud.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/MoonScale.o /Users/cmp/TurtleTower/TurtleTower/Classes/MoonScale.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleChat.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleCarryBird.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower normal i386
 cGenerateDSYMFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app.dSYM /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower
 cTouch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app
@@ -339,8 +341,8 @@ i<Foundation/Foundation.h>
 i"Bird.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m
-c000000004D045C4800000000000004C8
-t1292131400
+c000000004D33355B00000000000004C8
+t1295201627
 s1224
 i"DivebombBird.h"
 
@@ -537,10 +539,35 @@ i<Foundation/Foundation.h>
 i"Ball.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m
-c000000004D2F990B0000000000000788
-t1294965003
-s1928
+c000000004D3339780000000000000795
+t1295202680
+s1941
 i"Turtle.h"
+
+N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.h
+c000000004D33362000000000000001C5
+t1295201824
+s453
+i<UIKit/UIKit.h>
+i"DivebombBird.h"
+
+N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m
+c000000004D3338160000000000000211
+t1295202326
+s529
+i"TurtleCarryBird.h"
+
+N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.h
+c000000004D32318100000000000000C7
+t1295135105
+s199
+i<UIKit/UIKit.h>
+
+N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m
+c000000004D3231810000000000000238
+t1295135105
+s568
+i"TurtleChat.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleGameMoveState.h
 c000000004CC7571000000000000000E6
@@ -592,9 +619,9 @@ i"TurtleTowerAppDelegate.h"
 i"TurtleTowerViewController.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.h
-c000000004D2F9CF3000000000000101B
-t1294966003
-s4123
+c000000004D33391E000000000000105D
+t1295202590
+s4189
 i<UIKit/UIKit.h>
 i"vrvc.h"
 i"Turtle.h"
@@ -615,11 +642,12 @@ i"EasyCloud.h"
 i"MediumCloud.h"
 i"HardCloud.h"
 i"MoonScale.h"
+i"TurtleCarryBird.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m
-c000000004D2F9D89000000000000CF22
-t1294966153
-s53026
+c000000004D3339A2000000000000D2FF
+t1295202722
+s54015
 i"TurtleTowerViewController.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/WhiteCloud.h
@@ -788,11 +816,11 @@ i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app
-t1294966154
+t1295202722
 s748
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app.dSYM
-t1294966154
+t1295202722
 s102
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/ActiveWind
@@ -832,8 +860,8 @@ t1294525348
 s11201
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower
-t1294966154
-s249408
+t1295202722
+s255412
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTowerPlatform.png
 t1294525348
@@ -948,7 +976,7 @@ t1294525350
 s17284
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBird.o
-t1294525774
+t1295201628
 s17052
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBirdRow.o
@@ -1012,8 +1040,16 @@ t1291773369
 s5500
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/Turtle.o
-t1294965005
-s18408
+t1295202680
+s18384
+
+N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleCarryBird.o
+t1295202326
+s13744
+
+N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleChat.o
+t1295136924
+s9516
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleGameMoveState.o
 t1294525350
@@ -1028,17 +1064,17 @@ t1294525350
 s4900
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTower.LinkFileList
-c000000004D2F9A90000000000000160A
-t1294965392
-s5642
+c000000004D3335130000000000001717
+t1295201555
+s5911
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerAppDelegate.o
-t1294966003
+t1295202590
 s44600
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerViewController.o
-t1294966154
-s219492
+t1295202722
+s224884
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/WhiteCloud.o
 t1294599389
@@ -1648,7 +1684,7 @@ lSLF07#2@49"Analyze /Users/cmp/TurtleTower/TurtleTower/main.m316218151#316218152
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies316658954#316658954#0(0"0(0#1#0"4300911832#0"0#
+lSLF07#2@18"Check dependencies316895522#316895522#0(0"0(0#1#0"4300911832#0"0#
 
 CCompileC build/Debug-iphonesimulator/TurtleTower.app/ActiveWind.o /Users/cmp/TurtleTower/TurtleTower/Classes/ActiveWind.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s311303079.983704
@@ -1849,8 +1885,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@71"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/DifficultyObstacle.m316218150#316218150#0(0"0(0#0#63"/Users/cmp/TurtleTower/TurtleTower/Classes/DifficultyObstacle.m4300911832#1931"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/DifficultyObstacle.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DifficultyObstacle.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBird.o /Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s316218574.554015
-e316218574.639814
+s316894428.008709
+e316894428.090956
 r1
 xCompileC
 xbuild/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBird.o
@@ -1859,7 +1895,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@65"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m316218574#316218574#0(0"0(0#0#57"/Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m4300911832#1919"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBird.o0#
+lSLF07#2@65"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m316894428#316894428#0(0"0(0#0#57"/Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m4300911832#1919"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBird.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBird.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/DivebombBirdRow.o /Users/cmp/TurtleTower/TurtleTower/Classes/DivebombBirdRow.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s316218574.778061
@@ -2060,8 +2096,8 @@ o/Users/cmp/TurtleTower/TurtleTower/ScrollProtocol.m:14: warning: cannot find in
 lSLF07#2@59"Compile /Users/cmp/TurtleTower/TurtleTower/ScrollProtocol.m313466169#313466169#0(120"/Users/cmp/TurtleTower/TurtleTower/ScrollProtocol.m:14: warning: cannot find interface declaration for 'ScrollProtocol'1(22@54"Cannot find interface declaration for 'ScrollProtocol'313466169#0#120#0(6@51"/Users/cmp/TurtleTower/TurtleTower/ScrollProtocol.m313466131#14#0#14#0#0"0(0#0#51"/Users/cmp/TurtleTower/TurtleTower/ScrollProtocol.m4300911832#1915"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/ScrollProtocol.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/ScrollProtocol.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/Turtle.o /Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s316657805.279059
-e316657805.417931
+s316895480.724345
+e316895480.834796
 r1
 xCompileC
 xbuild/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/Turtle.o
@@ -2070,7 +2106,33 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m316657805#316657805#0(0"0(0#0#51"/Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m4300911832#1907"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/Turtle.o0#
+lSLF07#2@59"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m316895480#316895480#0(0"0(0#0#51"/Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m4300911832#1907"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/Turtle.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/Turtle.o0#
+
+CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleCarryBird.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316895126.556986
+e316895126.622580
+r1
+xCompileC
+xbuild/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleCarryBird.o
+x/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m316895126#316895126#0(0"0(0#0#60"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m4300911832#1925"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleCarryBird.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleCarryBird.o0#
+
+CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleChat.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s316829724.678023
+e316829724.745445
+r1
+xCompileC
+xbuild/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleChat.o
+x/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m316829724#316829724#0(0"0(0#0#55"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m7311434928328832000#1915"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleChat.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleChat.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleGameMoveState.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleGameMoveState.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s316218150.903664
@@ -2112,8 +2174,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@68"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleMoveState.m316218150#316218150#0(0"0(0#0#60"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleMoveState.m4300911832#1925"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleMoveState.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleMoveState.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerAppDelegate.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s316658803.585200
-e316658803.744917
+s316895390.333506
+e316895390.484559
 r1
 xCompileC
 xbuild/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerAppDelegate.o
@@ -2122,11 +2184,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@75"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m316658803#316658803#0(0"0(0#0#67"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m4300911832#1939"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerAppDelegate.o0#
+lSLF07#2@75"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m316895390#316895390#0(0"0(0#0#67"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m4300911832#1939"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerAppDelegate.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerViewController.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s316658954.053998
-e316658954.528902
+s316895522.143348
+e316895522.650990
 r1
 xCompileC
 xbuild/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerViewController.o
@@ -2135,7 +2197,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m316658954#316658954#0(0"0(0#0#70"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m4300911832#1945"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerViewController.o0#
+lSLF07#2@78"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m316895522#316895522#0(0"0(0#0#70"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m4300911832#1945"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-blrpemjaqanjkwhcshuvpyijblms/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTowerViewController.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/WhiteCloud.o /Users/cmp/TurtleTower/TurtleTower/Classes/WhiteCloud.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s316292189.661958
@@ -2418,23 +2480,23 @@ xturtlesmallsize1.png
 lSLF07#2@25"Copy turtlesmallsize1.png316218148#316218148#0(0"0(0#0#55"/Users/cmp/TurtleTower/TurtleTower/turtlesmallsize1.png4300911832#456"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/cmp/TurtleTower/TurtleTower/turtlesmallsize1.png /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app0#
 
 CGenerateDSYMFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app.dSYM /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower
-s316658954.569974
-e316658954.601067
+s316895522.693011
+e316895522.726536
 r1
 xGenerateDSYMFile
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app.dSYM
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower
-lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/TurtleTower.app.dSYM build/Debug-iphonesimulator/TurtleTower.app/TurtleTower316658954#316658954#0(0"0(0#0#90"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower4300911832#383"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app.dSYM0#
+lSLF07#2@121"GenerateDSYMFile build/Debug-iphonesimulator/TurtleTower.app.dSYM build/Debug-iphonesimulator/TurtleTower.app/TurtleTower316895522#316895522#0(0"0(0#0#90"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower4300911832#383"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app.dSYM0#
 
 CLd /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower normal i386
-s316658954.528987
-e316658954.569866
+s316895522.651079
+e316895522.692890
 r1
 xLd
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower
 xnormal
 xi386
-lSLF07#2@95"Link /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower316658954#316658954#0(0"0(0#0#0"4300911832#864"    cd /Users/cmp/TurtleTower/TurtleTower    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -filelist /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTower.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower0#
+lSLF07#2@95"Link /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower316895522#316895522#0(0"0(0#0#0"4300911832#864"    cd /Users/cmp/TurtleTower/TurtleTower    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -filelist /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/Objects-normal/i386/TurtleTower.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/TurtleTower0#
 
 CProcessInfoPlistFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app/Info.plist TurtleTower-Info.plist
 s316220456.987936
@@ -2485,10 +2547,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@33"Precompile TurtleTower_Prefix.pch309100885#309100887#0(0"0(0#0#57"/Users/cmp/TurtleTower/TurtleTower/TurtleTower_Prefix.pch4300911832#1785"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources/i386 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphonesimulator/TurtleTower.build/DerivedSources -c /Users/cmp/TurtleTower/TurtleTower/TurtleTower_Prefix.pch -o /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-gfycclgartibbzcfunkgjifaqvla/TurtleTower_Prefix.pch.gch0#
 
 CTouch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app
-s316658954.601161
-e316658954.603495
+s316895522.726627
+e316895522.729069
 r1
 xTouch
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app
-lSLF07#2@84"Touch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app316658954#316658954#0(0"0(0#0#0"4300911832#274"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app0#
+lSLF07#2@84"Touch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app316895522#316895522#0(0"0(0#0#0"4300911832#274"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphonesimulator/TurtleTower.app0#
 

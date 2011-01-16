@@ -26,6 +26,7 @@
 #import "MediumCloud.h"
 #import "HardCloud.h"
 #import "MoonScale.h"
+#import "TurtleCarryBird.h"
 
 #define CONTROLLER_WIND 0
 
@@ -46,7 +47,7 @@
 #define state_INTRO_BIRD_SWOOP 1
 #define state_INTRO_BIRD_CARRY 2
 
-@interface TurtleTowerViewController : vrvc <PlatformDelegate, WindDelegate, BirdControllerDelegate, SpawnerBirdDelegate> {
+@interface TurtleTowerViewController : vrvc <PlatformDelegate, WindDelegate, BirdControllerDelegate, SpawnerBirdDelegate, TurtleGrabbed> {
 	Turtle *t;	
 	Turtle *t2;
 	
@@ -206,5 +207,6 @@
 
 -(void)showMoonBar;
 -(void)hideMoonScale;
+-(void)showIntroTexts;
 
 @end

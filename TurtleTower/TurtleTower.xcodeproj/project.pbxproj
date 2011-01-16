@@ -15,6 +15,7 @@
 		2899E5220DE3E06400AC0155 /* TurtleTowerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* TurtleTowerViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* TurtleTowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TurtleTowerViewController.m */; };
+		BF027D2012E368B6005781EA /* TurtleCarryBird.m in Sources */ = {isa = PBXBuildFile; fileRef = BF027D1F12E368B6005781EA /* TurtleCarryBird.m */; };
 		BF06259012C7052E003DD96A /* EasyCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF06258F12C7052E003DD96A /* EasyCloud.m */; };
 		BF06259F12C705CF003DD96A /* MediumCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF06259E12C705CF003DD96A /* MediumCloud.m */; };
 		BF0625A212C705E8003DD96A /* HardCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0625A112C705E8003DD96A /* HardCloud.m */; };
@@ -42,6 +43,7 @@
 		BF86965C127B557C00C914F3 /* greenbirdb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869658127B557C00C914F3 /* greenbirdb.png */; };
 		BF8BDF9512ADACAC001F8135 /* BirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8BDF9412ADACAC001F8135 /* BirdRow.m */; };
 		BF8BDF9812ADADBC001F8135 /* PatrolBirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8BDF9712ADADBC001F8135 /* PatrolBirdRow.m */; };
+		BF8D85CB12E2690100D1C270 /* TurtleChat.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8D85CA12E2690100D1C270 /* TurtleChat.m */; };
 		BF8E04D412B0875B00D3668F /* CampBirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8E04D312B0875B00D3668F /* CampBirdRow.m */; };
 		BF8EEEFC12778E89002BF326 /* TurtleMenuMoveState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EEEFB12778E89002BF326 /* TurtleMenuMoveState.m */; };
 		BF8EEEFF12778E90002BF326 /* TurtleGameMoveState.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8EEEFE12778E90002BF326 /* TurtleGameMoveState.m */; };
@@ -85,6 +87,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TurtleTower_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleTower_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* TurtleTower-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TurtleTower-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		BF027D1E12E368B6005781EA /* TurtleCarryBird.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleCarryBird.h; sourceTree = "<group>"; };
+		BF027D1F12E368B6005781EA /* TurtleCarryBird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleCarryBird.m; sourceTree = "<group>"; };
 		BF06258E12C7052E003DD96A /* EasyCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyCloud.h; sourceTree = "<group>"; };
 		BF06258F12C7052E003DD96A /* EasyCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyCloud.m; sourceTree = "<group>"; };
 		BF06259D12C705CF003DD96A /* MediumCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediumCloud.h; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		BF8BDF9412ADACAC001F8135 /* BirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdRow.m; sourceTree = "<group>"; };
 		BF8BDF9612ADADBC001F8135 /* PatrolBirdRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatrolBirdRow.h; sourceTree = "<group>"; };
 		BF8BDF9712ADADBC001F8135 /* PatrolBirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatrolBirdRow.m; sourceTree = "<group>"; };
+		BF8D85C912E2690100D1C270 /* TurtleChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleChat.h; sourceTree = "<group>"; };
+		BF8D85CA12E2690100D1C270 /* TurtleChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurtleChat.m; sourceTree = "<group>"; };
 		BF8E04D212B0875B00D3668F /* CampBirdRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBirdRow.h; sourceTree = "<group>"; };
 		BF8E04D312B0875B00D3668F /* CampBirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBirdRow.m; sourceTree = "<group>"; };
 		BF8EEEFA12778E89002BF326 /* TurtleMenuMoveState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurtleMenuMoveState.h; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BF8D85C712E268EE00D1C270 /* Images */,
 				BF52B3241293502000FF1FBC /* Difficulty Controls */,
 				BFBCA4ED127C943300EA087D /* Base Classes */,
 				BFBCA4EC127C942600EA087D /* Birds */,
@@ -309,6 +316,15 @@
 			name = "Difficulty Controls";
 			sourceTree = "<group>";
 		};
+		BF8D85C712E268EE00D1C270 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BF8D85C912E2690100D1C270 /* TurtleChat.h */,
+				BF8D85CA12E2690100D1C270 /* TurtleChat.m */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		BF8EEF0312778E99002BF326 /* Turtle */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +399,8 @@
 				BF8E04D312B0875B00D3668F /* CampBirdRow.m */,
 				BFBDDE4712B5AD6C0081357A /* DivebombBirdRow.h */,
 				BFBDDE4812B5AD6C0081357A /* DivebombBirdRow.m */,
+				BF027D1E12E368B6005781EA /* TurtleCarryBird.h */,
+				BF027D1F12E368B6005781EA /* TurtleCarryBird.m */,
 			);
 			name = Birds;
 			sourceTree = "<group>";
@@ -538,6 +556,8 @@
 				BF06259F12C705CF003DD96A /* MediumCloud.m in Sources */,
 				BF0625A212C705E8003DD96A /* HardCloud.m in Sources */,
 				BFC0A6BE12DFD19400FD30E0 /* MoonScale.m in Sources */,
+				BF8D85CB12E2690100D1C270 /* TurtleChat.m in Sources */,
+				BF027D2012E368B6005781EA /* TurtleCarryBird.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

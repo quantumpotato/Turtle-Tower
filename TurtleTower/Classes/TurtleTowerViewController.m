@@ -712,18 +712,12 @@
 	[self showBeginningPlatforms];
 	[self centerTurtleAtPlatform:[self lowestPlatform]];
 	gamestate = 5;
-	[self showScore];
 	
 	[self.birdController reset];
 	
 	[self resetScore];
 	
-	//t.l = SYetY(t.l, -200);
-	///	gamestate = state_GAME_ANIMATING;
-	//	animscene = ANIMSCENE_POSTDEATH;
-	//	animstate = ANIMSTATE_CLOUD_RISE;
-	//	animstatetick = 48;
-	//	
+	[self showIntroTexts];
 	
 }
 
@@ -923,8 +917,9 @@
 
 -(void)TurtleLoop{
 	[t tick];
-	[self setAccelerometerForPlatform];
 	
+	[self setAccelerometerForPlatform];
+		
 	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM){
 		t.vel = CGPointMake(0,risingSpeed);
 		t.l = CombineVel(t.l, t.vel);
@@ -1244,8 +1239,25 @@
 	}
 }
 
+-(void)IntroLoop {
+	if (gamestate == 6){ 
+		
+		t2.l = CombineVel(t2.l,t2.vel);
+		t2.imageView.center = t2.l;
+		
+		
+		if (animscene == state_INTRO_TURTLE_TALK) {
+			animstatetick--;
+			if (animstatetick <= 0) {
+				[self moonTalkEnded];
+			}
+		}
+	}
+}
+
 -(void)loop{
 	[super loop];
+	[self IntroLoop];
 	[self ScoreLabelLoop];
 	[self TurtleLoop];
 	[self PlatformsLoop];
@@ -1293,23 +1305,51 @@
 	animscene = state_INTRO_BIRD_CARRY;	
 }
 
+-(void)grabbedTurtle:(Bird *)bird	{
+	t2.vel = bird.vel;
+}
+
+-(void)finishedTurtleOffScreen {
+	t2.l = CGPointMake(1000, 1000);
+	gamestate = 5;
+	[self createIntroTexts];
+	[self showScore];
+}
+
 -(void)moonTalkEnded {
 	animscene = state_INTRO_BIRD_SWOOP;
 	//generate swooping bird
+	TurtleCarryBird *bird = [[TurtleCarryBird alloc] init];
+	bird.turtleGrabbedDelegate = self;
+	bird.t = t2;
+	bird.l = CGPointMake(320, 480);
+	bird.vel = GetAngle(bird.l,t2.l);
+	bird.vel = MultiplyVel(bird.vel, 8);
+	bird.facing = -1;
+	bird.animF = 0;
+	bird.animTickReset = 10;
+	bird.animTick = bird.animTickReset;
+	bird.animFMax = 1;
+	bird.oscillateValue = 0;	
+	[self.view addSubview:bird.imageView];
+	[self.obs addObject:bird];
+	[bird release];
+	
 }
 
 -(void)setupBeginning{
-	gamestate = 5; //5
-//	gamestate = 6;
+	gamestate = 5;
+	[self showScore];
+	gamestate = 6;
 	animscene = state_INTRO_TURTLE_TALK;
 	animstatetick = 60; //Talking about moon
 	
 	[self showBeginningPlatforms];
-	[self showScore];
 	manaCharge = 150;
 	//	[self showMana];
-	[self createIntroTexts];
 	[self positionTurtleAtLowestPlatform];
+	t.l = SXetX(t.l, 120);
+	t2.l = CGPointMake(280, t.l.y);
 	[self saveScoresToPhone];
 	
 	NSString *dataPath = [self gameFilePath];
@@ -1344,6 +1384,12 @@
 	t.state = TSA_TURTLE_STATE_AIR;
 	t.jumpLeft = t.jumpLeftReset;	
 	t.lastl = SYOffsetY(t.lastl, 10);
+}
+
+-(void)showIntroTexts {
+	climbTowerText.center = CGPointMake(70,210);
+	upgradeText.center = CGPointMake(160,210);
+	scoresText.center = CGPointMake(260,210);
 }
 
 -(void)createIntroTexts{
@@ -1393,7 +1439,8 @@
 	[self.view addSubview:t.imageView];	
 	
 	t2 = [[Turtle alloc] init];
-	[self.view addSubview:t.imageView];
+	[self.view addSubview:t2.imageView];
+	t2.imageView.transform = CGAffineTransformMakeScale(-1, 1);
 	
 	ms = [[MoonScale alloc] initWithFrame:CGRectMake(280,30,40,400)];
 	[self.view addSubview:ms];
@@ -2081,6 +2128,5 @@
 		difficultySelectedStatus = 1;	
 	}
 }
-
 
 @end	
