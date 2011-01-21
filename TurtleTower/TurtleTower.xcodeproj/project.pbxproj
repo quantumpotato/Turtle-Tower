@@ -63,6 +63,8 @@
 		BFBCA4F1127C945600EA087D /* Feather.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBCA4F0127C945600EA087D /* Feather.m */; };
 		BFBDDE4912B5AD6C0081357A /* DivebombBirdRow.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBDDE4812B5AD6C0081357A /* DivebombBirdRow.m */; };
 		BFC0A6BE12DFD19400FD30E0 /* MoonScale.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0A6BD12DFD19400FD30E0 /* MoonScale.m */; };
+		BFC0C90C12E9193D00CA8328 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC0C90B12E9193D00CA8328 /* heart.png */; };
+		BFC0C91D12E91B6700CA8328 /* SetupCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0C91C12E91B6700CA8328 /* SetupCloud.m */; };
 		BFC161D8125EAE1800A76470 /* cmpvisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC161D7125EAE1800A76470 /* cmpvisuals.m */; };
 		BFE7BE92124C38D60083A59A /* vrvc.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE91124C38D60083A59A /* vrvc.m */; };
 		BFE7BE98124C39F20083A59A /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE97124C39F20083A59A /* Ball.m */; };
@@ -168,6 +170,9 @@
 		BFBDDE4812B5AD6C0081357A /* DivebombBirdRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivebombBirdRow.m; sourceTree = "<group>"; };
 		BFC0A6BC12DFD19400FD30E0 /* MoonScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoonScale.h; sourceTree = "<group>"; };
 		BFC0A6BD12DFD19400FD30E0 /* MoonScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoonScale.m; sourceTree = "<group>"; };
+		BFC0C90B12E9193D00CA8328 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		BFC0C91B12E91B6700CA8328 /* SetupCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupCloud.h; sourceTree = "<group>"; };
+		BFC0C91C12E91B6700CA8328 /* SetupCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupCloud.m; sourceTree = "<group>"; };
 		BFC161D6125EAE1800A76470 /* cmpvisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmpvisuals.h; sourceTree = "<group>"; };
 		BFC161D7125EAE1800A76470 /* cmpvisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmpvisuals.m; sourceTree = "<group>"; };
 		BFE7BE90124C38D60083A59A /* vrvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrvc.h; sourceTree = "<group>"; };
@@ -274,6 +279,7 @@
 		BF0A39D9124E696B00D1DF85 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BFC0C90B12E9193D00CA8328 /* heart.png */,
 				BF325ADB1252996400DAAF73 /* Birds */,
 				BF8F7CA712513E7100C58424 /* TurtleTowerPlatform.png */,
 				BF8F7C131251210E00C58424 /* subliminallycochlear3204601.png */,
@@ -374,6 +380,8 @@
 				BF06259E12C705CF003DD96A /* MediumCloud.m */,
 				BF0625A012C705E8003DD96A /* HardCloud.h */,
 				BF0625A112C705E8003DD96A /* HardCloud.m */,
+				BFC0C91B12E91B6700CA8328 /* SetupCloud.h */,
+				BFC0C91C12E91B6700CA8328 /* SetupCloud.m */,
 			);
 			name = Clouds;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 				BF86965A127B557C00C914F3 /* greenbirdcb.png in Resources */,
 				BF86965B127B557C00C914F3 /* greenbirdca.png in Resources */,
 				BF86965C127B557C00C914F3 /* greenbirdb.png in Resources */,
+				BFC0C90C12E9193D00CA8328 /* heart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +567,7 @@
 				BFC0A6BE12DFD19400FD30E0 /* MoonScale.m in Sources */,
 				BF8D85CB12E2690100D1C270 /* TurtleChat.m in Sources */,
 				BF027D2012E368B6005781EA /* TurtleCarryBird.m in Sources */,
+				BFC0C91D12E91B6700CA8328 /* SetupCloud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,6 +27,7 @@
 #import "HardCloud.h"
 #import "MoonScale.h"
 #import "TurtleCarryBird.h"
+#import "SetupCloud.h"
 
 #define CONTROLLER_WIND 0
 
@@ -47,7 +48,7 @@
 #define state_INTRO_BIRD_SWOOP 1
 #define state_INTRO_BIRD_CARRY 2
 
-@interface TurtleTowerViewController : vrvc <PlatformDelegate, WindDelegate, BirdControllerDelegate, SpawnerBirdDelegate, TurtleGrabbed> {
+@interface TurtleTowerViewController : vrvc <PlatformDelegate, WindDelegate, BirdControllerDelegate, SpawnerBirdDelegate, TurtleGrabbed, SetupCloudDelegate> {
 	Turtle *t;	
 	Turtle *t2;
 	
@@ -173,6 +174,9 @@
 	int trainingState;
 	
 	float lands, totallands;
+	
+	UIImageView *heartshape1;
+	UIImageView *heartshape2;
 }
 
 @property(nonatomic,retain) UILabel *easyText;

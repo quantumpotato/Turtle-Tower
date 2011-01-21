@@ -489,6 +489,14 @@
 	[self.pl addObject:wc];
 	[wc release];
 	
+	SetupCloud *sc = [[SetupCloud alloc] init];
+	sc.l = CGPointMake(250, 230);
+	sc.setupDelegate = self;
+	[self drawPlat:sc];
+	sc.secondView.center = CGPointMake(1000,500);	
+	[self.pl addObject:sc];
+	[sc release];
+	
 	BlueBase *basePlat = [[BlueBase alloc] init];
 	basePlat.l = CGPointMake(160,350);
 	basePlat.delegate = self;
@@ -698,6 +706,12 @@
 	}
 }
 
+-(void)revertClouds{
+	[self eraseAllClouds];
+	[self showBeginningPlatforms];
+	gamestate = 5;
+}
+
 -(void)killTurtle{
 	self.trainingText.center = CGPointMake(500,500);
 	t.l = SYetY(t.l,0);
@@ -708,15 +722,12 @@
 	if (score > highscore){
 		highscore = score;
 	}
-	
-	[self eraseAllClouds];
+
+		[self hideMoonScale];
 	[self removeAllBirdRows];
 	
-	[self hideMoonScale];
-	
-	[self showBeginningPlatforms];
+	[self revertClouds];	
 	[self centerTurtleAtPlatform:[self lowestPlatform]];
-	gamestate = 5;
 	
 	[self.birdController reset];
 	
@@ -924,7 +935,18 @@
 	[t tick];
 	
 	[self setAccelerometerForPlatform];
-		
+	
+	if (gamestate == 61) {
+		t.l = CombineVel(t.l, t.vel);
+		if (t.l.y > 510) {
+			[self revertClouds];
+			self.easyText.center = CGPointMake(1000, 1000);
+			self.mediumText.center = CGPointMake(1000, 1000);	
+			[self showIntroTexts];
+			t.l = CGPointMake(160,-30);
+		}
+	}
+	
 	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM){
 		t.vel = CGPointMake(0,risingSpeed);
 		t.l = CombineVel(t.l, t.vel);
@@ -1249,7 +1271,7 @@
 		
 		t2.l = CombineVel(t2.l,t2.vel);
 		t2.imageView.center = t2.l;
-		
+		heartshape2.center = CGPointMake(t2.l.x, t2.l.y-60);
 		
 		if (animscene == state_INTRO_TURTLE_TALK) {
 			animstatetick--;
@@ -1317,6 +1339,10 @@
 -(void)finishedTurtleOffScreen {
 	t2.l = CGPointMake(1000, 1000);
 	gamestate = 5;
+	[heartshape1 removeFromSuperview];
+	[heartshape1 release];
+	[heartshape2 removeFromSuperview];
+	[heartshape2 release];
 	[self createIntroTexts];
 	[self showScore];
 }
@@ -1344,8 +1370,9 @@
 
 -(void)setupBeginning{
 	gamestate = 5;
-	[self showScore];
+	[self showScore];	
 	gamestate = 6;
+		
 	animscene = state_INTRO_TURTLE_TALK;
 	animstatetick = 60; //Talking about moon
 	
@@ -1353,8 +1380,16 @@
 	manaCharge = 150;
 	//	[self showMana];
 	[self positionTurtleAtLowestPlatform];
-	t.l = SXetX(t.l, 120);
-	t2.l = CGPointMake(280, t.l.y);
+	t.l = SXetX(t.l, 80);
+	t2.l = CGPointMake(240, t.l.y);
+	heartshape1 = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart.png"]] retain];
+	heartshape1.transform = CGAffineTransformMakeScale(.3, .3);
+	[self.view addSubview:heartshape1];	
+	heartshape1.center = CGPointMake(t.l.x, t.l.y - 60);
+	heartshape2 = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart.png"]] retain];
+	heartshape2.transform = CGAffineTransformMakeScale(.3, .3);
+	[self.view addSubview:heartshape2];	
+	heartshape2.center = CGPointMake(t2.l.x, t2.l.y - 60);
 	[self saveScoresToPhone];
 	
 	NSString *dataPath = [self gameFilePath];
@@ -1402,7 +1437,7 @@
 	climbTowerText.backgroundColor = [UIColor clearColor];
 	
 	UILabel *climbLabel = makelabelat(CGRectMake(30,0,60,20));
-	climbLabel.text = @"CLIMB";
+	climbLabel.text = @"PLAY";
 	[climbTowerText addSubview:climbLabel];
 	[self.view addSubview:climbTowerText];
 	
@@ -1419,8 +1454,8 @@
 	scoresText.backgroundColor = [UIColor clearColor];
 	
 	UILabel *scoresLabel = makelabelat(CGRectMake(20,0,80,20));
-	scoresLabel.text = @"SCORES";
-	scoresLabel.textColor = [UIColor greenColor];
+	scoresLabel.text = @"SETUP";
+	scoresLabel.textColor = [UIColor whiteColor];
 	[scoresText addSubview:scoresLabel];
 	[self.view addSubview:scoresText];
 }
@@ -1598,9 +1633,10 @@
 		return;
 	}
 	
-	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM && difficultySelectedStatus == -1){
+	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM) {
 		float dist = 80;
 		float hdist = -110;
+		
 		if (difficultyLevel == 0 && gestureStartPoint.x <= 120){
 			[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - dist,t.l.y+hdist)];
 		}
@@ -1837,7 +1873,7 @@
 	if (difficultyLevel == 0) {
 		return 0;	
 	}else if (difficultyLevel == 1){
-		return 8;	
+		return 8;
 	}else if (difficultyLevel == 2){
 		return 16;	
 	}else if (difficultyLevel == 3) {
@@ -1880,7 +1916,7 @@
 			}	
 		}
 		
-		[self setTurtleOnPlatform:p];
+		[self setTurtleOnPlatform:p]; 
 		
 		lastScore = landingAccuracy;
 		[self colorPlatform:p withScore:landingAccuracy];		
@@ -1913,6 +1949,12 @@
 	gamestate = 20;
 	t.state = 20;
 	t.vel = CGPointMake(0,-5);
+}
+
+-(void)setupCloudLanded {
+	gamestate = 20;
+	t.state = 20;
+	t.vel = CGPointMake(0, -5);
 }
 
 -(void)eraseActiveClouds{
@@ -2003,20 +2045,20 @@
 	
 }	
 
+-(void)centerTurtleAbovePlatform:(Platform *)p{
+	t.l = CGPointMake(p.l.x,p.l.y-15);	
+}
 
--(void)finishedCloudRise{
-	[self resetDifficulty];	
-	[self eraseAllClouds];	
-	
+
+-(void)setupCloudFinishedRise {
+	[self eraseAllClouds];
 	gamestate = 60;
 	t.state = TSP_TURTLE_STATE_PLATFORM;
 	t.l = SXetX(t.l, 160);
 	EasyCloud *ec = [[EasyCloud alloc] init];
 	ec.delegate = self;
 	[self drawPlat:ec];
-	ec.l = CGPointMake(160,480);
-	risingSpeed = -3;
-	ec.vel = CGPointMake(0,risingSpeed);
+	ec.l = CGPointMake(160,380);         
 	[self setTurtleOnPlatform:ec];
 	
 	self.easyText.center = CGPointMake(ec.l.x, ec.l.y + 40);
@@ -2026,10 +2068,20 @@
 	MediumCloud *mc = [[MediumCloud alloc] init];
 	mc.delegate = self;
 	[self drawPlat:mc];	
-	mc.l = CGPointMake(60,481);
-	mc.vel = CGPointMake(0,risingSpeed);
+	mc.l = CGPointMake(60,381);
 	self.mediumText.center = CGPointMake(mc.l.x, mc.l.y + 40);
+	[self centerTurtleAbovePlatform:mc];
+	difficultyLevel = 1;
 	[mc release];
+	
+}
+
+
+-(void)finishedCloudRise{
+	[self resetDifficulty];	
+	[self eraseAllClouds];	
+	[self populateGame];
+	[self finishedFloat];
 }
 
 
@@ -2136,16 +2188,14 @@
 }
 
 -(void)difficultyCloudSelected:(int)diff {
-	if (difficultySelectedStatus == -1) {
 		difficultySelectedStatus = 0;
 		difficultyLevel = diff;
 		[self setDifficulties];
-		risingSpeed = -20;
-		
-		[self setPlatformSpeed:risingSpeed];
-		
-		difficultySelectedStatus = 1;	
-	}
+		gamestate = 61;
+		difficultySelectedStatus = 1;
+		t.l = CGPointMake(t.l.x,t.l.y+30);
+		t.vel = CGPointMake(0, 3);
+		t.state = TSA_TURTLE_STATE_AIR;
 }
 
 @end	

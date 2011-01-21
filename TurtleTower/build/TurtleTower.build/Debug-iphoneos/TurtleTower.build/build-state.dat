@@ -1,7 +1,7 @@
 TTurtleTower
 v7
 r0
-t316901950.280966
+t316915391.185697
 cCheck dependencies
 cCpResource build/Debug-iphoneos/TurtleTower.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.3.sdk/ResourceRules.plist
 cProcessInfoPlistFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/Info.plist TurtleTower-Info.plist
@@ -632,9 +632,9 @@ i"MoonScale.h"
 i"TurtleCarryBird.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m
-c000000004D3352BD000000000000D479
-t1295209149
-s54393
+c000000004D33B6AD000000000000D47E
+t1295234733
+s54398
 i"TurtleTowerViewController.h"
 
 N/Users/cmp/TurtleTower/TurtleTower/Classes/WhiteCloud.h
@@ -802,11 +802,11 @@ i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app
-t1295209150
+t1295222591
 s884
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app.dSYM
-t1295209150
+t1295211472
 s102
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/Info.plist
@@ -842,8 +842,8 @@ t1294600862
 s10634
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower
-t1295209150
-s358256
+t1295211472
+s365712
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTowerPlatform
 t2
@@ -876,6 +876,10 @@ s5996
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/greenbirdcb.png
 t1294600863
 s6007
+
+N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/heart.png
+t2
+s0
 
 N/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/purplebirdatry1.png
 t1294600862
@@ -1043,7 +1047,7 @@ t1295203857
 s45648
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTowerViewController.o
-t1295209150
+t1295211472
 s284484
 
 N/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/WhiteCloud.o
@@ -1269,6 +1273,11 @@ N/Users/cmp/TurtleTower/TurtleTower/greenbirdcb.png
 c000000004B342DF40000000000002625
 t1261710836
 s9765
+
+N/Users/cmp/TurtleTower/TurtleTower/heart.png
+c000000004D38E02F0000000000003D6D
+t1295573039
+s15725
 
 N/Users/cmp/TurtleTower/TurtleTower/main.m
 c000000004C9BFF030000000000000162
@@ -1680,15 +1689,16 @@ lSLF07#2@49"Analyze /Users/cmp/TurtleTower/TurtleTower/main.m316293665#316293665
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies316901949#316901949#0(0"0(0#1#0"4300911832#0"0#
+lSLF07#2@18"Check dependencies316915390#316915390#0(0"0(0#1#0"4300911832#0"0#
 
 CCodeSign /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app
-s316901950.152727
-e316901950.280926
+s316915390.836567
+e316915391.185658
 r1
 xCodeSign
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app
-lSLF07#2@45"CodeSign build/Debug-iphoneos/TurtleTower.app316901950#316901950#0(0"0(0#0#71"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app4300911832#666"    cd /Users/cmp/TurtleTower/TurtleTower    setenv IGNORE_CODESIGN_ALLOCATE_RADAR_7181968 /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign -f -s "iPhone Distribution: Anthony Broussard" --resource-rules=/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/ResourceRules.plist --entitlements /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower.xcent /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app0#
+o/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app: replacing existing signature
+lSLF07#2@45"CodeSign build/Debug-iphoneos/TurtleTower.app316915390#316915391#0(102"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app: replacing existing signature0(0#0#71"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app4300911832#666"    cd /Users/cmp/TurtleTower/TurtleTower    setenv IGNORE_CODESIGN_ALLOCATE_RADAR_7181968 /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/codesign -f -s "iPhone Distribution: Anthony Broussard" --resource-rules=/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/ResourceRules.plist --entitlements /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower.xcent /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app0#
 
 CCompileC build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/ActiveWind.o /Users/cmp/TurtleTower/TurtleTower/Classes/ActiveWind.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s316293665.102194
@@ -2135,8 +2145,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@75"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m316896657#316896657#0(0"0(0#0#67"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m4300911832#1811"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.3.sdk -fvisibility=hidden -gdwarf-2 -mno-thumb -miphoneos-version-min=3.1.3 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/DerivedSources/armv6 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-gxlaaeseajueohdjfgfauzdmypxq/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerAppDelegate.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTowerAppDelegate.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTowerViewController.o /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m normal armv6 objective-c com.apple.compilers.gcc.4_2
-s316901949.387115
-e316901950.065418
+s316904272.057565
+e316904272.607741
 r1
 xCompileC
 xbuild/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTowerViewController.o
@@ -2145,7 +2155,7 @@ xnormal
 xarmv6
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@78"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m316901949#316901950#0(0"0(0#0#70"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m4300911832#1817"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.3.sdk -fvisibility=hidden -gdwarf-2 -mno-thumb -miphoneos-version-min=3.1.3 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/DerivedSources/armv6 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-gxlaaeseajueohdjfgfauzdmypxq/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTowerViewController.o0#
+lSLF07#2@78"Compile /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m316904272#316904272#0(0"0(0#0#70"/Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m4300911832#1817"    cd /Users/cmp/TurtleTower/TurtleTower    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv6 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.3.sdk -fvisibility=hidden -gdwarf-2 -mno-thumb -miphoneos-version-min=3.1.3 -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-generated-files.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-own-target-headers.hmap -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-all-target-headers.hmap -iquote /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower-project-headers.hmap -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -I/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/include -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/DerivedSources/armv6 -I/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/DerivedSources -include /var/folders/Z7/Z7f7b2yHHXuYr9sBp9SHME+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TurtleTower_Prefix-gxlaaeseajueohdjfgfauzdmypxq/TurtleTower_Prefix.pch -c /Users/cmp/TurtleTower/TurtleTower/Classes/TurtleTowerViewController.m -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTowerViewController.o0#
 
 CCompileC build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/WhiteCloud.o /Users/cmp/TurtleTower/TurtleTower/Classes/WhiteCloud.m normal armv6 objective-c com.apple.compilers.gcc.4_2
 s316293664.835234
@@ -2361,6 +2371,9 @@ x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/greenbi
 xgreenbirdcb.png
 lSLF07#2@80"CopyPNGFile build/Debug-iphoneos/TurtleTower.app/greenbirdcb.png greenbirdcb.png316293663#316293663#0(0"0(0#0#50"/Users/cmp/TurtleTower/TurtleTower/greenbirdcb.png4300911832#562"    cd /Users/cmp/TurtleTower/TurtleTower    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/cmp/TurtleTower/TurtleTower/greenbirdcb.png /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/greenbirdcb.png0#
 
+CCopyPNGFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/heart.png heart.png
+r0
+
 CCopyPNGFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/purplebirdatry1.png purplebirdatry1.png
 s316293662.953645
 e316293662.993222
@@ -2437,23 +2450,23 @@ CCpResource build/Debug-iphoneos/TurtleTower.app/TurtleTowerPlatform TurtleTower
 r0
 
 CGenerateDSYMFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app.dSYM /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower
-s316901950.117981
-e316901950.150227
+s316904272.660944
+e316904272.693490
 r1
 xGenerateDSYMFile
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app.dSYM
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower
-lSLF07#2@107"GenerateDSYMFile build/Debug-iphoneos/TurtleTower.app.dSYM build/Debug-iphoneos/TurtleTower.app/TurtleTower316901950#316901950#0(0"0(0#0#83"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower4300911832#362"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app.dSYM0#
+lSLF07#2@107"GenerateDSYMFile build/Debug-iphoneos/TurtleTower.app.dSYM build/Debug-iphoneos/TurtleTower.app/TurtleTower316904272#316904272#0(0"0(0#0#83"/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower4300911832#362"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app.dSYM0#
 
 CLd /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower normal armv6
-s316901950.065509
-e316901950.117873
+s316904272.607836
+e316904272.660830
 r1
 xLd
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower
 xnormal
 xarmv6
-lSLF07#2@88"Link /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower316901950#316901950#0(0"0(0#0#0"4300911832#828"    cd /Users/cmp/TurtleTower/TurtleTower    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.3.sdk -L/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -filelist /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTower.LinkFileList -dead_strip -miphoneos-version-min=3.1.3 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower0#
+lSLF07#2@88"Link /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower316904272#316904272#0(0"0(0#0#0"4300911832#828"    cd /Users/cmp/TurtleTower/TurtleTower    setenv IPHONEOS_DEPLOYMENT_TARGET 3.1.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv6 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.1.3.sdk -L/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -F/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos -filelist /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/Objects-normal/armv6/TurtleTower.LinkFileList -dead_strip -miphoneos-version-min=3.1.3 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/TurtleTower0#
 
 CProcessInfoPlistFile /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app/Info.plist TurtleTower-Info.plist
 s316293661.017872
@@ -2544,10 +2557,10 @@ x/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/Turtl
 lSLF07#2@187"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower.xcent307250416#307250416#0(0"0(0#0#109"/Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower.xcent4300911832#436"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/cmp/TurtleTower/TurtleTower/build/TurtleTower.build/Debug-iphoneos/TurtleTower.build/TurtleTower.xcent0#
 
 CTouch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app
-s316901950.150410
-e316901950.152590
+s316904272.693663
+e316904272.695900
 r1
 xTouch
 x/Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app
-lSLF07#2@77"Touch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app316901950#316901950#0(0"0(0#0#0"4300911832#260"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app0#
+lSLF07#2@77"Touch /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app316904272#316904272#0(0"0(0#0#0"4300911832#260"    cd /Users/cmp/TurtleTower/TurtleTower    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/cmp/TurtleTower/TurtleTower/build/Debug-iphoneos/TurtleTower.app0#
 
