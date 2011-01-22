@@ -56,4 +56,11 @@
 -(void)difficultyCloudSelected:(int)diff cloud:(Platform *)cloud;
 -(void)finishedDifficultyCloudRise;
 
+@optional
+
+-(void)landedOnStratosphereCloud;
+-(void)landedOnMesosphereCloud;
+-(void)landedOnThermosphereCloud;
+
+
 @end

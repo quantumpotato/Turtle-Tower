@@ -98,7 +98,7 @@
 			self.timer = 0;
 			self.target = CGPointMake(self.target.x,t.l.y);
 			self.vel = GetAngle(self.l, self.target);
-			self.vel = MultiplyVel(self.vel, self.speed);
+			self.vel = MultiplyVel(self.vel, self.speed + 1.5);
 		}
 	}else if (self.state == 1 || self.state == 2){
 		self.oscillateRepeat--;
@@ -139,8 +139,8 @@
 			self.state = 4; //charging
 			self.vel = CGPointZero;
 			self.target = t.l;
-			int randomDelay = random() % 5;// WAS using Timer
-			self.timer = 3+randomDelay;			
+			int randomDelay = random() % 50;// WAS using Timer
+			self.timer = 50+randomDelay;			
 		}
 	}
 	

@@ -28,6 +28,9 @@
 #import "MoonScale.h"
 #import "TurtleCarryBird.h"
 #import "SetupCloud.h"
+#import "StratosphereWarpCloud.h"
+#import "MesosphereWarpCloud.h"
+#import "ThermosphereWarpCloud.h"
 
 #define CONTROLLER_WIND 0
 
@@ -165,6 +168,8 @@
 	UILabel *easyText;
 	UILabel *mediumText;
 	
+	UILabel *warpText1, *warpText2, *warpText3;
+	
 	float risingSpeed;
 	
 	int difficultySelectedStatus;
@@ -181,6 +186,9 @@
 
 @property(nonatomic,retain) UILabel *easyText;
 @property(nonatomic,retain) UILabel *mediumText;
+@property(nonatomic,retain) UILabel *warpText1;
+@property(nonatomic,retain) UILabel *warpText2;
+@property(nonatomic,retain) UILabel *warpText3;
 
 @property(nonatomic,retain) NSMutableArray *spawners;
 @property(nonatomic,retain) NSMutableArray *birdRows;

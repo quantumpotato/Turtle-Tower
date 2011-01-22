@@ -66,6 +66,9 @@
 		BFC0C90C12E9193D00CA8328 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC0C90B12E9193D00CA8328 /* heart.png */; };
 		BFC0C91D12E91B6700CA8328 /* SetupCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC0C91C12E91B6700CA8328 /* SetupCloud.m */; };
 		BFC161D8125EAE1800A76470 /* cmpvisuals.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC161D7125EAE1800A76470 /* cmpvisuals.m */; };
+		BFC6CA1412EB81830078AF11 /* StratosphereWarpCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6CA1312EB81830078AF11 /* StratosphereWarpCloud.m */; };
+		BFC6CA1E12EB82790078AF11 /* MesosphereWarpCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6CA1D12EB82790078AF11 /* MesosphereWarpCloud.m */; };
+		BFC6CA2712EB82BA0078AF11 /* ThermosphereWarpCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6CA2612EB82BA0078AF11 /* ThermosphereWarpCloud.m */; };
 		BFE7BE92124C38D60083A59A /* vrvc.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE91124C38D60083A59A /* vrvc.m */; };
 		BFE7BE98124C39F20083A59A /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE97124C39F20083A59A /* Ball.m */; };
 		BFE7BEA9124C3AE20083A59A /* cmpgames.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEA8124C3AE20083A59A /* cmpgames.m */; };
@@ -175,6 +178,12 @@
 		BFC0C91C12E91B6700CA8328 /* SetupCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupCloud.m; sourceTree = "<group>"; };
 		BFC161D6125EAE1800A76470 /* cmpvisuals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmpvisuals.h; sourceTree = "<group>"; };
 		BFC161D7125EAE1800A76470 /* cmpvisuals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmpvisuals.m; sourceTree = "<group>"; };
+		BFC6CA1212EB81830078AF11 /* StratosphereWarpCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StratosphereWarpCloud.h; sourceTree = "<group>"; };
+		BFC6CA1312EB81830078AF11 /* StratosphereWarpCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StratosphereWarpCloud.m; sourceTree = "<group>"; };
+		BFC6CA1C12EB82790078AF11 /* MesosphereWarpCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MesosphereWarpCloud.h; sourceTree = "<group>"; };
+		BFC6CA1D12EB82790078AF11 /* MesosphereWarpCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesosphereWarpCloud.m; sourceTree = "<group>"; };
+		BFC6CA2512EB82BA0078AF11 /* ThermosphereWarpCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermosphereWarpCloud.h; sourceTree = "<group>"; };
+		BFC6CA2612EB82BA0078AF11 /* ThermosphereWarpCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermosphereWarpCloud.m; sourceTree = "<group>"; };
 		BFE7BE90124C38D60083A59A /* vrvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrvc.h; sourceTree = "<group>"; };
 		BFE7BE91124C38D60083A59A /* vrvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vrvc.m; sourceTree = "<group>"; };
 		BFE7BE96124C39F20083A59A /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
@@ -382,6 +391,12 @@
 				BF0625A112C705E8003DD96A /* HardCloud.m */,
 				BFC0C91B12E91B6700CA8328 /* SetupCloud.h */,
 				BFC0C91C12E91B6700CA8328 /* SetupCloud.m */,
+				BFC6CA1212EB81830078AF11 /* StratosphereWarpCloud.h */,
+				BFC6CA1312EB81830078AF11 /* StratosphereWarpCloud.m */,
+				BFC6CA1C12EB82790078AF11 /* MesosphereWarpCloud.h */,
+				BFC6CA1D12EB82790078AF11 /* MesosphereWarpCloud.m */,
+				BFC6CA2512EB82BA0078AF11 /* ThermosphereWarpCloud.h */,
+				BFC6CA2612EB82BA0078AF11 /* ThermosphereWarpCloud.m */,
 			);
 			name = Clouds;
 			sourceTree = "<group>";
@@ -568,6 +583,9 @@
 				BF8D85CB12E2690100D1C270 /* TurtleChat.m in Sources */,
 				BF027D2012E368B6005781EA /* TurtleCarryBird.m in Sources */,
 				BFC0C91D12E91B6700CA8328 /* SetupCloud.m in Sources */,
+				BFC6CA1412EB81830078AF11 /* StratosphereWarpCloud.m in Sources */,
+				BFC6CA1E12EB82790078AF11 /* MesosphereWarpCloud.m in Sources */,
+				BFC6CA2712EB82BA0078AF11 /* ThermosphereWarpCloud.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

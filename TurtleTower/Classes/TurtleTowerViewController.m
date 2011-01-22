@@ -1,3 +1,5 @@
+//Berserk cloud above Play
+
 //Wind needs to save its calculations
 //Birds need dynamic ones
 
@@ -115,6 +117,7 @@
 @synthesize birdController, sphere;
 @synthesize spawners, birdRows;
 @synthesize easyText, mediumText, trainingText;
+@synthesize warpText1, warpText2, warpText3;
 
 -(void)initializeArrays{
 	[super initializeArrays];
@@ -479,6 +482,7 @@
 }
 
 -(void)showBeginningPlatforms{
+	difficultySelectedStatus = -1;
 	diffPlatformWidth = 35;
 	
 	WhiteCloud *wc = [[WhiteCloud alloc] init];
@@ -709,6 +713,8 @@
 -(void)revertClouds{
 	[self eraseAllClouds];
 	[self showBeginningPlatforms];
+	self.warpText1.center = CGPointMake(1000, 1000);
+	t.vel = CGPointMake(0,t.vel.y);
 	gamestate = 5;
 }
 
@@ -723,6 +729,8 @@
 		highscore = score;
 	}
 
+	difficultySelectedStatus = -1;
+	
 		[self hideMoonScale];
 	[self removeAllBirdRows];
 	
@@ -917,25 +925,19 @@
 		t.vel = SXetX(t.vel, 0);
 		
 	}
-	if (t.l.x < 30 && t.vel.x < 0){
-		t.l = SXetX(t.l, 30);	
-		t.vel = SXetX(t.vel, 0);
+	if (gamestate != 60) {
+		if (t.l.x < 30 && t.vel.x < 0){
+			t.l = SXetX(t.l, 30);	
+			t.vel = SXetX(t.vel, 0);
+		}
 	}
 	
-	
-	if (t.l.x> 320){
-		t.l = SXetX(t.l, 320);
-	}
-	if (t.l.x < 0){
-			t.l = SXetX(t.l, 0);	
-	}
 }	
 
 -(void)TurtleLoop{
 	[t tick];
 	
 	[self setAccelerometerForPlatform];
-	NSLog(@"t.vel.y: %f",t.vel.y);
 	
 	if (gamestate == 60 || gamestate == 61){
 		if (t.l.y > 510) {
@@ -1618,17 +1620,7 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 	[super touchesBegan:touches withEvent:event];
 	
-	if (gamestate == 20) {
-		gamestate = 21;
-		t.vel = CGPointMake(0, 8);
-		t.l = CGPointMake(t.l.x,t.l.y+20);
-		t.state = TSA_TURTLE_STATE_AIR;
-		[self setHighPlatformSpeed:8];
-		//		[self setLowPlatformSpeed:-2];
-		return;
-	}
-	
-	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM) {
+	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM && difficultySelectedStatus == -1){
 		float dist = 80;
 		float hdist = -110;
 		
@@ -1678,7 +1670,7 @@
 			}
 		}else if (jumpScheme == 7){
 			if (t.state == TSP_TURTLE_STATE_PLATFORM){
-				if (gamestate == 1 || gamestate == 5){
+				if (gamestate == 1 || gamestate == 5 || gamestate == 60){
 					if (gestureStartPoint.y < t.l.y - 10) {
 						[self calculateTurtleJumpImpulse:gestureStartPoint];	
 						t.walking = 0;
@@ -2043,6 +2035,13 @@
 	self.trainingText.textAlignment = UITextAlignmentCenter;
 	[self.view addSubview:self.trainingText];
 	
+	self.warpText1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+	self.warpText1.backgroundColor = [UIColor clearColor];
+	self.warpText1.textColor = [UIColor whiteColor];
+	self.warpText1.text = @"Stratosphere";
+	self.warpText1.center = CGPointMake(1000, 1000);
+	[self.view addSubview:self.warpText1];
+	
 }	
 
 -(void)centerTurtleAbovePlatform:(Platform *)p{
@@ -2197,19 +2196,37 @@
 -(void)select {
 	t.l = CGPointMake(t.l.x,t.l.y+30);
 	t.imageView.center = t.l;
-	t.vel = CGPointMake(0, 8);
-	
+	[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 200,t.l.y-200)];
 	t.state = TSA_TURTLE_STATE_AIR;
+	gamestate = 60;
 }
+
+-(void)showWarpClouds {
+	StratosphereWarpCloud *sc = [[StratosphereWarpCloud alloc] init];
+	sc.delegate = self;
+	sc.l = CGPointMake(60,230);
+	[self drawPlat:sc];
+	self.warpText1.center = CGPointMake(sc.l.x, sc.l.y + 40);
+	[sc release];
+}
+
 
 -(void)difficultyCloudSelected:(int)diff cloud:(Platform *)cloud {
 //	if (cloud)
 //		[self centerTurtleAbovePlatform:cloud];
-	difficultySelectedStatus = 0;
 		difficultyLevel = diff;
 		[self setDifficulties];
 		gamestate = 60;
-	[self performSelector:@selector(select) withObject:nil afterDelay:.2];  
+	
+	if (difficultySelectedStatus == -1) {
+		[self showWarpClouds];
+			difficultySelectedStatus = 1;
+	}
+}
+
+-(void)landedOnStratosphereCloud {
+	gamestate = 62;
+	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }
 
 @end	
