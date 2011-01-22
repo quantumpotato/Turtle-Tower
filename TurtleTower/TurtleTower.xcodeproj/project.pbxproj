@@ -69,6 +69,7 @@
 		BFC6CA1412EB81830078AF11 /* StratosphereWarpCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6CA1312EB81830078AF11 /* StratosphereWarpCloud.m */; };
 		BFC6CA1E12EB82790078AF11 /* MesosphereWarpCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6CA1D12EB82790078AF11 /* MesosphereWarpCloud.m */; };
 		BFC6CA2712EB82BA0078AF11 /* ThermosphereWarpCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC6CA2612EB82BA0078AF11 /* ThermosphereWarpCloud.m */; };
+		BFC6CAEA12EB8BBA0078AF11 /* pinkheart.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC6CAE912EB8BBA0078AF11 /* pinkheart.png */; };
 		BFE7BE92124C38D60083A59A /* vrvc.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE91124C38D60083A59A /* vrvc.m */; };
 		BFE7BE98124C39F20083A59A /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BE97124C39F20083A59A /* Ball.m */; };
 		BFE7BEA9124C3AE20083A59A /* cmpgames.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEA8124C3AE20083A59A /* cmpgames.m */; };
@@ -184,6 +185,7 @@
 		BFC6CA1D12EB82790078AF11 /* MesosphereWarpCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MesosphereWarpCloud.m; sourceTree = "<group>"; };
 		BFC6CA2512EB82BA0078AF11 /* ThermosphereWarpCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThermosphereWarpCloud.h; sourceTree = "<group>"; };
 		BFC6CA2612EB82BA0078AF11 /* ThermosphereWarpCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThermosphereWarpCloud.m; sourceTree = "<group>"; };
+		BFC6CAE912EB8BBA0078AF11 /* pinkheart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkheart.png; sourceTree = "<group>"; };
 		BFE7BE90124C38D60083A59A /* vrvc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrvc.h; sourceTree = "<group>"; };
 		BFE7BE91124C38D60083A59A /* vrvc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vrvc.m; sourceTree = "<group>"; };
 		BFE7BE96124C39F20083A59A /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ball.h; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC0C90B12E9193D00CA8328 /* heart.png */,
+				BFC6CAE912EB8BBA0078AF11 /* pinkheart.png */,
 				BF325ADB1252996400DAAF73 /* Birds */,
 				BF8F7CA712513E7100C58424 /* TurtleTowerPlatform.png */,
 				BF8F7C131251210E00C58424 /* subliminallycochlear3204601.png */,
@@ -528,6 +531,7 @@
 				BF86965B127B557C00C914F3 /* greenbirdca.png in Resources */,
 				BF86965C127B557C00C914F3 /* greenbirdb.png in Resources */,
 				BFC0C90C12E9193D00CA8328 /* heart.png in Resources */,
+				BFC6CAEA12EB8BBA0078AF11 /* pinkheart.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

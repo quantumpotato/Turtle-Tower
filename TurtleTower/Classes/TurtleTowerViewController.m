@@ -1383,7 +1383,7 @@
 	heartshape1.transform = CGAffineTransformMakeScale(.3, .3);
 	[self.view addSubview:heartshape1];	
 	heartshape1.center = CGPointMake(t.l.x, t.l.y - 60);
-	heartshape2 = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart.png"]] retain];
+	heartshape2 = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pinkheart.png"]] retain];
 	heartshape2.transform = CGAffineTransformMakeScale(.3, .3);
 	[self.view addSubview:heartshape2];	
 	heartshape2.center = CGPointMake(t2.l.x, t2.l.y - 60);
