@@ -32,7 +32,7 @@
 }
 
 -(void)landedOn:(Turtle *)t firstPlatform:(BOOL)firstPlat {
-	[self.delegate difficultyCloudSelected:0];	
+	[self.delegate difficultyCloudSelected:0 cloud:self];	
 }
 
 @end

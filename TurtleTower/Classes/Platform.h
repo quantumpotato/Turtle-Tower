@@ -53,7 +53,7 @@
 -(void)climbCloudLanded;
 -(void)finishedCloudRise;
 -(void)finishedFloat;
--(void)difficultyCloudSelected:(int)diff;
+-(void)difficultyCloudSelected:(int)diff cloud:(Platform *)cloud;
 -(void)finishedDifficultyCloudRise;
 
 @end

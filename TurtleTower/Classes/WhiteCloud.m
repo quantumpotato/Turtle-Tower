@@ -37,7 +37,7 @@
 		if (self.l.y < -30){
 			self.vel = CGPointZero;
 			self.l = CGPointMake(1000, self.l.y);
-			[self.delegate finishedCloudRise];	
+			[self.delegate finishedCloudRise];	 //was finishedCloudRise
 		}
 	}
 }

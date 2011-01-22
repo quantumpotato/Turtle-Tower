@@ -927,7 +927,7 @@
 		t.l = SXetX(t.l, 320);
 	}
 	if (t.l.x < 0){
-		t.l = SXetX(t.l, 0);	
+			t.l = SXetX(t.l, 0);	
 	}
 }	
 
@@ -935,9 +935,9 @@
 	[t tick];
 	
 	[self setAccelerometerForPlatform];
+	NSLog(@"t.vel.y: %f",t.vel.y);
 	
-	if (gamestate == 61) {
-		t.l = CombineVel(t.l, t.vel);
+	if (gamestate == 60 || gamestate == 61){
 		if (t.l.y > 510) {
 			[self revertClouds];
 			self.easyText.center = CGPointMake(1000, 1000);
@@ -945,11 +945,6 @@
 			[self showIntroTexts];
 			t.l = CGPointMake(160,-30);
 		}
-	}
-	
-	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM){
-		t.vel = CGPointMake(0,risingSpeed);
-		t.l = CombineVel(t.l, t.vel);
 	}else if (gamestate == 20){
 		t.vel = CGPointMake(0,-10);
 		t.l = CombineVel(t.l, t.vel);
@@ -1645,8 +1640,13 @@
 		}
 		
 		if (difficultyLevel == 0 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.y > t.l.x - 60 && gestureStartPoint.y < t.l.y + 100){
-			[self difficultyCloudSelected:0];	
+			[self difficultyCloudSelected:0 cloud:nil];	
 		}
+		
+		if (gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.y < t.l.y + 100) {
+			[self difficultyCloudSelected:difficultyLevel cloud:nil];
+		}
+		
 	}	else {
 		if (jumpScheme == 0){
 			if (t.state == TSP_TURTLE_STATE_PLATFORM){
@@ -2016,7 +2016,7 @@
 }	
 
 -(void)finishedDifficultyCloudRise {
-	[self drawClouds];	
+	[self drawClouds];
 	[self colourPlatformsForHeight];
 }
 
@@ -2061,6 +2061,10 @@
 	ec.l = CGPointMake(160,380);         
 	[self setTurtleOnPlatform:ec];
 	
+	if (difficultyLevel == 0) {
+		[self centerTurtleAbovePlatform:ec];
+	}
+	
 	self.easyText.center = CGPointMake(ec.l.x, ec.l.y + 40);
 	[ec release];
 	
@@ -2070,18 +2074,21 @@
 	[self drawPlat:mc];	
 	mc.l = CGPointMake(60,381);
 	self.mediumText.center = CGPointMake(mc.l.x, mc.l.y + 40);
-	[self centerTurtleAbovePlatform:mc];
-	difficultyLevel = 1;
+	if (difficultyLevel == 1) {
+			[self centerTurtleAbovePlatform:mc];
+	}
 	[mc release];
 	
 }
 
 
 -(void)finishedCloudRise{
-	[self resetDifficulty];	
-	[self eraseAllClouds];	
-	[self populateGame];
-	[self finishedFloat];
+	[self setDifficulties];
+	[self finishedDifficultyCloudRise];
+	//	[self resetDifficulty];	
+//	[self eraseAllClouds];	
+//	[self populateGame];
+//	[self finishedFloat];
 }
 
 
@@ -2187,15 +2194,22 @@
 	}	
 }
 
--(void)difficultyCloudSelected:(int)diff {
-		difficultySelectedStatus = 0;
+-(void)select {
+	t.l = CGPointMake(t.l.x,t.l.y+30);
+	t.imageView.center = t.l;
+	t.vel = CGPointMake(0, 8);
+	
+	t.state = TSA_TURTLE_STATE_AIR;
+}
+
+-(void)difficultyCloudSelected:(int)diff cloud:(Platform *)cloud {
+//	if (cloud)
+//		[self centerTurtleAbovePlatform:cloud];
+	difficultySelectedStatus = 0;
 		difficultyLevel = diff;
 		[self setDifficulties];
-		gamestate = 61;
-		difficultySelectedStatus = 1;
-		t.l = CGPointMake(t.l.x,t.l.y+30);
-		t.vel = CGPointMake(0, 3);
-		t.state = TSA_TURTLE_STATE_AIR;
+		gamestate = 60;
+	[self performSelector:@selector(select) withObject:nil afterDelay:.2];  
 }
 
 @end	

@@ -12,7 +12,7 @@
 @implementation MediumCloud
 
 -(void)landedOn:(Turtle *)t firstPlatform:(BOOL)firstPlat {
-	[self.delegate difficultyCloudSelected:1];	
+	[self.delegate difficultyCloudSelected:1 cloud:self];	
 }
 
 @end
