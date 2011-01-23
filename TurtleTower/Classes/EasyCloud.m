@@ -20,15 +20,8 @@
 	return self;
 }
 
--(void)move{
-	[super move];
-//	self.l = CombineVel(self.l, self.vel);
-	if (self.l.y < -30){
-		self.vel = CGPointZero;
-		self.l = CGPointMake(1000, self.l.y);
-		[self.delegate finishedDifficultyCloudRise];	
-	}
-//	self.view.center = self.l;
+-(void)move {
+	self.view.center = self.l;
 }
 
 -(void)landedOn:(Turtle *)t firstPlatform:(BOOL)firstPlat {

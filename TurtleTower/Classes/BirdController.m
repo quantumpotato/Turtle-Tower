@@ -152,7 +152,7 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 	}else{
 		target = CGPointMake(0,bird.l.y+fabsf(targetYOffset));
 	}
-	
+      	
 	bird.target = target;
 	bird.vel = GetAngle(bird.l, bird.target);
 	bird.vel = MultiplyVel(bird.vel, bird.speed);

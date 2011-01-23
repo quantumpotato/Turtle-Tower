@@ -16,10 +16,14 @@
 		self.width = 40;
 		self.height = 10;
 		self.view.backgroundColor = [UIColor whiteColor];
+		
 	}
 	return self;
 }
 
+-(void)move {
+//	self.secondView.center = CGPointMake(1000, -1000);
+}
 
 -(void)landedOn:(Turtle *)t firstPlatform:(BOOL)firstPlat {
 	[self.delegate landedOnStratosphereCloud];	

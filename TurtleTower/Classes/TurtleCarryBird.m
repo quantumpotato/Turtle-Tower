@@ -17,7 +17,7 @@
 	if (self.l.y < self.t.l.y - 30) {
 		[self.turtleGrabbedDelegate grabbedTurtle:self];
 	}
-	if (self.l.y < -50) {
+	if (self.l.y < -60) {
 		[self.turtleGrabbedDelegate finishedTurtleOffScreen];	
 		self.l = CGPointMake(1000, 1000);
 		self.vel = CGPointZero;

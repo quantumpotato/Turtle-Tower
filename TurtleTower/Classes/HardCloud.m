@@ -11,6 +11,10 @@
 
 @implementation HardCloud
 
+-(void)move {
+	
+}
+
 -(void)landedOn:(Turtle *)t firstPlatform:(BOOL)firstPlat {
 	[self.delegate difficultyCloudSelected:2 cloud:self];	
 }

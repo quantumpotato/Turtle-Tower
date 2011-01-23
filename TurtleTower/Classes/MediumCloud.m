@@ -15,4 +15,8 @@
 	[self.delegate difficultyCloudSelected:1 cloud:self];	
 }
 
+-(void)move {
+	self.view.center = self.l;
+}
+
 @end

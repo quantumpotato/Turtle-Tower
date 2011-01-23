@@ -153,10 +153,10 @@
 		if (lastScore > 60 && lastScore <= 80){
 			activeScoring.textColor = [UIColor purpleColor];
 		}
-		if (lastScore > 80 && lastScore <= 95){
+		if (lastScore > 80 && lastScore < 95){
 			activeScoring.textColor = [UIColor greenColor];
 		}
-		if (lastScore > 95){
+		if (lastScore >= 95){
 			activeScoring.textColor = [UIColor whiteColor];
 		}
 	}	
@@ -407,9 +407,20 @@
 	}
 }
 
+-(void)checkWarpUnlocks {
+	if (level == 13) {
+		mesowarp = YES;
+	} else if (level == 26) {
+		thermowarp = YES;
+	}
+}
+
 
 -(void)increaseLevel{
 	level++;
+	
+	[self checkWarpUnlocks];
+	
 	leveltick = 0;	
 	if (cloudScrollSpeed < 10){
 		cloudScrollSpeed+= .08;
@@ -471,11 +482,11 @@
 		p.view.backgroundColor = [UIColor purpleColor];	
 		p.secondView.backgroundColor = [UIColor purpleColor];
 	}
-	if (accuracy > 80 && accuracy <= 95){
+	if (accuracy > 80 && accuracy < 95){
 		p.view.backgroundColor = [UIColor greenColor];	
 		p.secondView.backgroundColor = [UIColor greenColor];
 	}
-	if (accuracy > 95){
+	if (accuracy >= 95){
 		p.view.backgroundColor = [UIColor whiteColor];	
 		p.secondView.backgroundColor = [UIColor whiteColor];
 	}
@@ -549,7 +560,7 @@
 	float updated = lands/ totallands;
 	[ms updateProgress:updated];
 	if (gamestate == 1){
-	[self calcTrainingText];
+		[self calcTrainingText];
 	}
 	t.landedMainCloud = firstPlat;
 	
@@ -674,7 +685,6 @@
 	sublevel = 0;
 	windless = 0;
 	windlessReset = 5;
-	difficultyLevel = 0;
 	[self setDifficulties];
 }
 
@@ -714,6 +724,7 @@
 	[self eraseAllClouds];
 	[self showBeginningPlatforms];
 	self.warpText1.center = CGPointMake(1000, 1000);
+	self.warpText2.center = CGPointMake(1000, 1000);
 	t.vel = CGPointMake(0,t.vel.y);
 	gamestate = 5;
 }
@@ -728,10 +739,10 @@
 	if (score > highscore){
 		highscore = score;
 	}
-
+	
 	difficultySelectedStatus = -1;
 	
-		[self hideMoonScale];
+	[self hideMoonScale];
 	[self removeAllBirdRows];
 	
 	[self revertClouds];	
@@ -874,8 +885,7 @@
 }	
 
 -(void)turtleStateAir{
-	t.l = SXOffsetX(t.l, activeWind);
-	
+	[self scrollEverythingWithX:-activeWind];
 	[self scrollEverythingWithX:-t.vel.x];
 	
 	t.lastl = t.l;
@@ -920,13 +930,11 @@
 		[self turtleFalling];
 	}
 	
-	if (t.l.x> 290 && t.vel.x > 0){
-		t.l = SXetX(t.l, 290);	
-		t.vel = SXetX(t.vel, 0);
-		
-	}
-	if (gamestate != 60) {
-		if (t.l.x < 30 && t.vel.x < 0){
+	if (gamestate == 5) {
+		if (t.l.x> 290 && t.vel.x > 0){
+			t.l = SXetX(t.l, 290);	
+			t.vel = SXetX(t.vel, 0);			
+		} else 	if (t.l.x < 30 && t.vel.x < 0){
 			t.l = SXetX(t.l, 30);	
 			t.vel = SXetX(t.vel, 0);
 		}
@@ -951,7 +959,7 @@
 		t.vel = CGPointMake(0,-10);
 		t.l = CombineVel(t.l, t.vel);
 		climbTowerText.center = CGPointMake(climbTowerText.center.x,climbTowerText.center.y+20);
-		upgradeText.center = CGPointMake(upgradeText.center.x,upgradeText.center.y+20);
+		//upgradeText.center = CGPointMake(upgradeText.center.x,upgradeText.center.y+20);
 		scoresText.center = CGPointMake(scoresText.center.x,scoresText.center.y+20);		
 		//		Platform *p = (Platform *)[self.pl objectAtIndex:INDEX_BLUE];
 		//		p.vel = CGPointMake(0, 2);
@@ -1163,7 +1171,7 @@
 	//	[self drawPlat:p1];
 	
 	climbTowerText.frame = CGRectMake(40,200,60,20);
-	upgradeText.frame = CGRectMake(130,200,60,20);
+	//upgradeText.frame = CGRectMake(130,200,60,20);
 	scoresText.frame = CGRectMake(230,200,60,20);
 }	
 
@@ -1224,7 +1232,7 @@
 -(void)removeOffscreenBirds{
 	for (int i = 0; i < [self.birdRows count]; i++) {
 		BirdRow *br = (BirdRow *)[self.birdRows objectAtIndex:i];
-		if (br.bird1.l.y > 500){
+		if (br.bird1.l.y > 700){
 			br.bird1.imageView.center = CGPointMake(500,800);
 			br.bird2.imageView.center = CGPointMake(500,800);			
 			br.bird1 = nil;
@@ -1294,10 +1302,10 @@
 
 -(void)hideIntroText{
 	climbTowerText.center = CGPointMake(1000,0);
-	upgradeText.center = CGPointMake(1000,0);
+	//upgradeText.center = CGPointMake(1000,0);
 	scoresText.center = CGPointMake(1000,0);
 	[climbTowerText release];
-	[upgradeText release];
+	//[upgradeText release];
 	[scoresText release];
 }
 
@@ -1369,7 +1377,7 @@
 	gamestate = 5;
 	[self showScore];	
 	gamestate = 6;
-		
+	
 	animscene = state_INTRO_TURTLE_TALK;
 	animstatetick = 60; //Talking about moon
 	
@@ -1387,13 +1395,16 @@
 	heartshape2.transform = CGAffineTransformMakeScale(.3, .3);
 	[self.view addSubview:heartshape2];	
 	heartshape2.center = CGPointMake(t2.l.x, t2.l.y - 60);
-	[self saveScoresToPhone];
+	
+	difficultyLevel = 0;
 	
 	NSString *dataPath = [self gameFilePath];
 	if ([[NSFileManager defaultManager] fileExistsAtPath:dataPath]){
 		NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:[self gameFilePath]];
 		[self readScoresFromDictionary:d];
 	}
+	
+	
 }
 
 -(void)setupDifficultyControllers{
@@ -1425,7 +1436,7 @@
 
 -(void)showIntroTexts {
 	climbTowerText.center = CGPointMake(70,210);
-	upgradeText.center = CGPointMake(160,210);
+	//upgradeText.center = CGPointMake(160,210);
 	scoresText.center = CGPointMake(260,210);
 }
 
@@ -1438,14 +1449,14 @@
 	[climbTowerText addSubview:climbLabel];
 	[self.view addSubview:climbTowerText];
 	
-	upgradeText = [[[UIView alloc] initWithFrame:CGRectMake(130,200,60,20)] retain];
-	upgradeText.backgroundColor = [UIColor clearColor];
+	//	upgradeText = [[[UIView alloc] initWithFrame:CGRectMake(130,200,60,20)] retain];
+	//	upgradeText.backgroundColor = [UIColor clearColor];
 	
-	UILabel *upgradeLabel = makelabelat(CGRectMake(30,0,60,20));
-	upgradeLabel.text = @"SHOP";
-	upgradeLabel.textColor = [UIColor yellowColor];
-	[upgradeText addSubview:upgradeLabel];
-	[self.view addSubview:upgradeText];
+	//	UILabel *upgradeLabel = makelabelat(CGRectMake(30,0,60,20));
+	//	upgradeLabel.text = @"SHOP";
+	//	upgradeLabel.textColor = [UIColor yellowColor];
+	//	[upgradeText addSubview:upgradeLabel];
+	//	[self.view addSubview:upgradeText];
 	
 	scoresText = [[[UIView alloc] initWithFrame:CGRectMake(230,200,60,20)] retain];;
 	scoresText.backgroundColor = [UIColor clearColor];
@@ -1765,6 +1776,9 @@
 	NSLog(@"score: %d mostExcellent: %d, turtleSoups: %d, birdsDodged: %d",highscore,mostExcellent,
 		  turtleSoups,birdsDodged);
 	
+	difficultyLevel = [[d objectForKey:@"difficulty"] intValue];
+	mesowarp = [[d objectForKey:@"mesowarp"] boolValue];
+	thermowarp = [[d objectForKey:@"thermowarp"] boolValue];
 }
 
 
@@ -1774,6 +1788,9 @@
 						  [NSString stringWithFormat:@"%d",mostExcellent], @"mostexcellent",
 						  [NSString stringWithFormat:@"%d",turtleSoups], @"turtlesoups",
 						  [NSString stringWithFormat:@"%d",birdsDodged], @"birdsdodged",
+						  [NSString stringWithFormat:@"%d",difficultyLevel], @"difficulty",
+						  [NSString stringWithFormat:@"%d", mesowarp], @"mesowarp",
+						  [NSString stringWithFormat:@"%d", thermowarp], @"thermowarp",
 						  nil];
 	[data writeToFile:[self gameFilePath] atomically:YES];
 	
@@ -1801,10 +1818,10 @@
 	if (lastScore > 60 && lastScore <= 80){
 		self.scoreText = @"Good";
 	}
-	if (lastScore > 80 && lastScore <= 95){
+	if (lastScore > 80 && lastScore < 95){
 		self.scoreText = @"Fantastic";
 	}
-	if (lastScore > 95){
+	if (lastScore >= 95){
 		self.scoreText = @"Excellent!";
 		if (lastScore == 100){
 			self.scoreText = @"Perfect!";
@@ -1917,7 +1934,7 @@
 		fastScoreTimer = fastScoreTimerReset;
 		
 		[self updateScoreText];		
-		if (landingAccuracy > 95){
+		if (landingAccuracy >= 95){
 			score+= landingAccuracy * consecutiveExcellent;
 			lastScore = landingAccuracy * consecutiveExcellent;
 		}
@@ -1995,6 +2012,17 @@
 	[self eraseAllClouds];
 	[self generatePlatformAt:-100];
 	//Generate 15 platforms
+	
+	
+	if (startinglevel > 1) {
+		for (int i = 0; i < startinglevel-1; i++) {
+			for (int ii = 0; ii < landingsInLevel; ii++) {
+				[self calculateDifficulty];
+			}
+			[self.birdController gainLevel];
+		}
+	}
+	
 	[self generatePlatformsCount:15];
 	self.easyText.center = CGPointMake(1000, 1000);
 	self.mediumText.center = CGPointMake(1000, 1000);	
@@ -2003,7 +2031,6 @@
 	for (int i = 0; i < [self.pl count]; i++){
 		Platform *p = (Platform *)[self.pl objectAtIndex:i];
 		p.vel = CGPointMake(0,5);	
-		
 	}
 }	
 
@@ -2042,6 +2069,14 @@
 	self.warpText1.center = CGPointMake(1000, 1000);
 	[self.view addSubview:self.warpText1];
 	
+	self.warpText2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+	self.warpText2.backgroundColor = [UIColor clearColor];
+	self.warpText2.textColor = [UIColor whiteColor];
+	self.warpText2.text = @"Mesosphere";
+	self.warpText2.center = CGPointMake(1000, 1000);
+	[self.view addSubview:self.warpText2];
+	
+	
 }	
 
 -(void)centerTurtleAbovePlatform:(Platform *)p{
@@ -2057,6 +2092,7 @@
 	EasyCloud *ec = [[EasyCloud alloc] init];
 	ec.delegate = self;
 	[self drawPlat:ec];
+	ec.secondView.center = CGPointMake(1000, -1000);	
 	ec.l = CGPointMake(160,380);         
 	[self setTurtleOnPlatform:ec];
 	
@@ -2071,10 +2107,11 @@
 	MediumCloud *mc = [[MediumCloud alloc] init];
 	mc.delegate = self;
 	[self drawPlat:mc];	
+	mc.secondView.center = CGPointMake(1000, -1000);	
 	mc.l = CGPointMake(60,381);
 	self.mediumText.center = CGPointMake(mc.l.x, mc.l.y + 40);
 	if (difficultyLevel == 1) {
-			[self centerTurtleAbovePlatform:mc];
+		[self centerTurtleAbovePlatform:mc];
 	}
 	[mc release];
 	
@@ -2085,9 +2122,9 @@
 	[self setDifficulties];
 	[self finishedDifficultyCloudRise];
 	//	[self resetDifficulty];	
-//	[self eraseAllClouds];	
-//	[self populateGame];
-//	[self finishedFloat];
+	//	[self eraseAllClouds];	
+	//	[self populateGame];
+	//	[self finishedFloat];
 }
 
 
@@ -2194,9 +2231,14 @@
 }
 
 -(void)select {
-	t.l = CGPointMake(t.l.x,t.l.y+30);
+	if (t.l.x < 320) {
+		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 200,t.l.y-200)];
+	} else {
+		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + 60,t.l.y-20)];
+	}
+	
 	t.imageView.center = t.l;
-	[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 200,t.l.y-200)];
+	
 	t.state = TSA_TURTLE_STATE_AIR;
 	gamestate = 60;
 }
@@ -2206,25 +2248,43 @@
 	sc.delegate = self;
 	sc.l = CGPointMake(60,230);
 	[self drawPlat:sc];
+	sc.secondView.center = CGPointMake(1000, -1000);	
 	self.warpText1.center = CGPointMake(sc.l.x, sc.l.y + 40);
 	[sc release];
+	
+	if (mesowarp) {
+		MesosphereWarpCloud *mc = [[MesosphereWarpCloud alloc] init];
+		mc.delegate = self;
+		mc.l = CGPointMake(160, 230);
+		[self drawPlat:mc];
+		mc.secondView.center = CGPointMake(1000, -1000);	
+		self.warpText2.center = CGPointMake(mc.l.x, mc.l.y + 40);
+		[mc release];
+	}
 }
 
 
 -(void)difficultyCloudSelected:(int)diff cloud:(Platform *)cloud {
-//	if (cloud)
-//		[self centerTurtleAbovePlatform:cloud];
-		difficultyLevel = diff;
-		[self setDifficulties];
-		gamestate = 60;
+	//	if (cloud)
+	//		[self centerTurtleAbovePlatform:cloud];
+	difficultyLevel = diff;
+	[self setDifficulties];
+	gamestate = 60;
 	
 	if (difficultySelectedStatus == -1) {
 		[self showWarpClouds];
-			difficultySelectedStatus = 1;
+		difficultySelectedStatus = 1;
 	}
 }
 
 -(void)landedOnStratosphereCloud {
+	startinglevel = 1;
+	gamestate = 62;
+	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
+}
+
+-(void)landedOnMesosphereCloud {
+	startinglevel = 13;
 	gamestate = 62;
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }

@@ -182,6 +182,10 @@
 	
 	UIImageView *heartshape1;
 	UIImageView *heartshape2;
+	
+	BOOL mesowarp, thermowarp;
+	
+	int startinglevel;
 }
 
 @property(nonatomic,retain) UILabel *easyText;
