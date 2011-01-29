@@ -497,7 +497,7 @@
 	diffPlatformWidth = 35;
 	
 	WhiteCloud *wc = [[WhiteCloud alloc] init];
-	wc.l = CGPointMake(70,230);
+	wc.l = CGPointMake(35,230);
 	wc.delegate = self;
 	[self drawPlat:wc];
 	wc.secondView.center = CGPointMake(1000,500);	
@@ -505,7 +505,7 @@
 	[wc release];
 	
 	SetupCloud *sc = [[SetupCloud alloc] init];
-	sc.l = CGPointMake(250, 230);
+	sc.l = CGPointMake(250+35, 230);
 	sc.setupDelegate = self;
 	[self drawPlat:sc];
 	sc.secondView.center = CGPointMake(1000,500);	
@@ -1435,13 +1435,13 @@
 }
 
 -(void)showIntroTexts {
-	climbTowerText.center = CGPointMake(70,210);
+	climbTowerText.center = CGPointMake(35,210);
 	//upgradeText.center = CGPointMake(160,210);
-	scoresText.center = CGPointMake(260,210);
+	scoresText.center = CGPointMake(295,210);
 }
 
 -(void)createIntroTexts{
-	climbTowerText = [[[UIView alloc] initWithFrame:CGRectMake(40,200,60,20)] retain];
+	climbTowerText = [[[UIView alloc] initWithFrame:CGRectMake(0,200,60,20)] retain];
 	climbTowerText.backgroundColor = [UIColor clearColor];
 	
 	UILabel *climbLabel = makelabelat(CGRectMake(30,0,60,20));
@@ -1458,7 +1458,7 @@
 	//	[upgradeText addSubview:upgradeLabel];
 	//	[self.view addSubview:upgradeText];
 	
-	scoresText = [[[UIView alloc] initWithFrame:CGRectMake(230,200,60,20)] retain];;
+	scoresText = [[[UIView alloc] initWithFrame:CGRectMake(265,200,60,20)] retain];;
 	scoresText.backgroundColor = [UIColor clearColor];
 	
 	UILabel *scoresLabel = makelabelat(CGRectMake(20,0,80,20));
@@ -1511,7 +1511,7 @@
 	scoreLabel.font = [UIFont systemFontOfSize:12];
 	[self.view addSubview:scoreLabel];
 	
-	birdLabel = [[[UILabel alloc] initWithFrame:CGRectMake(200,425,120,20)] retain];
+	birdLabel = [[[UILabel alloc] initWithFrame:CGRectMake(160,425,160,20)] retain];
 	birdLabel.backgroundColor = [UIColor clearColor];
 	birdLabel.textColor = [UIColor whiteColor];
 	birdLabel.font = [UIFont systemFontOfSize:12];
@@ -1631,25 +1631,51 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
 	[super touchesBegan:touches withEvent:event];
 	
-	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM && difficultySelectedStatus == -1){
-		float dist = 80;
-		float hdist = -110;
+	if (gamestate == 60 && t.state == TSP_TURTLE_STATE_PLATFORM) {
 		
-		if (difficultyLevel == 0 && gestureStartPoint.x <= 120){
-			[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - dist,t.l.y+hdist)];
+		if (difficultySelectedStatus == -1){
+			float dist = 80;
+			float hdist = -110;
+			
+			if (difficultyLevel == 0 && gestureStartPoint.x <= 120){
+				[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - dist,t.l.y+hdist)];
+			}
+			if (difficultyLevel == 1 && gestureStartPoint.x > 120 && gestureStartPoint.x < 200) {
+				[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + dist,t.l.y+hdist)];		
+			}
+			
+			if (difficultyLevel == 0 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.y > t.l.x - 60 && gestureStartPoint.y < t.l.y + 100){
+				[self difficultyCloudSelected:0 cloud:nil];	
+			}
+			
+			if (gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.y < t.l.y + 100) {
+				[self difficultyCloudSelected:difficultyLevel cloud:nil];
+			}
+		} else {
+			float dist = 62;
+			float hdist = -70;
+			
+			if (gestureStartPoint.x <= 120){
+				[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - dist,t.l.y+hdist)];
+			}
+			
+			 if (gestureStartPoint.x > 120 && gestureStartPoint.x < 200 && mesowarp) {
+				 if (difficultyLevel == 1) {
+				 	[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + dist,t.l.y+hdist)];
+				 }else if (difficultyLevel == 0) {
+					 [self calculateTurtleJumpImpulse:CGPointMake(t.l.x,t.l.y+hdist)];
+				 }
+			 }
+			
+			if (gestureStartPoint.x <= 120) {
+				if (difficultyLevel == 1) {
+				 	[self calculateTurtleJumpImpulse:CGPointMake(t.l.x,t.l.y+hdist)];
+				}else if (difficultyLevel == 0) {
+					[self calculateTurtleJumpImpulse:CGPointMake(t.l.x-dist,t.l.y+hdist)];
+				}				
+			}
+			
 		}
-		if (difficultyLevel == 1 && gestureStartPoint.x > 120 && gestureStartPoint.x < 200) {
-			[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + dist,t.l.y+hdist)];		
-		}
-		
-		if (difficultyLevel == 0 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.y > t.l.x - 60 && gestureStartPoint.y < t.l.y + 100){
-			[self difficultyCloudSelected:0 cloud:nil];	
-		}
-		
-		if (gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.y < t.l.y + 100) {
-			[self difficultyCloudSelected:difficultyLevel cloud:nil];
-		}
-		
 	}	else {
 		if (jumpScheme == 0){
 			if (t.state == TSP_TURTLE_STATE_PLATFORM){
@@ -2022,7 +2048,7 @@
 			[self.birdController gainLevel];
 		}
 	}
-	 
+	
 	[self generatePlatformsCount:15];
 	self.easyText.center = CGPointMake(1000, 1000);
 	self.mediumText.center = CGPointMake(1000, 1000);	
@@ -2232,7 +2258,7 @@
 
 -(void)select {
 	if (t.l.x < 320) {
-		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 200,t.l.y-200)];
+		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 300,t.l.y-200)];
 	} else {
 		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + 60,t.l.y-20)];
 	}
