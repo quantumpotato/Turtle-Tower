@@ -2166,17 +2166,23 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	self.trainingText.textAlignment = UITextAlignmentCenter;
 	[self.view addSubview:self.trainingText];
 	
-	self.warpText1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+	self.warpText1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
 	self.warpText1.backgroundColor = [UIColor clearColor];
 	self.warpText1.textColor = [UIColor whiteColor];
-	self.warpText1.text = @"Stratosphere";
+	self.warpText1.text = @"   Stratosphere \n     Level 1";
+	self.warpText1.lineBreakMode = UILineBreakModeWordWrap;
+	self.warpText1.numberOfLines = 2;
+	self.warpText1.font = [UIFont systemFontOfSize:14];	
 	self.warpText1.center = CGPointMake(1000, 1000);
 	[self.view addSubview:self.warpText1];
 	
-	self.warpText2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+	self.warpText2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
 	self.warpText2.backgroundColor = [UIColor clearColor];
 	self.warpText2.textColor = [UIColor whiteColor];
-	self.warpText2.text = @"Mesosphere";
+	self.warpText2.font = [UIFont systemFontOfSize:14];
+	self.warpText2.text = @"   Mesosphere \n      Level 13";
+	self.warpText2.lineBreakMode = UILineBreakModeWordWrap;
+	self.warpText2.numberOfLines = 2;
 	self.warpText2.center = CGPointMake(1000, 1000);
 	[self.view addSubview:self.warpText2];
 	
