@@ -162,8 +162,38 @@
 	}	
 	if (gamestate == 5){
 		levelLabel.text = @"";
-		scoreLabel.text = [NSString stringWithFormat:@"High Score: %d",highscore];	
-		excellentLabel.text = [NSString stringWithFormat:@"Most Excellent: %d",mostExcellent];
+		int _highscore;
+		if (difficultyLevel == 0) {
+			_highscore = highscore;	
+		}
+		if (difficultyLevel == 1) {
+			_highscore = highscore2;	
+		}
+		if (difficultyLevel == 2) {
+			_highscore = highscore3;	
+		}
+		if (difficultyLevel == 3) {
+			_highscore = highscore4;	
+		}
+		
+		scoreLabel.text = [NSString stringWithFormat:@"High Score: %d",_highscore];	
+		
+		int _mostExcellent = 0;
+		
+		if (difficultyLevel == 0){ 
+			_mostExcellent = mostExcellent;	
+		}
+		if (difficultyLevel == 1){ 
+			_mostExcellent = mostExcellent2;	
+		}
+		if (difficultyLevel == 2){ 
+			_mostExcellent = mostExcellent3;	
+		}
+		if (difficultyLevel == 3){ 
+			_mostExcellent = mostExcellent4;	
+		}
+		
+		excellentLabel.text = [NSString stringWithFormat:@"Most Excellent: %d",_mostExcellent];
 		turtleLabel.text = [NSString stringWithFormat:@"Turtle Soup: %d",turtleSoups];
 		birdLabel.text = [NSString	stringWithFormat:@"Birds Dodged: %d",birdsDodged];
 	}
@@ -736,8 +766,27 @@
 	t.state = TSP_TURTLE_STATE_PLATFORM;
 	turtleSoups++;
 	scoreText = @"Died!";
-	if (score > highscore){
-		highscore = score;
+	
+
+	if (difficultyLevel == 0) {
+		if (score > highscore){
+			highscore = score;
+		}
+	}
+	if (difficultyLevel == 1) {
+		if (score > highscore2){
+			highscore2 = score;
+		}
+	}
+	if (difficultyLevel == 2) {
+		if (score > highscore3){
+			highscore3 = score;
+		}
+	}
+	if (difficultyLevel == 3) {
+		if (score > highscore4){
+			highscore4 = score;
+		}
 	}
 	
 	difficultySelectedStatus = -1;
@@ -1435,6 +1484,7 @@
 }
 
 -(void)showIntroTexts {
+	[self showScore];	
 	climbTowerText.center = CGPointMake(35,210);
 	//upgradeText.center = CGPointMake(160,210);
 	scoresText.center = CGPointMake(295,210);
@@ -1796,11 +1846,15 @@
 
 -(void)readScoresFromDictionary:(NSDictionary *)d{
 	highscore = [[d objectForKey:@"highscore"] intValue];
+highscore2 = [[d objectForKey:@"highscore2"] intValue];
+highscore3 = [[d objectForKey:@"highscore3"] intValue];
+highscore4 = [[d objectForKey:@"highscore4"] intValue];	
 	mostExcellent = [[d objectForKey:@"mostexcellent"] intValue];
+mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
+	mostExcellent3 = [[d objectForKey:@"mostexcellent3"] intValue];
+	mostExcellent4 = [[d objectForKey:@"mostexcellent4"] intValue];
 	turtleSoups = [[d objectForKey:@"turtlesoups"] intValue];
 	birdsDodged = [[d objectForKey:@"birdsdodged"] intValue];
-	NSLog(@"score: %d mostExcellent: %d, turtleSoups: %d, birdsDodged: %d",highscore,mostExcellent,
-		  turtleSoups,birdsDodged);
 	
 	difficultyLevel = [[d objectForKey:@"difficulty"] intValue];
 	mesowarp = [[d objectForKey:@"mesowarp"] boolValue];
@@ -1811,7 +1865,13 @@
 -(void)saveScoresToPhone{
 	NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
 						  [NSString stringWithFormat:@"%d",highscore], @"highscore",
+						  [NSString stringWithFormat:@"%d",highscore2], @"highscore2",
+						  [NSString stringWithFormat:@"%d",highscore3], @"highscore3",
+ 						  [NSString stringWithFormat:@"%d",highscore4], @"highscore4", 
 						  [NSString stringWithFormat:@"%d",mostExcellent], @"mostexcellent",
+						  [NSString stringWithFormat:@"%d",mostExcellent2], @"mostexcellent2",
+						  [NSString stringWithFormat:@"%d",mostExcellent3], @"mostexcellent3",
+						  [NSString stringWithFormat:@"%d",mostExcellent4], @"mostexcellent4",						  
 						  [NSString stringWithFormat:@"%d",turtleSoups], @"turtlesoups",
 						  [NSString stringWithFormat:@"%d",birdsDodged], @"birdsdodged",
 						  [NSString stringWithFormat:@"%d",difficultyLevel], @"difficulty",
@@ -1857,9 +1917,27 @@
 			cMostExcellent = consecutiveExcellent;
 		}
 		
-		if (consecutiveExcellent > mostExcellent){
-			mostExcellent = consecutiveExcellent;
+		if (difficultyLevel == 0) {
+			if (consecutiveExcellent > mostExcellent){
+				mostExcellent = consecutiveExcellent;
+			}
 		}
+		if (difficultyLevel == 1) {
+			if (consecutiveExcellent > mostExcellent2){
+				mostExcellent2 = consecutiveExcellent;
+			}
+		}
+		if (difficultyLevel == 2) {
+			if (consecutiveExcellent > mostExcellent3){
+				mostExcellent3 = consecutiveExcellent;
+			}
+		}
+		if (difficultyLevel == 3) {
+			if (consecutiveExcellent > mostExcellent4){
+				mostExcellent4 = consecutiveExcellent;
+			}
+		}
+
 	}else{
 		consecutiveExcellent = 0;	
 	}

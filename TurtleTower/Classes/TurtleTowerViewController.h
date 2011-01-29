@@ -114,6 +114,8 @@
 	
 	int highestPlatformIndex;
 	int mostExcellent, turtleSoups, birdsDodged, cMostExcellent;
+	int highscore2,highscore3,highscore4;
+	int mostExcellent2, mostExcellent3, mostExcellent4;
 	UIView *manaView;
 	int manaCharge;
 	
