@@ -2022,7 +2022,7 @@
 			[self.birdController gainLevel];
 		}
 	}
-	
+	 
 	[self generatePlatformsCount:15];
 	self.easyText.center = CGPointMake(1000, 1000);
 	self.mediumText.center = CGPointMake(1000, 1000);	
