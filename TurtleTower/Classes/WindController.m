@@ -31,8 +31,8 @@
 }
 
 -(void)calculateResets{
-	if (self.level >= 20 && self.level < 25){
-		if (level == 20){
+	if (self.level >= 25 && self.level < 30){
+		if (level == 25){
 		[self activateWind];
 		}		
 		self.maxEffect++;	

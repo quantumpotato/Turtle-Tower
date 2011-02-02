@@ -188,6 +188,8 @@
 	BOOL mesowarp, thermowarp;
 	
 	int startinglevel;
+	
+	Platform *lastCloudLandedOn;
 }
 
 @property(nonatomic,retain) UILabel *easyText;

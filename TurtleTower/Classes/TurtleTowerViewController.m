@@ -586,6 +586,7 @@
 }
 
 -(void)landedOnPlatform:(Platform *)p firstPlatform:(BOOL)firstPlat{	
+	lastCloudLandedOn = p;
 	lands++;
 	float updated = lands/ totallands;
 	[ms updateProgress:updated];
@@ -633,7 +634,11 @@
 	}
 	for (int i = 0; i < [self.birdRows count]; i++) {
 		BirdRow *br = (BirdRow *)[self.birdRows objectAtIndex:i];
-		[br scrollWithY:y];
+		if (br.bird1.k == OBS_KIND_CAMP_BIRD && br.bird1.state >= 3) {
+			NSLog(@"5=5");
+		} else {
+			[br scrollWithY:y];
+		}
 	}
 	
 	for (int i = 0; i < [self.pl count]; i++){
@@ -847,7 +852,6 @@
 		t.walkDir = -6;		
 	}
 	
-	t.walkDir = 3;
 }
 
 -(void)turtleStatePlatform{
@@ -857,19 +861,29 @@
 	
 	if (t.walking != 0) {
 		float walkDist = 0;
-		if (t.l.x+(t.walking * t.walkSpeed) < t.rightedge && t.l.x+(t.walking * t.walkSpeed) > t.leftedge) {
-			walkDist = t.walking * t.walkSpeed;
-		} else {
-			if (t.walking > 0 && t.rightedge > t.l.x + 1) {
-				walkDist = t.rightedge-t.l.x-6;	
-			} else if (t.walking < 0 && t.leftedge < t.l.x - 1) {
-				walkDist = t.l.x-t.leftedge+6;
+		walkDist = t.walking * t.walkSpeed;// * ;
+		//if (t.l.x+(t.walking * t.walkSpeed) < t.rightedge && t.l.x+(t.walking * t.walkSpeed) > t.leftedge) {
+//			walkDist = t.walking * t.walkSpeed;
+//		} else {
+//			if (t.walking > 0 && t.rightedge > t.l.x + 1) {
+//				walkDist = t.rightedge-t.l.x-6;	
+//			} else if (t.walking < 0 && t.leftedge < t.l.x - 1) {
+//				walkDist = t.l.x-t.leftedge+6;
+//			}
+//		}
+		if (walkDist != 0 && score > 0){
+//			t.leftedge-= t.walking;
+//			t.rightedge-= t.walking;
+				[self scrollEverythingWithX:-walkDist];
+			[self.birdController divebombTick];
+//			t.l = SXOffsetX(t.l, -t.walking);
+				lastCloudLandedOn.l = SXOffsetX(lastCloudLandedOn.l, walkDist);	
+			if (t.facing != t.walking) {
+				t.facing = t.walking;				
+				t.imageView.transform = CGAffineTransformMakeScale(t.wscale * t.facing, t.hscale);
+				[t tick];
 			}
-		}
-		if (walkDist != 0) {
-			t.leftedge-= t.walking;
-			t.rightedge-= t.walking;
-			[self scrollEverythingWithX:-t.walking];
+			
 		}
 		
 	}
@@ -1141,6 +1155,7 @@
 	NSMutableArray *indexes = [NSMutableArray array];
 	for (int i = 0; i < [self.obs count]; i++){
 		Bird *ob = (Bird *)[self.obs objectAtIndex:i];
+		
 		BOOL deleteBird = NO;
 		if (ob.l.x > t.l.x + (320*5) && ob.vel.x > 0){
 			deleteBird = YES;	
@@ -1281,17 +1296,21 @@
 -(void)removeOffscreenBirds{
 	for (int i = 0; i < [self.birdRows count]; i++) {
 		BirdRow *br = (BirdRow *)[self.birdRows objectAtIndex:i];
-		if (br.bird1.l.y > 700){
-			br.bird1.imageView.center = CGPointMake(500,800);
-			br.bird2.imageView.center = CGPointMake(500,800);			
-			br.bird1 = nil;
-			br.bird2 = nil;
-			[self.birdRows removeObjectAtIndex:i];
-			return;
+		if (br.bird1.k == OBS_KIND_CAMP_BIRD && br.bird1.state >= 3) {
+			
+		} else {
+			if (br.bird1.l.y > 700){
+				br.bird1.imageView.center = CGPointMake(500,800);
+				br.bird2.imageView.center = CGPointMake(500,800);			
+				br.bird1 = nil;
+				br.bird2 = nil;
+				[self.birdRows removeObjectAtIndex:i];
+				return;
+			}
 		}
 	}
 }
-
+	
 -(void)BirdRowLoop{
 	for (int i = 0; i < [self.birdRows count]; i++) {
 		BirdRow *br = (BirdRow *)[self.birdRows objectAtIndex:i];
@@ -1859,6 +1878,8 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	difficultyLevel = [[d objectForKey:@"difficulty"] intValue];
 	mesowarp = [[d objectForKey:@"mesowarp"] boolValue];
 	thermowarp = [[d objectForKey:@"thermowarp"] boolValue];
+	mesowarp = YES;
+	thermowarp = YES;
 }
 
 
@@ -2033,7 +2054,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 		
 		lastScore = landingAccuracy;
 		[self colorPlatform:p withScore:landingAccuracy];		
-		score+= (landingAccuracy + [self bonusScoreByDifficulty]);	
+		score+= landingAccuracy;
 		
 		fastScoreTimer = fastScoreTimerReset;
 		

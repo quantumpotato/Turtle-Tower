@@ -90,7 +90,7 @@
 		self.timer++;	
 		if (self.timer >= 20*66){
 			self.l = SYetY(self.l, 955);
-		}
+	}
 	}else if (self.state == 4){
 		self.timer--;
 		if (self.timer <= 0){
@@ -99,6 +99,14 @@
 			self.target = CGPointMake(self.target.x,t.l.y);
 			self.vel = GetAngle(self.l, self.target);
 			self.vel = MultiplyVel(self.vel, self.speed + 1.5);
+		} else {
+			if (self.l.y > 530) {
+				self.state = 3;
+				self.timer = 0;
+				self.target = CGPointMake(self.target.x,t.l.y);
+				self.vel = GetAngle(self.l, self.target);
+				self.vel = MultiplyVel(self.vel, self.speed + 1.5);				
+			}
 		}
 	}else if (self.state == 1 || self.state == 2){
 		self.oscillateRepeat--;

@@ -303,9 +303,8 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 }
 
 -(void)divebombTick{
-	if (self.level >= 15){
+	if (self.level >= 20){
 		self.divebombCountdown--;
-	
 		if (self.divebombCountdown <= 0){
 			self.divebombCountdown = self.divebombCountdownReset;
 			[self makeDivebombBird];

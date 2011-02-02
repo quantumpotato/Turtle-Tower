@@ -32,6 +32,8 @@
 @property (nonatomic) float leftedge;
 @property (nonatomic) float rightedge;
 @property (nonatomic) int walking;
+@property (nonatomic) float hscale;
+@property (nonatomic) float wscale;
 
 -(void)tick;
 -(void)setSquashState:(int)newstate;

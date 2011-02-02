@@ -10,13 +10,14 @@
 
 @implementation Turtle
 @synthesize landedMainCloud, leftedge, rightedge, walking;
+@synthesize wscale, hscale;
 
 -(id)init{
 	if (self = [super init]){
 		self.jumpLeft = 0;
 		self.jumpLeftReset = 12; //15
 		self.jumpPower = 8; //8
-		self.walkSpeed = 15;
+		self.walkSpeed = 5;
 		self.walking =0;
 		self.facing = 1;
 		self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"turtlesmallsize1.png"]];
