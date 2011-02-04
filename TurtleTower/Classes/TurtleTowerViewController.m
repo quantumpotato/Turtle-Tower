@@ -448,6 +448,9 @@
 
 -(void)increaseLevel{
 	level++;
+	if ( (level == 5 || level == 6) && gamestate != -100) {
+		[self.birdController makeDivebombBird];
+	}
 	
 	[self checkWarpUnlocks];
 	
@@ -653,6 +656,10 @@
 		case 0:
 			diffPlatformWidthReset = 136; //120
 			cloudScrollSpeed = 1.5;
+			int randomSwitch = arc4random() % 2;
+			if (randomSwitch == 0) {
+				cloudScrollSpeed = -1*cloudScrollSpeed;	
+			}
 			break;
 		case 1:
 			diffPlatformWidthReset = 110;
@@ -1418,6 +1425,8 @@
 	[heartshape2 release];
 	[self createIntroTexts];
 	[self showScore];
+	[self removeAllBirdRows];
+	[self removeOffscreenBirds];
 }
 
 -(void)moonTalkEnded {
@@ -1688,7 +1697,7 @@
 	}
 	
 	float dist = GetDist(CGPointMake(target.x,t.l.y), target);
-	if (dist > 300){dist = 300;}
+	if (dist > 310){dist = 310;}
 	//	float middleX = (target.x+t.l.x)/2;
 	target = CGPointMake(target.x,target.y-(fabsf(target.y-t.l.y)));
 	dist = dist / 7;
@@ -2030,7 +2039,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 		}
 		
 		
-		[self colourPlatformsForHeight];
+//		[self colourPlatformsForHeight];
 		
 		self.birdController.highestPlatformY = ((Platform *)[self highestPlatform]).l.y-35;
 		[self.birdController tick];
@@ -2138,7 +2147,8 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	[self generatePlatformAt:-100];
 	//Generate 15 platforms
 	
-	
+	int oldstate = gamestate;
+	gamestate = -100;
 	if (startinglevel > 1) {
 		for (int i = 0; i < startinglevel-1; i++) {
 			for (int ii = 0; ii < landingsInLevel; ii++) {
@@ -2147,6 +2157,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 			[self.birdController gainLevel];
 		}
 	}
+	gamestate = oldstate;
 	
 	[self generatePlatformsCount:15];
 	self.easyText.center = CGPointMake(1000, 1000);
@@ -2161,7 +2172,6 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 
 -(void)finishedDifficultyCloudRise {
 	[self drawClouds];
-	[self colourPlatformsForHeight];
 }
 
 
@@ -2323,6 +2333,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 		[self activateBirdRow:br];
 	} else if (bird.kind == OBS_KIND_DIVEBOMB_BIRD) {
 		DivebombBirdRow *br = [[DivebombBirdRow alloc] initWithBird:bird];
+		NSLog(@"bird animFMax: %d",bird.animFMax);
 		[self activateBirdRow:br];
 	}
 }

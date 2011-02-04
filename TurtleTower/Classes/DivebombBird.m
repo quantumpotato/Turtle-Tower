@@ -16,17 +16,27 @@
 		self.kind = OBS_KIND_DIVEBOMB_BIRD;
 		self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"greenbirdcb.png"]];
 		self.imageView.frame = CGRectMake(0, 0, 84,70);
+		self.animFMax = 1;
+		self.animTickReset = 20;
+		self.animF = 0;
+		self.delay = 0;
+		self.animTick = self.animTickReset;
 	}
 	return self;
 }
 
 -(void)move{
-	if (self.l.x > 300 && self.vel.x > 0){
-		self.vel = CGPointMake(-self.vel.x,self.vel.y);
+	NSLog(@"self.l.x/y: %f, %f",self.l.x,self.l.y);
+	if (self.l.x > 300) {
+		self.l = SXetX(self.l, 300);
+		self.vel = CGPointMake(-fabsf(self.vel.x),self.vel.y);
 		self.facing = -1;
-	}else if (self.l.x < 20 && self.vel.x < 0){
-		self.vel = CGPointMake(-self.vel.x,self.vel.y);
+		[self setBirdImage];
+	}else if (self.l.x < 20) {
+		self.l = SXetX(self.l, 20);
+		self.vel = CGPointMake(fabsf(self.vel.x),self.vel.y);
 		self.facing = 1;
+		[self setBirdImage];
 	}
 			  
 	[super move];

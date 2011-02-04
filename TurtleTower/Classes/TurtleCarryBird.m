@@ -13,7 +13,7 @@
 @synthesize turtleGrabbedDelegate;
 
 -(void)move {
-	[super move];
+	self.l = CombineVel(self.l, self.vel);
 	if (self.l.y < self.t.l.y - 30) {
 		[self.turtleGrabbedDelegate grabbedTurtle:self];
 	}

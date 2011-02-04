@@ -76,6 +76,7 @@
 -(void)gainLevel;
 -(void)reset;
 -(void)setPlatformBirdSpeed:(Bird *)ob;
+-(void)makeDivebombBird;
 
 -(void)setDifficultyLevel:(int)diffLevel;
 

@@ -131,7 +131,7 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 }
 
 -(void)makeDivebombBird{
-	Bird *bird = [[Bird alloc] initWithKind:OBS_KIND_DIVEBOMB_BIRD];
+	DivebombBird *bird = [[DivebombBird alloc] init];
 	bird.state = 1;
 	
 	int random2 = arc4random() % 20;
@@ -142,8 +142,8 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 	
 	[self setDivebombBirdSpeed:bird];
 	
-	int targetYOffset = arc4random() % 16;
-	targetYOffset+= 3;
+	int targetYOffset = arc4random() % 10;
+	targetYOffset+= 10;
 	int randomDirectionSwitch = arc4random() % 2;
 	CGPoint target;
 	if (randomDirectionSwitch == 1){
@@ -157,13 +157,8 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 	bird.vel = GetAngle(bird.l, bird.target);
 	bird.vel = MultiplyVel(bird.vel, bird.speed);
 	
-	bird.animF = 0;
-	bird.animTickReset = 40;
-	bird.animTick = bird.animTickReset;
-	bird.animFMax = 1;
 	bird.oscillateValue = 0;
 	bird.delayReset = diffPBDelay;
-	bird.delay = 0;
 	[self.delegate didReceiveBirdForSpawner:bird];
 	[bird release];	
 }

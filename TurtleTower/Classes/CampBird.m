@@ -29,7 +29,7 @@
 		self.animFMax = 1;
 		self.oscillateRepeat = 5;
 		self.oscillateRepeatReset = arc4random() % 28;
-		self.oscillateRepeatReset+= 15;
+		self.oscillateRepeatReset+= 25; //15
 		self.oscillateValue = 2;		
 		
 		self.direction = -1;
