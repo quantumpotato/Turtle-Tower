@@ -1016,6 +1016,8 @@
 -(void)TurtleLoop{
 	[t tick];
 	
+	[ms tick];
+	
 	[self setAccelerometerForPlatform];
 	
 	if (gamestate == 60 || gamestate == 61){
@@ -1548,11 +1550,11 @@
 }
 
 -(void)showMoonBar {
-	ms.frame = CGRectMake(280,30,40,400);	
+	ms.frame = CGRectMake(280,0,40,460);	
 }
 
 -(void)hideMoonScale {
-	ms.frame = CGRectMake(1000, 1000, 40, 400);
+	ms.frame = CGRectMake(1000, 1000, ms.frame.size.width, ms.frame.size.height);
 }
 
 -(void)setupViews{
@@ -1569,9 +1571,10 @@
 	[self.view addSubview:t2.imageView];
 	t2.imageView.transform = CGAffineTransformMakeScale(-1, 1);
 	
-	ms = [[MoonScale alloc] initWithFrame:CGRectMake(280,30,40,400)];
+	ms = [[MoonScale alloc] initWithFrame:CGRectMake(280,0,40,460)];
+	ms.t = t;
 	[self.view addSubview:ms];
-	[ms updateProgress:.38];
+	[ms updateProgress:0];
 	[self hideMoonScale];
 	
 	
@@ -2270,6 +2273,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 
 -(void)finishedCloudRise{
 	[self setDifficulties];
+	
 	[self finishedDifficultyCloudRise];
 	//	[self resetDifficulty];	
 	//	[self eraseAllClouds];	

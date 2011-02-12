@@ -77,6 +77,7 @@
 		BFE7BEC6124C41820083A59A /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEC5124C41820083A59A /* Bird.m */; };
 		BFE7BEC9124C418A0083A59A /* Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BEC8124C418A0083A59A /* Platform.m */; };
 		BFF52CA4129375D300244A0E /* WindInactiveControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF52CA3129375D300244A0E /* WindInactiveControl.m */; };
+		BFF901D31306FFFD0007CD17 /* Moon50.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF901D21306FFFD0007CD17 /* Moon50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -200,6 +201,7 @@
 		BFE7BEC8124C418A0083A59A /* Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Platform.m; sourceTree = "<group>"; };
 		BFF52CA2129375D300244A0E /* WindInactiveControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindInactiveControl.h; sourceTree = "<group>"; };
 		BFF52CA3129375D300244A0E /* WindInactiveControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindInactiveControl.m; sourceTree = "<group>"; };
+		BFF901D21306FFFD0007CD17 /* Moon50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moon50.png; sourceTree = "<group>"; };
 		BFFE738312AF1D13003D0475 /* ScrollProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +292,7 @@
 		BF0A39D9124E696B00D1DF85 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BFF901D21306FFFD0007CD17 /* Moon50.png */,
 				BFC0C90B12E9193D00CA8328 /* heart.png */,
 				BFC6CAE912EB8BBA0078AF11 /* pinkheart.png */,
 				BF325ADB1252996400DAAF73 /* Birds */,
@@ -532,6 +535,7 @@
 				BF86965C127B557C00C914F3 /* greenbirdb.png in Resources */,
 				BFC0C90C12E9193D00CA8328 /* heart.png in Resources */,
 				BFC6CAEA12EB8BBA0078AF11 /* pinkheart.png in Resources */,
+				BFF901D31306FFFD0007CD17 /* Moon50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Turtle.h"
 
 @interface MoonScale : UIView {
 
@@ -15,9 +15,12 @@
 	float height;
 	UIImageView *moon;
 	UIImageView *turtle;
+	Turtle *t;
 }
 
+@property(nonatomic,retain) Turtle *t;
 
 -(void)updateProgress:(float)newProgress;
+-(void)tick;
 
 @end
