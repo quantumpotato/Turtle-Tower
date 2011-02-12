@@ -80,7 +80,7 @@ divebombCountdown, divebombCountdownReset, diffDivebombCountdown, diffDivebombBi
 	}else{
 		diffrandom = 0;
 	}
-	ob.speed = diffrandom + 4;
+	ob.speed = diffrandom + 2; //Was 4
 	ob.delay = random() % 6;
 	ob.delay = ob.delay + 8;
 }

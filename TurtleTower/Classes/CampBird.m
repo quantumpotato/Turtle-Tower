@@ -68,7 +68,7 @@
 		
 		if (!turtlePassed){
 		
-			if (self.t.l.y < self.l.y+120){
+			if (self.t.l.y < self.l.y+160){ //120
 				turtlePassed = YES;
 			}
 			

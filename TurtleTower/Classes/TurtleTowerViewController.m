@@ -448,16 +448,17 @@
 
 -(void)increaseLevel{
 	level++;
-	if ( (level == 5 || level == 6) && gamestate != -100) {
+	if ( (level == 5 || level == 7) && gamestate != -100) {
 		[self.birdController makeDivebombBird];
 	}
 	
 	[self checkWarpUnlocks];
 	
 	leveltick = 0;	
-	if (cloudScrollSpeed < 10){
-		cloudScrollSpeed+= .08;
-	}
+	//Disabling auto cloud scroll speed, instead raising on excellent / perfect
+//	if (cloudScrollSpeed < 10){
+//		cloudScrollSpeed+= .08;
+//	}
 	[self calculateSphere];
 	
 	for (DifficultyController *dc in self.difficultyControllers){
@@ -1921,6 +1922,12 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	}
 }
 
+-(void)increaseCloudScrollDifficulty {
+	if (cloudScrollSpeed < 10){
+		cloudScrollSpeed+= .08;
+	}
+}
+
 -(void)updateScoreText{
 	if (lastScore <= 20){
 		self.scoreText = @"Barely!";
@@ -1938,6 +1945,8 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 		self.scoreText = @"Fantastic";
 	}
 	if (lastScore >= 95){
+		[self increaseCloudScrollDifficulty];
+		
 		self.scoreText = @"Excellent!";
 		if (lastScore == 100){
 			self.scoreText = @"Perfect!";
