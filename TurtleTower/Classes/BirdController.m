@@ -80,7 +80,7 @@ divebombCountdown, divebombCountdownReset, diffDivebombCountdown, diffDivebombBi
 	}else{
 		diffrandom = 0;
 	}
-	ob.speed = diffrandom + 2; //Was 4
+	ob.speed = diffrandom + 4; //Was 4. 4 because the turtle can dodge better
 	ob.delay = random() % 6;
 	ob.delay = ob.delay + 8;
 }
@@ -143,7 +143,7 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 	[self setDivebombBirdSpeed:bird];
 	
 	int targetYOffset = arc4random() % 10;
-	targetYOffset+= 10;
+	targetYOffset+= 20;
 	int randomDirectionSwitch = arc4random() % 2;
 	CGPoint target;
 	if (randomDirectionSwitch == 1){
