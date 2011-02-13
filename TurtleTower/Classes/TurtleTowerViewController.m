@@ -1325,14 +1325,14 @@
 	for (int i = 0; i < [self.birdRows count]; i++) {
 		BirdRow *br = (BirdRow *)[self.birdRows objectAtIndex:i];
 		[br tick];
-		if (GetDist(br.bird1.l, t.l) < 35) {
-			if (t.l.y > br.bird1.l.y - 20 || t.state == TSA_TURTLE_STATE_AIR){
+		if (GetDist(br.bird1.l, t.l) < 28) {
+			if (t.l.y > br.bird1.l.y - 15 || t.state == TSA_TURTLE_STATE_AIR){
 				[self killTurtle];
 			}
 		}
 		if (br.bird1.kind == OBS_KIND_PATROL_BIRD){
-			if (t.l.y > br.bird2.l.y - 20 || t.state == TSA_TURTLE_STATE_AIR){
-				if (GetDist(br.bird2.l, t.l) < 35) {
+			if (t.l.y > br.bird2.l.y - 15 || t.state == TSA_TURTLE_STATE_AIR){
+				if (GetDist(br.bird2.l, t.l) < 28) {
 					[self killTurtle];
 				}
 			}
