@@ -1927,7 +1927,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 
 -(void)increaseCloudScrollDifficulty {
 	if (cloudScrollSpeed < 10){
-		cloudScrollSpeed+= .08;
+		cloudScrollSpeed+= .005; //was .08, about ~58 perfect levels to reach max difficulty
 	}
 }
 
