@@ -2454,7 +2454,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 
 -(void)landedOnStratosphereCloud {
 	startinglevel = 13;
-	heightGained = (1000 / turtleHeight) + (10 * startinglevel * landingsInLevel);
+	heightGained = (1000 * turtleHeight) + (10 * startinglevel * landingsInLevel);
 	gamestate = 62;
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }
