@@ -200,27 +200,34 @@
 }
 
 -(void)calculateSphere{
-	if (level <= 12){
+
+	//Tropo, Strato, Meso, Thermo, Exo
+	//Space, Outer Space, Deep Space, Lunar Space
+	
+	if (level <= 11){ 
+		self.sphere = @"Troposphere";	
+	}else if (level >11 && level <= 22){
 		self.sphere = @"Stratosphere";
-	}else if (level > 12 && level <= 25){
+	}else if (level >22 && level <= 33){
 		self.sphere = @"Mesosphere";
-	}else if (level > 25 && level <= 37){
+	}else if (level >33 && level <= 44){
 		self.sphere = @"Thermosphere";
-	}else if (level > 37 && level <= 50){
-		self.sphere = @"Exposphere";
-	}else if (level > 50 && level <= 62){
+	}else if (level >44 && level <= 55){
+		self.sphere = @"Exosphere";
+	}else if (level >55 && level <= 66){
 		self.sphere = @"Space";
-	}else if (level > 62 && level <= 75){
+	}else if (level >66 && level <= 77){
 		self.sphere = @"Outer Space";
-	}else if (level > 75 && level <= 87){
+	}else if (level >77 && level <= 88){
 		self.sphere = @"Deep Space";
-	}else if (level > 87 && level <= 100){
-		self.sphere = @"Lunar Space";
+	}else if (level >88 && level <= 100){
+		self.sphere = @"Lunar Space";	
 	}
 }
 
 -(void)showLevelLabel{
-	levelLabel.text = [NSString stringWithFormat:@"%@: Level %d-%d",self.sphere,level,leveltick];
+	levelLabel.text = [NSString stringWithFormat:@"%@: %.2f shells high",self.sphere, heightGained  / turtleHeight];
+//	levelLabel.text = [NSString stringWithFormat:@"%@: Level %d-%d",self.sphere,level,leveltick];
 }
 
 -(Platform *)highestPlatform{
@@ -689,7 +696,8 @@
 -(void)resetDifficulty{
 	totallands = 2500;
 	lands = 0;
-	self.sphere = @"Stratosphere";
+	heightGained = 1000 * turtleHeight;
+	self.sphere = @"Troposphere";
 	difficultySelectedStatus = -1;
 	cloudScrollSpeed = 3;
 	landingsInLevel = 25; //25, 14;
@@ -959,6 +967,11 @@
 	[self scrollEverythingWithX:-activeWind];
 	[self scrollEverythingWithX:-t.vel.x];
 	
+	if (gamestate == 1) {
+		heightGained -= t.vel.y;
+		[self showLevelLabel];
+	}
+	
 	t.lastl = t.l;
 	if (t.jumpLeft > 0){
 		[self scrollForTurtleJump];
@@ -985,6 +998,7 @@
 			}
 		}
 	}
+	
 	
 	if (t.vel.y > -2 && t.vel.y < 2){
 		t.vel = SYetY(t.vel, 2);	
@@ -1571,14 +1585,14 @@
 	[self.view addSubview:t2.imageView];
 	t2.imageView.transform = CGAffineTransformMakeScale(-1, 1);
 	
-	ms = [[MoonScale alloc] initWithFrame:CGRectMake(280,0,40,460)];
+	ms = [[MoonScale alloc] initWithFrame:CGRectMake(280,0,40,4600)];
 	ms.t = t;
 	[self.view addSubview:ms];
 	[ms updateProgress:0];
 	[self hideMoonScale];
 	
 	
-	levelLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,10,200,20)];
+	levelLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,10,320,20)];
 	levelLabel.backgroundColor = [UIColor clearColor];
 	levelLabel.textColor = [UIColor whiteColor];
 	levelLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
@@ -2212,7 +2226,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	self.warpText1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
 	self.warpText1.backgroundColor = [UIColor clearColor];
 	self.warpText1.textColor = [UIColor whiteColor];
-	self.warpText1.text = @"   Stratosphere \n     Level 1";
+	self.warpText1.text = @"   Troposphere \n     Level 1";
 	self.warpText1.lineBreakMode = UILineBreakModeWordWrap;
 	self.warpText1.numberOfLines = 2;
 	self.warpText1.font = [UIFont systemFontOfSize:14];	
@@ -2223,7 +2237,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	self.warpText2.backgroundColor = [UIColor clearColor];
 	self.warpText2.textColor = [UIColor whiteColor];
 	self.warpText2.font = [UIFont systemFontOfSize:14];
-	self.warpText2.text = @"   Mesosphere \n      Level 13";
+	self.warpText2.text = @"   Stratosphere \n      Level 13";
 	self.warpText2.lineBreakMode = UILineBreakModeWordWrap;
 	self.warpText2.numberOfLines = 2;
 	self.warpText2.center = CGPointMake(1000, 1000);
@@ -2399,7 +2413,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 }
 
 -(void)showWarpClouds {
-	StratosphereWarpCloud *sc = [[StratosphereWarpCloud alloc] init];
+	TroposphereWarpCloud *sc = [[TroposphereWarpCloud alloc] init];
 	sc.delegate = self;
 	sc.l = CGPointMake(60,230);
 	[self drawPlat:sc];
@@ -2408,7 +2422,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	[sc release];
 	
 	if (mesowarp) {
-		MesosphereWarpCloud *mc = [[MesosphereWarpCloud alloc] init];
+		StratosphereWarpCloud *mc = [[StratosphereWarpCloud alloc] init];
 		mc.delegate = self;
 		mc.l = CGPointMake(160, 230);
 		[self drawPlat:mc];
@@ -2432,14 +2446,15 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	}
 }
 
--(void)landedOnStratosphereCloud {
+-(void)landedOnTroposphereCloud {
 	startinglevel = 1;
 	gamestate = 62;
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }
 
--(void)landedOnMesosphereCloud {
+-(void)landedOnStratosphereCloud {
 	startinglevel = 13;
+	heightGained = (1000 / turtleHeight) + (10 * startinglevel * landingsInLevel);
 	gamestate = 62;
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }

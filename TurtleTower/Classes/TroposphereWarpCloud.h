@@ -1,5 +1,5 @@
 //
-//  MesosphereCloud.h
+//  StratosphereWarpCloud.h
 //  TurtleTower
 //
 //  Created by X3N0 on 1/22/11.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Platform.h"
 
-@interface MesosphereWarpCloud : Platform {
+@interface TroposphereWarpCloud : Platform {
 
 }
 

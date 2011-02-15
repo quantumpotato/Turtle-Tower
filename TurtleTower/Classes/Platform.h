@@ -58,6 +58,7 @@
 
 @optional
 
+-(void)landedOnTroposphereCloud;
 -(void)landedOnStratosphereCloud;
 -(void)landedOnMesosphereCloud;
 -(void)landedOnThermosphereCloud;

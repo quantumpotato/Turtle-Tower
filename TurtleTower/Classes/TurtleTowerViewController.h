@@ -28,8 +28,8 @@
 #import "MoonScale.h"
 #import "TurtleCarryBird.h"
 #import "SetupCloud.h"
+#import "TroposphereWarpCloud.h"
 #import "StratosphereWarpCloud.h"
-#import "MesosphereWarpCloud.h"
 #import "ThermosphereWarpCloud.h"
 
 #define CONTROLLER_WIND 0
@@ -98,7 +98,7 @@
 	int platformOscillateReset;
 	
 	int oldHeight;
-	int heightGained;
+	float heightGained;
 	
 	float targetHeight;
 	BOOL targetDirectionRight;
