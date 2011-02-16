@@ -26,7 +26,6 @@
 }
 
 -(void)move{
-	NSLog(@"self.l.x/y: %f, %f",self.l.x,self.l.y);
 	if (self.l.x > 300) {
 		self.l = SXetX(self.l, 300);
 		self.vel = CGPointMake(-fabsf(self.vel.x),self.vel.y);

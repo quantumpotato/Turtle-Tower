@@ -648,7 +648,7 @@
 	for (int i = 0; i < [self.birdRows count]; i++) {
 		BirdRow *br = (BirdRow *)[self.birdRows objectAtIndex:i];
 		if (br.bird1.k == OBS_KIND_CAMP_BIRD && br.bird1.state >= 3) {
-			NSLog(@"5=5");
+
 		} else {
 			[br scrollWithY:y];
 		}
@@ -1742,8 +1742,6 @@
 				[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + dist,t.l.y+hdist)];		
 			}
 			
-		
-			
 			if (gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.y < t.l.y + 100) {
 				[self difficultyCloudSelected:difficultyLevel cloud:nil];
 			}
@@ -2360,7 +2358,6 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 		[self activateBirdRow:br];
 	} else if (bird.kind == OBS_KIND_DIVEBOMB_BIRD) {
 		DivebombBirdRow *br = [[DivebombBirdRow alloc] initWithBird:bird];
-		NSLog(@"bird animFMax: %d",bird.animFMax);
 		[self activateBirdRow:br];
 	}
 }

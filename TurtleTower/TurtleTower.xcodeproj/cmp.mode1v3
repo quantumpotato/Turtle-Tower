@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BFDB8B8C130B54D7004570D0</string>
+										<string>BFDB8B9A130B553D004570D0</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -414,7 +414,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BFDB8B8D130B54D7004570D0</string>
+										<string>BFDB8B9B130B553D004570D0</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -532,7 +532,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>TurtleTowerViewController.m</string>
+								<string>DivebombBird.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -540,11 +540,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>TurtleTowerViewController.m</string>
+										<string>DivebombBird.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BFDB8B8E130B54D7004570D0</string>
+										<string>BFDB8B9E130B553D004570D0</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -626,7 +626,6 @@
 											<string>BFCA4DAB12FA4D800022E9FF</string>
 											<string>BFCA4DB412FA4E600022E9FF</string>
 											<string>BF13975112FCB8280015A98E</string>
-											<string>BF13975D12FCB8570015A98E</string>
 											<string>BF13977112FCB9780015A98E</string>
 											<string>BFE7EE2913060CFC0021822D</string>
 											<string>BFF901D8130700250007CD17</string>
@@ -638,7 +637,8 @@
 											<string>BF9E4DC7130A146E00545D0D</string>
 											<string>BF9E4DD4130A14C700545D0D</string>
 											<string>BF9E4DD5130A14C700545D0D</string>
-											<string>BFDB8B7A130B53E5004570D0</string>
+											<string>BFDB8B9C130B553D004570D0</string>
+											<string>BFDB8B9D130B553D004570D0</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -677,7 +677,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BFDB8B8F130B54D7004570D0</string>
+										<string>BFDB8B9F130B553D004570D0</string>
 										<key>history</key>
 										<array>
 											<string>BFE7BECE124C497B0083A59A</string>
@@ -973,13 +973,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>BFDB8B8B130B54C6004570D0</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>BFDB8B6A130B530A004570D0</string>
 		<string>BFDB8B6B130B530A004570D0</string>
-		<string>BFE7BE83124C36860083A59A</string>
-		<string>/Users/cmp/TurtleTower/TurtleTower/TurtleTower.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>BFE7BE83124C36860083A59A</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Users/cmp/TurtleTower/TurtleTower/TurtleTower.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 50 1680 978 0 0 1680 1028 </string>
@@ -1221,7 +1221,7 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CDD528C0622207200134675</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>CampBird.m</string>
+										<string>TurtleTowerViewController.m</string>
 										<key>StatusBarVisibility</key>
 										<true/>
 									</dict>
@@ -1277,8 +1277,8 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C530D57069F1CE1000CFCEE</string>
-				<string>BFCA4D4912FA417C0022E9FF</string>
-				<string>BFCA4D4A12FA417C0022E9FF</string>
+				<string>BFDB8B92130B54E9004570D0</string>
+				<string>BFDB8B93130B54E9004570D0</string>
 				<string>1CDD528C0622207200134675</string>
 				<string>1CD0528E0623707200166675</string>
 			</array>
@@ -1353,7 +1353,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
