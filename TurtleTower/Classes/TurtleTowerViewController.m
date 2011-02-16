@@ -537,6 +537,8 @@
 	difficultySelectedStatus = -1;
 	diffPlatformWidth = 35;
 	
+	[self showScore];
+	
 	WhiteCloud *wc = [[WhiteCloud alloc] init];
 	wc.l = CGPointMake(35,230);
 	wc.delegate = self;
