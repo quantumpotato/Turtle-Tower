@@ -1742,9 +1742,7 @@
 				[self calculateTurtleJumpImpulse:CGPointMake(t.l.x + dist,t.l.y+hdist)];		
 			}
 			
-			if (difficultyLevel == 0 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.y > t.l.x - 60 && gestureStartPoint.y < t.l.y + 100){
-				[self difficultyCloudSelected:0 cloud:nil];	
-			}
+		
 			
 			if (gestureStartPoint.x < t.l.x + 40 && gestureStartPoint.x > t.l.x - 40 && gestureStartPoint.y < t.l.y + 100) {
 				[self difficultyCloudSelected:difficultyLevel cloud:nil];
@@ -2456,7 +2454,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 
 -(void)landedOnStratosphereCloud {
 	startinglevel = 13;
-	heightGained = (1000 * turtleHeight) + (10 * startinglevel * landingsInLevel);
+	heightGained = (1000 * turtleHeight) + (10 * startinglevel * landingsInLevel * turtleHeight);
 	gamestate = 62;
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }
