@@ -699,7 +699,10 @@
 	totallands = 2500;
 	lands = 0;
 	heightGained = 1000 * turtleHeight;
-	self.sphere = @"Troposphere";
+	if (startinglevel > 1) {
+        heightGained = (1000 * turtleHeight) + (10 * startinglevel * landingsInLevel * turtleHeight);
+    }
+    self.sphere = @"Troposphere";
 	difficultySelectedStatus = -1;
 	cloudScrollSpeed = 3;
 	landingsInLevel = 25; //25, 14;
@@ -711,13 +714,9 @@
 	diffPlatformWidthReset = 136; //120
 	diffPlatformWidthCycles = 0;
 	diffPlatformWidth = diffPlatformWidthReset;
-	
-	
 	diffFadeDelayReset = 0;
-	
 	emptyFades = 0;
 	maxEmptyFades = 4;
-	
 	diffHWind = 4; //0
 	activeWind = 0;
 	diffPlatformOscillate = 5;
@@ -2397,6 +2396,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 }
 
 -(void)select {
+    [self resetDifficulty];
 	if (t.l.x < 320) {
 		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 300,t.l.y-200)];
 	} else {
@@ -2456,4 +2456,4 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }
 
-@end	
+@end
