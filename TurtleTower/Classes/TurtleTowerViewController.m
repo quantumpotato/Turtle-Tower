@@ -1028,6 +1028,13 @@
 	
 }	
 
+-(void)turtleFellFromDifficultyClouds {
+    [self revertClouds];
+    self.easyText.center = CGPointMake(1000, 1000);
+    self.mediumText.center = CGPointMake(1000, 1000);	
+    [self finishedCloudRise];
+}
+
 -(void)TurtleLoop{
 	[t tick];
 	
@@ -1037,20 +1044,13 @@
 	
 	if (gamestate == 60 || gamestate == 61){
 		if (t.l.y > 510) {
-			[self revertClouds];
-			self.easyText.center = CGPointMake(1000, 1000);
-			self.mediumText.center = CGPointMake(1000, 1000);	
-			[self showIntroTexts];
-			t.l = CGPointMake(160,-30);
+            [self turtleFellFromDifficultyClouds];
 		}
 	}else if (gamestate == 20){
 		t.vel = CGPointMake(0,-10);
 		t.l = CombineVel(t.l, t.vel);
 		climbTowerText.center = CGPointMake(climbTowerText.center.x,climbTowerText.center.y+20);
-		//upgradeText.center = CGPointMake(upgradeText.center.x,upgradeText.center.y+20);
 		scoresText.center = CGPointMake(scoresText.center.x,scoresText.center.y+20);		
-		//		Platform *p = (Platform *)[self.pl objectAtIndex:INDEX_BLUE];
-		//		p.vel = CGPointMake(0, 2);
 	}else if (gamestate == 40){
 		t.vel = CGPointMake(0,-1);
 		t.l = CombineVel(t.l, t.vel);
@@ -1228,9 +1228,7 @@
 -(void)animatePlatformFall{
 	for (int i = 0; i < [self.pl count]; i++){
 		Platform *p = (Platform *)[self.pl objectAtIndex:i];
-		//		if (p.platform != 100 && p.l.y < 480){
 		p.l = SYOffsetY(p.l, 5);
-		//		}
 	}
 	Platform *lp = [self lowestPlatform];
 	if (lp.l.y < 480 && lp.l.y >= baseHeight - 40){
