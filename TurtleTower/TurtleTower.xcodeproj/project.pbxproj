@@ -32,6 +32,8 @@
 		BF46096D1255503A00FE13A2 /* purplebirdca.png in Resources */ = {isa = PBXBuildFile; fileRef = BF4609691255503A00FE13A2 /* purplebirdca.png */; };
 		BF46096E1255503A00FE13A2 /* purplebirdcb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF46096A1255503A00FE13A2 /* purplebirdcb.png */; };
 		BF4D456112A735AD001F9C33 /* BirdSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D456012A735AD001F9C33 /* BirdSpawner.m */; };
+		BF5160BE133AD89000682574 /* featherp1small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5160BC133AD89000682574 /* featherp1small.png */; };
+		BF5160BF133AD89000682574 /* featherp2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5160BD133AD89000682574 /* featherp2small.png */; };
 		BF52B30C12934D1700FF1FBC /* DifficultyController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B30B12934D1700FF1FBC /* DifficultyController.m */; };
 		BF52B31512934DFF00FF1FBC /* DifficultyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B31412934DFF00FF1FBC /* DifficultyControl.m */; };
 		BF52B3271293503000FF1FBC /* WindController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B3261293503000FF1FBC /* WindController.m */; };
@@ -119,6 +121,8 @@
 		BF46096A1255503A00FE13A2 /* purplebirdcb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purplebirdcb.png; sourceTree = "<group>"; };
 		BF4D455F12A735AD001F9C33 /* BirdSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSpawner.h; sourceTree = "<group>"; };
 		BF4D456012A735AD001F9C33 /* BirdSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSpawner.m; sourceTree = "<group>"; };
+		BF5160BC133AD89000682574 /* featherp1small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherp1small.png; sourceTree = "<group>"; };
+		BF5160BD133AD89000682574 /* featherp2small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherp2small.png; sourceTree = "<group>"; };
 		BF52B30A12934D1700FF1FBC /* DifficultyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyController.h; sourceTree = "<group>"; };
 		BF52B30B12934D1700FF1FBC /* DifficultyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyController.m; sourceTree = "<group>"; };
 		BF52B31312934DFF00FF1FBC /* DifficultyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyControl.h; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 		BF0A39D9124E696B00D1DF85 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BF5160B5133AD6CD00682574 /* Feathers */,
 				BFF901D21306FFFD0007CD17 /* Moon50.png */,
 				BFC0C90B12E9193D00CA8328 /* heart.png */,
 				BFC6CAE912EB8BBA0078AF11 /* pinkheart.png */,
@@ -320,6 +325,15 @@
 				BF325AE51252997400DAAF73 /* SMbird1b84.png */,
 			);
 			name = Birds;
+			sourceTree = "<group>";
+		};
+		BF5160B5133AD6CD00682574 /* Feathers */ = {
+			isa = PBXGroup;
+			children = (
+				BF5160BC133AD89000682574 /* featherp1small.png */,
+				BF5160BD133AD89000682574 /* featherp2small.png */,
+			);
+			name = Feathers;
 			sourceTree = "<group>";
 		};
 		BF52B3241293502000FF1FBC /* Difficulty Controls */ = {
@@ -536,6 +550,8 @@
 				BFC0C90C12E9193D00CA8328 /* heart.png in Resources */,
 				BFC6CAEA12EB8BBA0078AF11 /* pinkheart.png in Resources */,
 				BFF901D31306FFFD0007CD17 /* Moon50.png in Resources */,
+				BF5160BE133AD89000682574 /* featherp1small.png in Resources */,
+				BF5160BF133AD89000682574 /* featherp2small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -654,6 +654,11 @@
 		}
 	}
 	
+	for (int i = 0; i < [self.obs count]; i++ ){
+		DifficultyObstacle *o = (DifficultyObstacle *)[self.obs objectAtIndex:i];
+		[o scrollWithY:y];
+	}
+	
 	for (int i = 0; i < [self.pl count]; i++){
 		Platform *p = (Platform*)[self.pl objectAtIndex:i];
 		p.l = IYncreaseY(p.l, y);
@@ -1271,11 +1276,11 @@
 	//	xl+= 30;
 	//	int yl = arc4random() % 100;
 	feather.l = CGPointMake(self.newestBird.l.x,self.newestBird.l.y);
-	feather.view.center = feather.l;
+	feather.imageView.center = feather.l;
 	int featherSpeed = arc4random() % 3;
 	feather.vel = CGPointMake(activeWind,featherSpeed+2);
 	[self.obs addObject:feather];
-	[self.view addSubview:feather.view];
+	[self.view addSubview:feather.imageView];
 	[feather release];
 }
 
@@ -1390,8 +1395,9 @@
 	[self ObstacleLoop];
 	[self BirdRowLoop];
 	[self TextLoop];
+	
 	//	[self SpawnerLoop];
-	//	if (gamestate == 1){[self FeatherLoop];}	
+		if (gamestate == 1){[self FeatherLoop];}	
 }
 
 -(void)hideIntroText{
@@ -2224,7 +2230,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	self.warpText1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
 	self.warpText1.backgroundColor = [UIColor clearColor];
 	self.warpText1.textColor = [UIColor whiteColor];
-	self.warpText1.text = @"   Troposphere \n     Level 1";
+	self.warpText1.text = @"   Troposphere \n     1000 shells";
 	self.warpText1.lineBreakMode = UILineBreakModeWordWrap;
 	self.warpText1.numberOfLines = 2;
 	self.warpText1.font = [UIFont systemFontOfSize:14];	
@@ -2235,7 +2241,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	self.warpText2.backgroundColor = [UIColor clearColor];
 	self.warpText2.textColor = [UIColor whiteColor];
 	self.warpText2.font = [UIFont systemFontOfSize:14];
-	self.warpText2.text = @"   Stratosphere \n      Level 13";
+	self.warpText2.text = @"   Stratosphere \n      4250 shells";
 	self.warpText2.lineBreakMode = UILineBreakModeWordWrap;
 	self.warpText2.numberOfLines = 2;
 	self.warpText2.center = CGPointMake(1000, 1000);
@@ -2304,6 +2310,10 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	p.vel = CGPointZero;
 	self.trainingText.center = CGPointMake(t.l.x, t.l.y-50);
 	self.trainingText.text = @"Moon Turtle waits for you!";
+	if (startinglevel > 1) {
+		heightGained = (1000 * turtleHeight) + (10 * startinglevel * landingsInLevel * turtleHeight);
+	}
+	[self showScore];
 }
 
 -(void)finishedSlideDown{

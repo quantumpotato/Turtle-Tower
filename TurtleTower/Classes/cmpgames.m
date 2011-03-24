@@ -61,7 +61,7 @@ float GetDist(CGPoint initialp, CGPoint secondp){
 }
 
 BOOL OutOfBounds(CGPoint initialp){
-	if (initialp.x < -10 || initialp.x > 330 || initialp.y < -10 || initialp.y > 490){
+	if (initialp.x < 2 || initialp.x > 318  || initialp.y < 2 || initialp.y > 478){
 		return YES;	
 	}
 	return NO;
