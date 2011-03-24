@@ -704,7 +704,10 @@
 	totallands = 2500;
 	lands = 0;
 	heightGained = 1000 * turtleHeight;
-	self.sphere = @"Troposphere";
+	if (startinglevel > 1) {
+        heightGained = (1000 * turtleHeight) + (10 * startinglevel * landingsInLevel * turtleHeight);
+    }
+    self.sphere = @"Troposphere";
 	difficultySelectedStatus = -1;
 	cloudScrollSpeed = 3;
 	landingsInLevel = 25; //25, 14;
@@ -716,13 +719,9 @@
 	diffPlatformWidthReset = 136; //120
 	diffPlatformWidthCycles = 0;
 	diffPlatformWidth = diffPlatformWidthReset;
-	
-	
 	diffFadeDelayReset = 0;
-	
 	emptyFades = 0;
 	maxEmptyFades = 4;
-	
 	diffHWind = 4; //0
 	activeWind = 0;
 	diffPlatformOscillate = 5;
@@ -1034,6 +1033,13 @@
 	
 }	
 
+-(void)turtleFellFromDifficultyClouds {
+    [self revertClouds];
+    self.easyText.center = CGPointMake(1000, 1000);
+    self.mediumText.center = CGPointMake(1000, 1000);	
+    [self finishedCloudRise];
+}
+
 -(void)TurtleLoop{
 	[t tick];
 	
@@ -1043,20 +1049,13 @@
 	
 	if (gamestate == 60 || gamestate == 61){
 		if (t.l.y > 510) {
-			[self revertClouds];
-			self.easyText.center = CGPointMake(1000, 1000);
-			self.mediumText.center = CGPointMake(1000, 1000);	
-			[self showIntroTexts];
-			t.l = CGPointMake(160,-30);
+            [self turtleFellFromDifficultyClouds];
 		}
 	}else if (gamestate == 20){
 		t.vel = CGPointMake(0,-10);
 		t.l = CombineVel(t.l, t.vel);
 		climbTowerText.center = CGPointMake(climbTowerText.center.x,climbTowerText.center.y+20);
-		//upgradeText.center = CGPointMake(upgradeText.center.x,upgradeText.center.y+20);
 		scoresText.center = CGPointMake(scoresText.center.x,scoresText.center.y+20);		
-		//		Platform *p = (Platform *)[self.pl objectAtIndex:INDEX_BLUE];
-		//		p.vel = CGPointMake(0, 2);
 	}else if (gamestate == 40){
 		t.vel = CGPointMake(0,-1);
 		t.l = CombineVel(t.l, t.vel);
@@ -1234,9 +1233,7 @@
 -(void)animatePlatformFall{
 	for (int i = 0; i < [self.pl count]; i++){
 		Platform *p = (Platform *)[self.pl objectAtIndex:i];
-		//		if (p.platform != 100 && p.l.y < 480){
 		p.l = SYOffsetY(p.l, 5);
-		//		}
 	}
 	Platform *lp = [self lowestPlatform];
 	if (lp.l.y < 480 && lp.l.y >= baseHeight - 40){
@@ -2407,6 +2404,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 }
 
 -(void)select {
+    [self resetDifficulty];
 	if (t.l.x < 320) {
 		[self calculateTurtleJumpImpulse:CGPointMake(t.l.x - 300,t.l.y-200)];
 	} else {
@@ -2466,4 +2464,4 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	[self performSelector:@selector(select) withObject:nil afterDelay:.2];
 }
 
-@end	
+@end
