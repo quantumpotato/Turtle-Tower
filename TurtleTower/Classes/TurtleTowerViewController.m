@@ -1274,7 +1274,7 @@
 	//	int yl = arc4random() % 100;
 	feather.l = CGPointMake(self.newestBird.l.x,self.newestBird.l.y);
 	feather.imageView.center = feather.l;
-	int featherSpeed = arc4random() % 3;
+	int featherSpeed = 1;
 	feather.vel = CGPointMake(activeWind,featherSpeed+2);
 	[self.obs addObject:feather];
 	[self.view addSubview:feather.imageView];
