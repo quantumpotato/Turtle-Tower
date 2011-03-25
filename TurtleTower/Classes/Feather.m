@@ -30,6 +30,27 @@
 	if (self.delay > self.delayReset * 2 + 15){
 		self.delay = 0;
 	}
+	
+	
+	if (self.delay < self.delayReset) {
+		if (self.direction != 1) {
+			self.direction = 1;
+			[self changeImageToFirst];
+		}
+	}else {
+		if (self.direction != -1) {
+			self.direction = -1;
+			[self changeImageToSecond];
+		}
+	}
+}
+
+-(void)changeImageToFirst {
+	self.imageView.image = self.firstFeather;	
+}
+
+-(void)changeImageToSecond {
+	self.imageView.image = self.secondFeather;	
 }
 
 -(void)dealloc {

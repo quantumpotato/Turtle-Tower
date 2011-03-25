@@ -33,7 +33,6 @@
 		BF46096E1255503A00FE13A2 /* purplebirdcb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF46096A1255503A00FE13A2 /* purplebirdcb.png */; };
 		BF4D456112A735AD001F9C33 /* BirdSpawner.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4D456012A735AD001F9C33 /* BirdSpawner.m */; };
 		BF5160BE133AD89000682574 /* featherp1small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5160BC133AD89000682574 /* featherp1small.png */; };
-		BF5160BF133AD89000682574 /* featherp2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF5160BD133AD89000682574 /* featherp2small.png */; };
 		BF52B30C12934D1700FF1FBC /* DifficultyController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B30B12934D1700FF1FBC /* DifficultyController.m */; };
 		BF52B31512934DFF00FF1FBC /* DifficultyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B31412934DFF00FF1FBC /* DifficultyControl.m */; };
 		BF52B3271293503000FF1FBC /* WindController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF52B3261293503000FF1FBC /* WindController.m */; };
@@ -42,6 +41,8 @@
 		BF62EB06133C2511009E5D24 /* OrangeFeather.m in Sources */ = {isa = PBXBuildFile; fileRef = BF62EB05133C2511009E5D24 /* OrangeFeather.m */; };
 		BF62EB22133C29D3009E5D24 /* feathero1small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EB20133C29D3009E5D24 /* feathero1small.png */; };
 		BF62EB23133C29D3009E5D24 /* feathero2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EB21133C29D3009E5D24 /* feathero2small.png */; };
+		BF62EBB8133C41A0009E5D24 /* featherp2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EBB7133C41A0009E5D24 /* featherp2small.png */; };
+		BF62EBBB133C41CE009E5D24 /* PurpleFeather.m in Sources */ = {isa = PBXBuildFile; fileRef = BF62EBBA133C41CE009E5D24 /* PurpleFeather.m */; };
 		BF869659127B557C00C914F3 /* greenbirda.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869655127B557C00C914F3 /* greenbirda.png */; };
 		BF86965A127B557C00C914F3 /* greenbirdcb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869656127B557C00C914F3 /* greenbirdcb.png */; };
 		BF86965B127B557C00C914F3 /* greenbirdca.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869657127B557C00C914F3 /* greenbirdca.png */; };
@@ -129,7 +130,6 @@
 		BF4D455F12A735AD001F9C33 /* BirdSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdSpawner.h; sourceTree = "<group>"; };
 		BF4D456012A735AD001F9C33 /* BirdSpawner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdSpawner.m; sourceTree = "<group>"; };
 		BF5160BC133AD89000682574 /* featherp1small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherp1small.png; sourceTree = "<group>"; };
-		BF5160BD133AD89000682574 /* featherp2small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherp2small.png; sourceTree = "<group>"; };
 		BF52B30A12934D1700FF1FBC /* DifficultyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyController.h; sourceTree = "<group>"; };
 		BF52B30B12934D1700FF1FBC /* DifficultyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyController.m; sourceTree = "<group>"; };
 		BF52B31312934DFF00FF1FBC /* DifficultyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyControl.h; sourceTree = "<group>"; };
@@ -144,6 +144,9 @@
 		BF62EB05133C2511009E5D24 /* OrangeFeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrangeFeather.m; sourceTree = "<group>"; };
 		BF62EB20133C29D3009E5D24 /* feathero1small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feathero1small.png; sourceTree = "<group>"; };
 		BF62EB21133C29D3009E5D24 /* feathero2small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feathero2small.png; sourceTree = "<group>"; };
+		BF62EBB7133C41A0009E5D24 /* featherp2small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherp2small.png; sourceTree = "<group>"; };
+		BF62EBB9133C41CE009E5D24 /* PurpleFeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleFeather.h; sourceTree = "<group>"; };
+		BF62EBBA133C41CE009E5D24 /* PurpleFeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurpleFeather.m; sourceTree = "<group>"; };
 		BF869655127B557C00C914F3 /* greenbirda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirda.png; sourceTree = "<group>"; };
 		BF869656127B557C00C914F3 /* greenbirdcb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdcb.png; sourceTree = "<group>"; };
 		BF869657127B557C00C914F3 /* greenbirdca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdca.png; sourceTree = "<group>"; };
@@ -352,7 +355,7 @@
 				BF9303E6133B70470082B897 /* featherg2.png */,
 				BF9303E7133B70480082B897 /* featherg1.png */,
 				BF5160BC133AD89000682574 /* featherp1small.png */,
-				BF5160BD133AD89000682574 /* featherp2small.png */,
+				BF62EBB7133C41A0009E5D24 /* featherp2small.png */,
 			);
 			name = Feathers;
 			sourceTree = "<group>";
@@ -379,6 +382,8 @@
 				BFBCA4F0127C945600EA087D /* Feather.m */,
 				BF62EB04133C2511009E5D24 /* OrangeFeather.h */,
 				BF62EB05133C2511009E5D24 /* OrangeFeather.m */,
+				BF62EBB9133C41CE009E5D24 /* PurpleFeather.h */,
+				BF62EBBA133C41CE009E5D24 /* PurpleFeather.m */,
 			);
 			name = Feathers;
 			sourceTree = "<group>";
@@ -582,13 +587,13 @@
 				BFC6CAEA12EB8BBA0078AF11 /* pinkheart.png in Resources */,
 				BFF901D31306FFFD0007CD17 /* Moon50.png in Resources */,
 				BF5160BE133AD89000682574 /* featherp1small.png in Resources */,
-				BF5160BF133AD89000682574 /* featherp2small.png in Resources */,
 				BF9303E8133B70480082B897 /* feathero1.pdf in Resources */,
 				BF9303E9133B70480082B897 /* feathero2.png in Resources */,
 				BF9303EA133B70480082B897 /* featherg2.png in Resources */,
 				BF9303EB133B70480082B897 /* featherg1.png in Resources */,
 				BF62EB22133C29D3009E5D24 /* feathero1small.png in Resources */,
 				BF62EB23133C29D3009E5D24 /* feathero2small.png in Resources */,
+				BF62EBB8133C41A0009E5D24 /* featherp2small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +653,7 @@
 				BFC6CA1E12EB82790078AF11 /* StratosphereWarpCloud.m in Sources */,
 				BFC6CA2712EB82BA0078AF11 /* ThermosphereWarpCloud.m in Sources */,
 				BF62EB06133C2511009E5D24 /* OrangeFeather.m in Sources */,
+				BF62EBBB133C41CE009E5D24 /* PurpleFeather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

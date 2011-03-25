@@ -8,6 +8,7 @@
 
 #import "CampBirdRow.h"
 #import "CampBird.h"
+#import "PurpleFeather.h"
 
 @implementation CampBirdRow
 
@@ -38,6 +39,11 @@
 -(void)tick{
 	[self.bird1 move];
 	[self.bird1 animate];	
+}
+
+-(Feather *)newFeather {
+	PurpleFeather *feather = [[[PurpleFeather alloc] init] autorelease];
+	return feather;
 }
 
 @end

@@ -19,6 +19,7 @@
 @property(nonatomic, retain) UIImage *firstFeather;
 @property(nonatomic, retain) UIImage *secondFeather;
 
-
+-(void)changeImageToFirst;
+-(void)changeImageToSecond;
 
 @end
