@@ -111,6 +111,7 @@
 //Birds dodged (when the bird gets dealloced)	
 
 #import "TurtleTowerViewController.h"
+#import "GreenFeather.h"
 
 @implementation TurtleTowerViewController
 @synthesize scoreText, newestBird;
@@ -653,9 +654,9 @@
 			[br scrollWithY:y];
 			if (!br.droppedFeather && br.bird1.l.y > -300) {
 				br.droppedFeather = YES;
-				[self dropFeather:[br newFeather] FromWidth:br.bird1.l.x];
+				[self dropFeather:[br newFeather] FromBird:br.bird1];
 				if (br.bird2) {
-					[self dropFeather:[br newFeather] FromWidth:br.bird2.l.x];	
+					[self dropFeather:[br newFeather] FromBird:br.bird2];
 				}
 			}
 		}
@@ -1274,15 +1275,19 @@
 	scoresText.frame = CGRectMake(230,200,60,20);
 }	
 
--(void)dropFeather:(Feather *)feather FromWidth:(float)width{
+-(void)dropFeather:(Feather *)feather FromBird:(Bird *)bird{
 	if (feather) {
-	feather.l = CGPointMake(width,-300);
-	feather.imageView.center = feather.l;
-	int featherSpeed = 1;
-	feather.vel = CGPointMake(activeWind,featherSpeed+.5);
-	[self.obs addObject:feather];
-	[self.view addSubview:feather.imageView];
-//	[feather release];
+		feather.l = CGPointMake(bird.l.x,-300);
+		feather.imageView.center = feather.l;
+		int featherSpeed = 1;
+		if ([feather isKindOfClass:[GreenFeather class]]) {
+			featherSpeed+= bird.vel.y;
+			featherSpeed++;
+		}
+		feather.vel = CGPointMake(activeWind,featherSpeed+.5);
+		
+		[self.obs addObject:feather];
+		[self.view addSubview:feather.imageView];
 	}
 }
 

@@ -43,6 +43,9 @@
 		BF62EB23133C29D3009E5D24 /* feathero2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EB21133C29D3009E5D24 /* feathero2small.png */; };
 		BF62EBB8133C41A0009E5D24 /* featherp2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EBB7133C41A0009E5D24 /* featherp2small.png */; };
 		BF62EBBB133C41CE009E5D24 /* PurpleFeather.m in Sources */ = {isa = PBXBuildFile; fileRef = BF62EBBA133C41CE009E5D24 /* PurpleFeather.m */; };
+		BF62EBF3133C44DC009E5D24 /* GreenFeather.m in Sources */ = {isa = PBXBuildFile; fileRef = BF62EBF2133C44DC009E5D24 /* GreenFeather.m */; };
+		BF62EBF6133C4582009E5D24 /* featherg1small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EBF4133C4582009E5D24 /* featherg1small.png */; };
+		BF62EBF7133C4582009E5D24 /* featherg2small.png in Resources */ = {isa = PBXBuildFile; fileRef = BF62EBF5133C4582009E5D24 /* featherg2small.png */; };
 		BF869659127B557C00C914F3 /* greenbirda.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869655127B557C00C914F3 /* greenbirda.png */; };
 		BF86965A127B557C00C914F3 /* greenbirdcb.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869656127B557C00C914F3 /* greenbirdcb.png */; };
 		BF86965B127B557C00C914F3 /* greenbirdca.png in Resources */ = {isa = PBXBuildFile; fileRef = BF869657127B557C00C914F3 /* greenbirdca.png */; };
@@ -147,6 +150,10 @@
 		BF62EBB7133C41A0009E5D24 /* featherp2small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherp2small.png; sourceTree = "<group>"; };
 		BF62EBB9133C41CE009E5D24 /* PurpleFeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleFeather.h; sourceTree = "<group>"; };
 		BF62EBBA133C41CE009E5D24 /* PurpleFeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurpleFeather.m; sourceTree = "<group>"; };
+		BF62EBF1133C44DC009E5D24 /* GreenFeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GreenFeather.h; sourceTree = "<group>"; };
+		BF62EBF2133C44DC009E5D24 /* GreenFeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GreenFeather.m; sourceTree = "<group>"; };
+		BF62EBF4133C4582009E5D24 /* featherg1small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherg1small.png; sourceTree = "<group>"; };
+		BF62EBF5133C4582009E5D24 /* featherg2small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = featherg2small.png; sourceTree = "<group>"; };
 		BF869655127B557C00C914F3 /* greenbirda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirda.png; sourceTree = "<group>"; };
 		BF869656127B557C00C914F3 /* greenbirdcb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdcb.png; sourceTree = "<group>"; };
 		BF869657127B557C00C914F3 /* greenbirdca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbirdca.png; sourceTree = "<group>"; };
@@ -356,6 +363,8 @@
 				BF9303E7133B70480082B897 /* featherg1.png */,
 				BF5160BC133AD89000682574 /* featherp1small.png */,
 				BF62EBB7133C41A0009E5D24 /* featherp2small.png */,
+				BF62EBF4133C4582009E5D24 /* featherg1small.png */,
+				BF62EBF5133C4582009E5D24 /* featherg2small.png */,
 			);
 			name = Feathers;
 			sourceTree = "<group>";
@@ -384,6 +393,8 @@
 				BF62EB05133C2511009E5D24 /* OrangeFeather.m */,
 				BF62EBB9133C41CE009E5D24 /* PurpleFeather.h */,
 				BF62EBBA133C41CE009E5D24 /* PurpleFeather.m */,
+				BF62EBF1133C44DC009E5D24 /* GreenFeather.h */,
+				BF62EBF2133C44DC009E5D24 /* GreenFeather.m */,
 			);
 			name = Feathers;
 			sourceTree = "<group>";
@@ -594,6 +605,8 @@
 				BF62EB22133C29D3009E5D24 /* feathero1small.png in Resources */,
 				BF62EB23133C29D3009E5D24 /* feathero2small.png in Resources */,
 				BF62EBB8133C41A0009E5D24 /* featherp2small.png in Resources */,
+				BF62EBF6133C4582009E5D24 /* featherg1small.png in Resources */,
+				BF62EBF7133C4582009E5D24 /* featherg2small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +667,7 @@
 				BFC6CA2712EB82BA0078AF11 /* ThermosphereWarpCloud.m in Sources */,
 				BF62EB06133C2511009E5D24 /* OrangeFeather.m in Sources */,
 				BF62EBBB133C41CE009E5D24 /* PurpleFeather.m in Sources */,
+				BF62EBF3133C44DC009E5D24 /* GreenFeather.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

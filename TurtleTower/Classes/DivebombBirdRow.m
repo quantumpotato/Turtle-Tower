@@ -8,6 +8,7 @@
 
 #import "DivebombBirdRow.h"
 #import "DivebombBird.h"
+#import "GreenFeather.h"
 
 @implementation DivebombBirdRow
 
@@ -26,6 +27,11 @@
 -(void)tick{
 	[self.bird1 move];
 	[self.bird1 animate];	
+}
+
+-(Feather *)newFeather {
+	GreenFeather *feather = [[[GreenFeather alloc] init] autorelease];
+	return feather;
 }
 
 @end
