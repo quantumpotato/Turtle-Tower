@@ -651,6 +651,10 @@
 
 		} else {
 			[br scrollWithY:y];
+			if (!br.droppedFeather && br.bird1.l.y > -100) {
+				br.droppedFeather = YES;
+				[self dropFeather:[br newFeather] FromWidth:br.bird1.l.x];
+			}
 		}
 	}
 	
@@ -1267,18 +1271,16 @@
 	scoresText.frame = CGRectMake(230,200,60,20);
 }	
 
--(void)dropFeather{
-	Feather *feather = [[Feather alloc] init];
-	//	int xl = arc4random() % 160;
-	//	xl+= 30;
-	//	int yl = arc4random() % 100;
-	feather.l = CGPointMake(self.newestBird.l.x,self.newestBird.l.y);
+-(void)dropFeather:(Feather *)feather FromWidth:(float)width{
+	if (feather) {
+	feather.l = CGPointMake(width,-50);
 	feather.imageView.center = feather.l;
 	int featherSpeed = 1;
 	feather.vel = CGPointMake(activeWind,featherSpeed+2);
 	[self.obs addObject:feather];
 	[self.view addSubview:feather.imageView];
-	[feather release];
+//	[feather release];
+	}
 }
 
 -(void)FeatherLoop{
@@ -1286,7 +1288,7 @@
 	if (featherCountdown <= 0){
 		featherCountdown = featherCountdownReset;
 		///		for (int i = 0; i < 5; i++){
-		[self dropFeather];
+	//	[self dropFeather];
 		//	}
 	}
 }
@@ -1394,7 +1396,7 @@
 	[self TextLoop];
 	
 	//	[self SpawnerLoop];
-		if (gamestate == 1){[self FeatherLoop];}	
+//		if (gamestate == 1){[self FeatherLoop];}	
 }
 
 -(void)hideIntroText{

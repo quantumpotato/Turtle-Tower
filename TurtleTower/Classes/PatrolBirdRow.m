@@ -8,6 +8,7 @@
 
 #import "PatrolBirdRow.h"
 #import "PatrolBird.h"
+#import "OrangeFeather.h"
 
 @implementation PatrolBirdRow
 
@@ -25,6 +26,11 @@
 		self.bird2.vel = CGPointMake(self.bird2.speed * self.bird2.direction,0);		
 	}
 	return self;
+}
+
+-(Feather *)newFeather {
+	OrangeFeather *feather = [[[OrangeFeather alloc] init] autorelease];
+	return feather;
 }
 
 @end

@@ -9,8 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "DifficultyObstacle.h"
 
+
 @interface Feather : DifficultyObstacle {
 
+	UIImage *firstFeather;
+	UIImage *secondFeather;
 }
+
+@property(nonatomic, retain) UIImage *firstFeather;
+@property(nonatomic, retain) UIImage *secondFeather;
+
+
 
 @end

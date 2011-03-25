@@ -10,7 +10,7 @@
 
 
 @implementation BirdRow
-@synthesize bird1, bird2, direction;
+@synthesize bird1, bird2, direction, droppedFeather;
 
 -(void)calculateDirection{
 	self.direction = -1;
@@ -70,6 +70,10 @@
 - (void)scrollWithY:(float)y {
 	self.bird1.l = SYOffsetY(self.bird1.l, y);
 	self.bird2.l = SYOffsetY(self.bird2.l, y);
+}
+
+-(Feather *)newFeather {
+	return nil;	
 }
 
 @end

@@ -231,4 +231,6 @@
 -(void)hideMoonScale;
 -(void)showIntroTexts;
 
+-(void)dropFeather:(Feather *)feather FromWidth:(float)width;
+
 @end
