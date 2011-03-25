@@ -17,6 +17,10 @@
 	
 }
 
+-(void)scrollWithX:(float)x {
+	self.l = SXOffsetX(self.l, x);
+}
+
 -(void)scrollWithY:(float)y{
 	self.l = SYOffsetY(self.l, y);	
 }

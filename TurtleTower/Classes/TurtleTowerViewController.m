@@ -629,7 +629,7 @@
 		}
 		for (int i = 0; i < [self.obs count]; i++){
 			DifficultyObstacle *o = (DifficultyObstacle *)[self.obs objectAtIndex:i];
-			o.l = CGPointMake(o.l.x+x,o.l.y);
+			[o scrollWithX:x];
 			
 		}
 		for (int i = 0; i < [self.birdRows count]; i++) {
@@ -651,9 +651,12 @@
 
 		} else {
 			[br scrollWithY:y];
-			if (!br.droppedFeather && br.bird1.l.y > -100) {
+			if (!br.droppedFeather && br.bird1.l.y > -300) {
 				br.droppedFeather = YES;
 				[self dropFeather:[br newFeather] FromWidth:br.bird1.l.x];
+				if (br.bird2) {
+					[self dropFeather:[br newFeather] FromWidth:br.bird2.l.x];	
+				}
 			}
 		}
 	}
@@ -1273,10 +1276,10 @@
 
 -(void)dropFeather:(Feather *)feather FromWidth:(float)width{
 	if (feather) {
-	feather.l = CGPointMake(width,-50);
+	feather.l = CGPointMake(width,-300);
 	feather.imageView.center = feather.l;
 	int featherSpeed = 1;
-	feather.vel = CGPointMake(activeWind,featherSpeed+2);
+	feather.vel = CGPointMake(activeWind,featherSpeed+.5);
 	[self.obs addObject:feather];
 	[self.view addSubview:feather.imageView];
 //	[feather release];

@@ -23,7 +23,7 @@
 -(void)move {
 	[super move];
 	
-	if (self.delay < 30) {
+	if (self.delay < self.delayReset) {
 		if (self.direction != 1) {
 			self.direction = 1;
 			self.imageView.image = self.firstFeather;
@@ -34,6 +34,7 @@
 				self.imageView.image = self.secondFeather;
 			}
 		}
+	
 }
 
 @end

@@ -251,4 +251,13 @@
 	self.l = CombineVel(self.l, self.vel);	
 }
 
+-(void)dealloc {
+	if (self.imageView) {
+		[self.imageView removeFromSuperview];
+		self.imageView = nil;
+	}
+	self.view = nil;
+	[super dealloc];
+}
+
 @end
