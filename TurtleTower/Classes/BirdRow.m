@@ -72,7 +72,7 @@
 	self.bird2.l = SYOffsetY(self.bird2.l, y);
 }
 
--(Feather *)newFeather {
+-(Feather *)feather {
 	return nil;	
 }
 

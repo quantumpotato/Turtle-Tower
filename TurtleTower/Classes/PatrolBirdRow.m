@@ -28,7 +28,7 @@
 	return self;
 }
 
--(Feather *)newFeather {
+-(Feather *)feather {
 	OrangeFeather *feather = [[[OrangeFeather alloc] init] autorelease];
 	return feather;
 }

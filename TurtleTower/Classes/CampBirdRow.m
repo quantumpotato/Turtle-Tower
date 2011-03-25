@@ -41,7 +41,7 @@
 	[self.bird1 animate];	
 }
 
--(Feather *)newFeather {
+-(Feather *)feather {
 	PurpleFeather *feather = [[[PurpleFeather alloc] init] autorelease];
 	return feather;
 }

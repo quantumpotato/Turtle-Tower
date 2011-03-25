@@ -28,6 +28,6 @@
 -(void)tick;
 -(void)calculateDirection;
 
--(Feather *)newFeather;
+-(Feather *)feather;
 
 @end

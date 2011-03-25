@@ -61,7 +61,7 @@ divebombCountdown, divebombCountdownReset, diffDivebombCountdown, diffDivebombBi
 
 -(void)setPlatformBirdSpeed:(Bird *)ob{
 	int diffrandom;
-	float floatedDiff;
+	float floatedDiff = 0;
 	if (self.diffPBSpeed > 0){
 		diffrandom = arc4random() % self.diffPBSpeed;
 		floatedDiff = diffrandom * .75;

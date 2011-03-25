@@ -163,7 +163,7 @@
 	}	
 	if (gamestate == 5){
 		levelLabel.text = @"";
-		int _highscore;
+		int _highscore = 0;
 		if (difficultyLevel == 0) {
 			_highscore = highscore;	
 		}
@@ -654,9 +654,9 @@
 			[br scrollWithY:y];
 			if (!br.droppedFeather && br.bird1.l.y > -300) {
 				br.droppedFeather = YES;
-				[self dropFeather:[br newFeather] FromBird:br.bird1];
+				[self dropFeather:[br feather] FromBird:br.bird1];
 				if (br.bird2) {
-					[self dropFeather:[br newFeather] FromBird:br.bird2];
+					[self dropFeather:[br feather] FromBird:br.bird2];
 				}
 			}
 		}
@@ -1217,6 +1217,18 @@
 	}
 }
 
+-(void)checkForFeatherRemoval {
+    NSMutableArray *removableFeathers = [NSMutableArray array];
+    for (DifficultyObstacle *o in self.obs) {
+        if (o.l.y > 520) {
+            [removableFeathers addObject:o];
+        }
+    }
+    
+    [self.obs removeObjectsInArray:removableFeathers];
+
+}
+
 -(void)ObstacleLoop{
 	for (int i = 0; i < [self.obs count]; i++) {
 		DifficultyObstacle *ob = (DifficultyObstacle *)[self.obs objectAtIndex:i];
@@ -1227,12 +1239,11 @@
 		if (ob.kind == OBS_KIND_FEATHER){
 			ob.vel = SXetX(ob.vel, activeWind);
 			[ob move];
-			ob.view.center = ob.l;
 		}
 	}
 	
 	if (gamestate == 1){
-		[self checkForBirdRemoval];
+		[self checkForFeatherRemoval];
 	}
 	
 }
