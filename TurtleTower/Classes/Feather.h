@@ -14,6 +14,8 @@
 
 	UIImage *firstFeather;
 	UIImage *secondFeather;
+    
+    int featherDelay;
 }
 
 @property(nonatomic, retain) UIImage *firstFeather;

@@ -1284,7 +1284,7 @@
 			featherSpeed+= bird.vel.y;
 			featherSpeed++;
 		}
-		feather.vel = CGPointMake(activeWind,featherSpeed+.5);
+		feather.vel = CGPointMake(activeWind,.5); //featherSpeed+.5);
 		
 		[self.obs addObject:feather];
 		[self.view addSubview:feather.imageView];

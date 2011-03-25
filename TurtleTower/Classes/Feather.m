@@ -19,6 +19,8 @@
 		self.delay = 0;
 		self.delayReset = arc4random() % 100;
 		self.delayReset+= 40;
+        self.delayReset = 20;
+        featherDelay = 5;
 	}
 	return self;
 }
@@ -26,13 +28,22 @@
 -(void)move {
 	self.l = CombineVel(self.l, self.vel);
 	self.imageView.center = self.l;
-	self.delay++;
 	if (self.delay > self.delayReset * 2 + 15){
 		self.delay = 0;
-	}
-	
-	
+	}	
+
+    featherDelay--;
+    if (featherDelay <= 0) {
+        featherDelay = 3;
+        self.delay++;
+        self.imageView.transform = CGAffineTransformMakeRotation(.1 * self.delay);        
+    }
+    
+
 	if (self.delay < self.delayReset) {
+         //Do transforms   
+
+        
 		if (self.direction != 1) {
 			self.direction = 1;
 			[self changeImageToFirst];
@@ -42,6 +53,9 @@
 			self.direction = -1;
 			[self changeImageToSecond];
 		}
+        if (self.delay > (self.delayReset * 2) + 15) {
+            self.delay = 0;
+        }
 	}
 }
 
@@ -57,6 +71,16 @@
 	self.firstFeather = nil;
 	self.secondFeather = nil;
 	[super dealloc];
+}
+
+-(void)scrollWithX:(float)x {
+    [super scrollWithX:x];
+    if (self.l.x > 320) {
+        self.l = SXOffsetX(self.l, -320);
+    }else if (self.l.x < 0) {
+        self.l = SXOffsetX(self.l, 320);
+    }
+
 }
 
 @end
