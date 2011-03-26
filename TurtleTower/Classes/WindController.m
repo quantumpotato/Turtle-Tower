@@ -61,5 +61,11 @@
 	return self.savedEffect;
 }
 
+-(void)dealloc {
+	self.activeControl = nil;
+	self.windActiveControl = nil;
+	self.earlyGameWindControl = nil;
+	[super dealloc];
+}
 
 @end

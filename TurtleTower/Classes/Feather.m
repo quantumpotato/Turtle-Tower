@@ -20,6 +20,8 @@
 		self.delayReset = arc4random() % 100;
 		self.delayReset+= 40;
         self.delayReset = 20;
+		self.direction = -1;
+		featherTick = 0;
         featherDelay = 5;
 	}
 	return self;
@@ -35,35 +37,63 @@
     featherDelay--;
     if (featherDelay <= 0) {
         featherDelay = 3;
-        self.delay++;
-        self.imageView.transform = CGAffineTransformMakeRotation(.1 * self.delay);        
+		[self oscillateFeather];
     }
-    
+}
 
-	if (self.delay < self.delayReset) {
-         //Do transforms   
-
-        
-		if (self.direction != 1) {
-			self.direction = 1;
-			[self changeImageToFirst];
+-(void)oscillateFeather {
+//facing determines image
+	//direction is motion
+	//delay is tick	
+	if (self.direction == 1) {
+		if (!self.facing == -1) {
+			featherTick--;	
+			if (featherTick <= 0) {
+				self.facing = 1;
+				featherTick = 0;
+				[self changeImageToFirst];
+			}
+		} else if (!self.facing == 1) {
+			featherTick++;
+			if (featherTick == 100) {
+				self.facing = -1;
+				self.direction = -1;
+			}
 		}
-	}else {
-		if (self.direction != -1) {
-			self.direction = -1;
-			[self changeImageToSecond];
+	} else if (self.direction == -1) {
+		if (!self.facing == 1) {
+			featherTick--;
+			if (featherTick <= 0) {
+				[self changeImageToSecond];	
+				self.facing = -1;
+				featherTick = 0;
+			}
+		}else if (!self.facing == -1) {
+			featherTick++;
+			if (featherTick == 100) {
+				self.facing = 1;
+				self.direction = 1;
+			}
 		}
-        if (self.delay > (self.delayReset * 2) + 15) {
-            self.delay = 0;
-        }
 	}
+	
+	
+	
+	if (self.facing == 1) {
+	      self.imageView.transform = CGAffineTransformMakeRotation(.1 * featherTick);        
+	} else if (self.facing == -1) {
+	      self.imageView.transform = CGAffineTransformMakeRotation(.1 * featherTick);        		
+	}
+	
 }
 
 -(void)changeImageToFirst {
+	NSLog(@"oh hello");
 	self.imageView.image = self.firstFeather;	
 }
 
 -(void)changeImageToSecond {
+	NSLog(@"Zoppao");	
 	self.imageView.image = self.secondFeather;	
 }
 
