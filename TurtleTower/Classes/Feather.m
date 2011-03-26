@@ -45,44 +45,66 @@
 //facing determines image
 	//direction is motion
 	//delay is tick	
-	if (self.direction == 1) {
-		if (!self.facing == -1) {
-			featherTick--;	
-			if (featherTick <= 0) {
-				self.facing = 1;
-				featherTick = 0;
-				[self changeImageToFirst];
-			}
-		} else if (!self.facing == 1) {
-			featherTick++;
-			if (featherTick == 100) {
-				self.facing = -1;
-				self.direction = -1;
-			}
-		}
-	} else if (self.direction == -1) {
-		if (!self.facing == 1) {
-			featherTick--;
-			if (featherTick <= 0) {
-				[self changeImageToSecond];	
-				self.facing = -1;
-				featherTick = 0;
-			}
-		}else if (!self.facing == -1) {
-			featherTick++;
-			if (featherTick == 100) {
-				self.facing = 1;
-				self.direction = 1;
-			}
-		}
+//	if (self.direction == 1) {
+//		if (!self.facing == -1) {
+//			featherTick--;	
+//			if (featherTick <= 0) {
+//				self.facing = 1;
+//				featherTick = 0;
+//				[self changeImageToFirst];
+//			}
+//		} else if (!self.facing == 1) {
+//			featherTick++;
+//			if (featherTick == 100) {
+//				self.facing = -1;
+//				self.direction = -1;
+//			}
+//		}
+//	} else if (self.direction == -1) {
+//		if (!self.facing == 1) {
+//			featherTick--;
+//			if (featherTick <= 0) {
+//				[self changeImageToSecond];	
+//				self.facing = -1;
+//				featherTick = 0;
+//			}
+//		}else if (!self.facing == -1) {
+//			featherTick++;
+//			if (featherTick == 100) {
+//				self.facing = 1;
+//				self.direction = 1;
+//			}
+//		}
+//	}
+	
+	if (self.facing == self.direction) {
+		featherTick++;	
+	} else {
+		featherTick--;
+	}
+	
+	if (featherTick <= 0) {
+		self.facing = -self.facing;
+		featherTick = 1;
+	//	if (self.facing == 1) {
+//			[self changeImageToFirst];
+//		}else {
+//			[self changeImageToSecond];			
+//		}
+	}else if (featherTick >= 30){
+		self.direction = -self.direction;
+		if (self.facing == 1) {
+			[self changeImageToFirst];
+		}else {
+			[self changeImageToSecond];			
+		}		
 	}
 	
 	
-	
 	if (self.facing == 1) {
-	      self.imageView.transform = CGAffineTransformMakeRotation(.1 * featherTick);        
+	      self.imageView.transform = CGAffineTransformMakeRotation(.03 * featherTick);        
 	} else if (self.facing == -1) {
-	      self.imageView.transform = CGAffineTransformMakeRotation(.1 * featherTick);        		
+	      self.imageView.transform = CGAffineTransformMakeRotation(-.03 * featherTick);        		
 	}
 	
 }
