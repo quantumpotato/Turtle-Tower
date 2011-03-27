@@ -797,8 +797,10 @@
 -(void)killTurtle{
 	self.trainingText.center = CGPointMake(500,500);
 	t.l = SYetY(t.l,0);
-	t.vel = CGPointMake(0,1);
-	t.state = TSP_TURTLE_STATE_PLATFORM;
+	t.l = CGPointMake(160, 0);
+	t.vel = SXetX(t.vel, 0);
+//	t.vel = CGPointMake(0,1);
+	t.state = TSA_TURTLE_STATE_AIR;
 	turtleSoups++;
 	scoreText = @"Died!";
 	
@@ -830,7 +832,7 @@
 	[self removeAllBirdRows];
 	
 	[self revertClouds];	
-	[self centerTurtleAtPlatform:[self lowestPlatform]];
+//	[self centerTurtleAtPlatform:[self lowestPlatform]];
 	
 	[self.birdController reset];
 	
@@ -1025,7 +1027,7 @@
 		t.l = CombineVel(t.l, t.vel);
 	}
 	
-	if (t.vel.y >= 0){		
+	if (t.vel.y >= 0 && gamestate != 78){		
 		[self turtleFalling];
 	}
 	
@@ -1051,6 +1053,13 @@
 -(void)TurtleLoop{
 	[t tick];
 	
+	if (gamestate == 78) {
+		t.l = CombineVel(t.l, t.vel);
+		if (t.l.x > 340 || t.l.x < 20 || t.l.y < -20 || t.l.y > 480){
+			[self killTurtle];
+		}
+	}
+	
 	[ms tick];
 	
 	[self setAccelerometerForPlatform];
@@ -1073,7 +1082,7 @@
 		if (gamestate == 1){
 			[self turtleStatePlatform];
 		}		
-	}else if (t.state == TSA_TURTLE_STATE_AIR){
+	}else if (t.state == TSA_TURTLE_STATE_AIR && gamestate != 78){
 		[self turtleStateAir];
 	}
 	
@@ -1359,6 +1368,14 @@
 		}
 	}
 }
+
+-(void)carryTurtle:(Bird *)bird {
+	gamestate = 78;
+	bird.vel = CGPointMake(bird.vel.x, fabsf(bird.vel.y));
+	bird.state = 5;
+	t.l = CGPointMake(bird.l.x, bird.l.y + 35);
+	t.vel = bird.vel;
+}
 	
 -(void)BirdRowLoop{
 	for (int i = 0; i < [self.birdRows count]; i++) {
@@ -1366,13 +1383,13 @@
 		[br tick];
 		if (GetDist(br.bird1.l, t.l) < 28) {
 			if (t.l.y > br.bird1.l.y - 15 || t.state == TSA_TURTLE_STATE_AIR){
-				[self killTurtle];
+				[self carryTurtle:br.bird1];
 			}
 		}
 		if (br.bird1.kind == OBS_KIND_PATROL_BIRD){
 			if (t.l.y > br.bird2.l.y - 15 || t.state == TSA_TURTLE_STATE_AIR){
 				if (GetDist(br.bird2.l, t.l) < 28) {
-					[self killTurtle];
+				[self carryTurtle:br.bird2];
 				}
 			}
 		}
