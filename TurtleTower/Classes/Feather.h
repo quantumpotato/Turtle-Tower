@@ -17,6 +17,7 @@
     
     int featherDelay;
 	int featherTick;
+	float featherRotate, featherRotation;
 }
 
 @property(nonatomic, retain) UIImage *firstFeather;
@@ -26,5 +27,6 @@
 -(void)changeImageToSecond;
 
 -(void)oscillateFeather;
+-(void)rotateFeather;
 
 @end
