@@ -654,10 +654,19 @@
 			[br scrollWithY:y];
 			if (!br.droppedFeather && br.bird1.l.y > -300) {
 				br.droppedFeather = YES;
-				[self dropFeather:[br feather] FromBird:br.bird1];
+				[self dropFeather:[[br feather] featherWithBird:br.bird1 forLower:YES] FromBird:br.bird1];
 				if (br.bird2) {
-					[self dropFeather:[br feather] FromBird:br.bird2];
+					[self dropFeather:[[br feather] featherWithBird:br.bird2 forLower:YES] FromBird:br.bird2];
 				}
+			}else if (!br.droppedSecondFeather && br.bird1.l.y > -600) {
+				br.droppedSecondFeather = YES;	
+				
+				[self dropFeather:[[br feather] featherWithBird:br.bird1 forLower:NO] FromBird:br.bird1];
+				if (br.bird2) {
+					[self dropFeather:[[br feather] featherWithBird:br.bird2 forLower:NO] FromBird:br.bird2];
+				}
+				
+				
 			}
 		}
 	}

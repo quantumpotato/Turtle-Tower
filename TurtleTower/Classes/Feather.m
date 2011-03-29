@@ -35,6 +35,15 @@
 	return self;
 }
 
+
+-(id)featherWithBird:(Bird *)bird forLower:(BOOL)lower {
+	if (lower) {
+		[self changeImageToSecond];
+	}
+		featherRotation = bird.direction * .01 * bird.speed;
+	return self;
+}
+
 -(void)move {
 	self.l = CombineVel(self.l, self.vel);
 	self.imageView.center = self.l;

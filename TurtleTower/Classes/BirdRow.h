@@ -16,12 +16,14 @@
 	Bird *bird2;
 	int direction;
 	BOOL droppedFeather;
+	BOOL droppedSecondFeather;
 }
 
 @property(nonatomic,retain) Bird *bird1;
 @property(nonatomic,retain) Bird *bird2;
 @property(nonatomic) int direction;
 @property(nonatomic) BOOL droppedFeather;
+@property(nonatomic) BOOL droppedSecondFeather;
 
 -(id)initWithBird:(Bird *)bird;
 

@@ -10,8 +10,7 @@
 
 
 @implementation BirdRow
-@synthesize bird1, bird2, direction, droppedFeather;
-
+@synthesize bird1, bird2, direction, droppedFeather, droppedSecondFeather;
 -(void)calculateDirection{
 	self.direction = -1;
 	NSInteger rand = arc4random() % 2;

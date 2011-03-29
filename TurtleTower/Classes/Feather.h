@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "DifficultyObstacle.h"
-
+#import "Bird.h"
 
 @interface Feather : DifficultyObstacle {
 
@@ -28,5 +28,7 @@
 
 -(void)oscillateFeather;
 -(void)rotateFeather;
+
+-(id)featherWithBird:(Bird *)bird forLower:(BOOL)lower;
 
 @end
