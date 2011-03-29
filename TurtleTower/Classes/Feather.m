@@ -37,7 +37,7 @@
 
 
 -(id)featherWithBird:(Bird *)bird forLower:(BOOL)lower {
-	if (lower) {
+	if (lower) {	
 		[self changeImageToSecond];
 	}
 		featherRotation = bird.direction * .01 * bird.speed;

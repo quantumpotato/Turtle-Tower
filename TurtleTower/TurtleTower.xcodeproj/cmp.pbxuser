@@ -1020,7 +1020,7 @@
 		fRef = BFBCA4F0127C945600EA087D /* Feather.m */;
 		name = "Feather.m: 52";
 		rLen = 0;
-		rLoc = 1252;
+		rLoc = 1253;
 		rType = 0;
 		vrLen = 421;
 		vrLoc = 838;
@@ -2428,7 +2428,7 @@
 		fRef = BFBCA4F0127C945600EA087D /* Feather.m */;
 		name = "Feather.m: 43";
 		rLen = 0;
-		rLoc = 1520;
+		rLoc = 1521;
 		rType = 0;
 		vrLen = 210;
 		vrLoc = 786;
@@ -3326,7 +3326,7 @@
 		isa = PBXTextBookmark;
 		fRef = BFBCA4F0127C945600EA087D /* Feather.m */;
 		name = "Feather.m: 39";
-		rLen = 103;
+		rLen = 104;
 		rLoc = 785;
 		rType = 0;
 		vrLen = 241;
@@ -3377,7 +3377,7 @@
 		fRef = BFBCA4F0127C945600EA087D /* Feather.m */;
 		name = "Feather.m: 40";
 		rLen = 0;
-		rLoc = 889;
+		rLoc = 890;
 		rType = 0;
 		vrLen = 241;
 		vrLoc = 784;
@@ -3527,7 +3527,7 @@
 		fRef = BFBCA4F0127C945600EA087D /* Feather.m */;
 		name = "Feather.m: 40";
 		rLen = 0;
-		rLoc = 855;
+		rLoc = 856;
 		rType = 0;
 		vrLen = 179;
 		vrLoc = 781;
@@ -3693,7 +3693,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 0;
+		breakpointsEnabled = 1;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
