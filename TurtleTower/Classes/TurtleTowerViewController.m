@@ -1252,11 +1252,9 @@
 		DifficultyObstacle *ob = (DifficultyObstacle *)[self.obs objectAtIndex:i];
 		[ob move];
 		[ob animate];
-		//Maybe?
 		
 		if (ob.kind == OBS_KIND_FEATHER){
 			ob.vel = SXetX(ob.vel, activeWind);
-			[ob move];
 		}
 	}
 	
