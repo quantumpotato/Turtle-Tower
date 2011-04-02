@@ -501,6 +501,10 @@
 	
 	DifficultyController *wc = [self.difficultyControllers objectAtIndex:CONTROLLER_WIND];
 	activeWind = [wc calculateEffect];
+	int randDir = arc4random() % 2;
+	if (randDir == 1) {
+		activeWind = -activeWind;
+	}
 	
 	
 	[self calculatePlatformDifficulty];
@@ -2283,7 +2287,7 @@ mostExcellent2 = [[d objectForKey:@"mostexcellent2"] intValue];
 	self.warpText2.backgroundColor = [UIColor clearColor];
 	self.warpText2.textColor = [UIColor whiteColor];
 	self.warpText2.font = [UIFont systemFontOfSize:14];
-	self.warpText2.text = @"   Stratosphere \n      4250 shells";
+	self.warpText2.text = @"   Stratosphere \n     4250 shells";
 	self.warpText2.lineBreakMode = UILineBreakModeWordWrap;
 	self.warpText2.numberOfLines = 2;
 	self.warpText2.center = CGPointMake(1000, 1000);
