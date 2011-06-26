@@ -46,6 +46,12 @@
 
 -(void)move {
 	self.l = CombineVel(self.l, self.vel);
+    if (self.l.x > 320) {
+        self.l = SXOffsetX(self.l, -320);
+    }else if (self.l.x < 0) {
+        self.l = SXOffsetX(self.l, 320);
+    }
+	
 	self.imageView.center = self.l;
 	if (self.delay > self.delayReset * 2 + 15){
 		self.delay = 0;
@@ -141,12 +147,10 @@
 }
 
 -(void)changeImageToFirst {
-	NSLog(@"?");
 	self.imageView.image = self.firstFeather;	
 }
 
 -(void)changeImageToSecond {
-	NSLog(@"!");
 	self.imageView.image = self.secondFeather;	
 }
 
@@ -158,12 +162,6 @@
 
 -(void)scrollWithX:(float)x {
     [super scrollWithX:x];
-    if (self.l.x > 320) {
-        self.l = SXOffsetX(self.l, -320);
-    }else if (self.l.x < 0) {
-        self.l = SXOffsetX(self.l, 320);
-    }
-
 }
 
 @end

@@ -22,6 +22,8 @@
 -(void)reset{
 	[super reset];
 	self.activeControl = self.earlyGameWindControl;
+	self.activeReset = 5;  
+	self.inactiveReset = 6;
 }
 
 -(void)activateWind{
