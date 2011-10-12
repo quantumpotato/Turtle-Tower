@@ -109,7 +109,11 @@ ob.l = CGPointMake(random3,self.highestPlatformY-random2);
 //	ob.l = CGPointMake(random3,230);	
 	[self setPlatformBirdSpeed:ob];
 	ob.vel = CGPointMake(ob.direction * ob.speed,0);
-		
+	
+	ob.oscillateValue = 3;
+    ob.oscillateRepeatReset = 10;
+    ob.oscillateRepeat = 10;
+    
 	self.emptyBird = 0;		
 	[self.delegate didReceiveBirdForSpawner:ob];
 	[ob release];	
