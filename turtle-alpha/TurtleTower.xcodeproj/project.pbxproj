@@ -733,7 +733,7 @@
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "A617AA53-FE6E-4362-B420-43EB9202010B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A617AA53-FE6E-4362-B420-43EB9202010B";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

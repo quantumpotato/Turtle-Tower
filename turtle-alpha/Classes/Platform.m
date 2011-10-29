@@ -19,11 +19,11 @@
 	if (self = [super init]){
 		self.view = [[UIView alloc] initWithFrame:CGRectMake(1000,1000,10,10)];
 		float color = 60.0/255.0;
-		self.view.backgroundColor = [UIColor colorWithRed:color green:color blue:color alpha:1]; // [UIColor darkGrayColor];
+		self.view.backgroundColor = [UIColor colorWithRed:color green:color blue:color alpha:1];
 		self.view.center = CGPointMake(500,5900);
 		self.secondView = [[UIView alloc] initWithFrame:CGRectMake(1000,1000,10,10)];
 		self.secondView.center = CGPointMake(500,5900);
-		self.secondView.backgroundColor = [UIColor colorWithRed:color green:color blue:color alpha:1];// /= [UIColor darkGrayColor];
+		self.secondView.backgroundColor = [UIColor colorWithRed:color green:color blue:color alpha:1];
 		self.landed = 0;
 		self.l = CGPointMake(-1000, -1000);
 //		self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"TurtleTowerPlatform.png"]];
