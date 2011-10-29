@@ -1,0 +1,27 @@
+in progress:
+
+unfinished:
+
+game should start on title
+turtle should jump towards tap
+cloud should rise into game mode
+clouds should have 2 images and wrap
+game mode should descend clouds quickly
+game mode should bring turtle up
+interface should appear
+turtle should jump towards tap
+turtle x movement should scroll clouds
+turtle y movement should go up then fall
+turtle landing on cloud should change cloud colour
+birds should appear
+birds should move
+birds should oscillate
+birds should have strategy behaviors available
+turtle dev enemies should function
+controllers should manage enemy appearance
+turtle should flip
+clouds should bounce
+feathers should drop
+feathers should redrop from closest bird who has not dropped recent feather height
+
+finished:
