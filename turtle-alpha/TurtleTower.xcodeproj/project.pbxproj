@@ -556,6 +556,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TurtleTower" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -732,7 +733,7 @@
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "A617AA53-FE6E-4362-B420-43EB9202010B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A617AA53-FE6E-4362-B420-43EB9202010B";
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
